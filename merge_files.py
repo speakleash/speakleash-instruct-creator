@@ -16,10 +16,16 @@ for file in files:
     with open(file_path, "r") as f:
         data = json.load(f)
 
+
+    file_counter = 1
+
     for item in data:
         item['source'] = file.replace(".json", "")
         all.append(item)
         counter += 1
+        file_counter += 1
+
+    print("File: " + file + " - " + str(file_counter) + " instructions.")
 
 random.shuffle(all)
 
