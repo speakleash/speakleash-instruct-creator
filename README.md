@@ -4,7 +4,7 @@ Create a script that will create a json with instructions and place it in the ou
 
 # Plan
 ## 1 
-SK - TODO
+SK - DONE
 https://huggingface.co/datasets/allegro/summarization-polish-summaries-corpus
 allegro-summarization-polish-summaries-corpus.csv
 
@@ -16,17 +16,17 @@ allegro-summarization-allegro-articles-body-to-lead.csv
 allegro-summarization-allegro-articles-lead-to-title.csv
 
 ## 3
-SK - TODO
+? - TODO
 https://huggingface.co/datasets/clarin-pl/poquad
 poquad-train.json
 
 ## 4
-SK - TODO
+? - TODO
 https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
 ## 5
-SK - TODO
+? - TODO
 https://github.com/Ermlab/polish-gec-datasets
 human_annotators_common_errors_10K.jsonl
 
