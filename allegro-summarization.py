@@ -38,7 +38,7 @@ def create_instruction(instruction, file_path, json_path):
 
     random.shuffle(instructions)
 
-    with open(json_path, "w") as f: 
+    with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
 create_instruction("Stwórz tytuł dla podanego artykułu.",file_path_1, json_path_1)
