@@ -21,7 +21,7 @@ https://huggingface.co/datasets/clarin-pl/poquad
 poquad-train.json
 
 ## 4
-? - TODO
+IC - TODO
 https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
