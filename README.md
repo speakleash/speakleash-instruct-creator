@@ -2,6 +2,9 @@
 
 Create a script that will create a json with instructions and place it in the output folder (e.g. allegro-summarization.py). Then run merge-files.py. The script will merge all the json files into one big json file
 
+Template:
+(person's initials responsible for dataset | work status | dataset url | dataset file name)
+
 # Plan
 ## 1 
 SK - DONE
