@@ -21,7 +21,7 @@ https://huggingface.co/datasets/clarin-pl/poquad
 poquad-train.json
 
 ## 4
-IC - TODO
+? - TODO
 https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
@@ -44,3 +44,7 @@ massive_amazon.jsonl
 ## 8
 MF - TODO
 https://huggingface.co/datasets/allegro/klej-dyk
+
+## 9
+MF - TODO
+q&a extraction from speakleash database (forum selection)
