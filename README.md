@@ -34,7 +34,7 @@ https://github.com/Ermlab/polish-gec-datasets
 human_annotators_common_errors_10K.jsonl
 
 ## 6
-MF - TODO
+MF - DONE
 https://huggingface.co/datasets/piotr-rybak/legal-questions/tree/main/data
 piotr-rybak_legal-questions.jsonl
 
