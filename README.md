@@ -49,5 +49,5 @@ MF - DONE
 https://huggingface.co/datasets/allegro/klej-dyk
 
 ## 9
-MF - TODO
+MF - IN PROGRESS
 Q&A extraction from SpeakLeash datasets (selected forums)
