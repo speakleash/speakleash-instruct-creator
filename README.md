@@ -29,7 +29,7 @@ https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
 ## 5
-? - TODO
+MF - TODO
 https://github.com/Ermlab/polish-gec-datasets
 human_annotators_common_errors_10K.jsonl
 
@@ -45,7 +45,7 @@ Amazaon Massive Dataset
 massive_amazon.jsonl
 
 ## 8
-MF - TODO
+MF - DONE
 https://huggingface.co/datasets/allegro/klej-dyk
 
 ## 9
