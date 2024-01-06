@@ -24,12 +24,12 @@ https://huggingface.co/datasets/clarin-pl/poquad
 poquad-train.json
 
 ## 4
-IC - TODO
+IC - DONE
 https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
 ## 5
-MF - TODO
+IC - TODO
 https://github.com/Ermlab/polish-gec-datasets
 human_annotators_common_errors_10K.jsonl
 
