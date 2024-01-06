@@ -19,7 +19,7 @@ allegro-summarization-allegro-articles-body-to-lead.csv
 allegro-summarization-allegro-articles-lead-to-title.csv
 
 ## 3
-MF - TODO
+MF - DONE
 https://huggingface.co/datasets/clarin-pl/poquad
 poquad-train.json
 
