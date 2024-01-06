@@ -114,7 +114,7 @@ def get_pairs(qa_df):
 
 if __name__ == '__main__':
     base_dir = "./"
-    replicate_to = os.path.join(base_dir, "datasets")
+    replicate_to = os.path.join(base_dir, "data")
     sl = Speakleash(replicate_to)
     df1 = get_frame()
     df1['text'] = df1['text'].apply(clean_forum)
