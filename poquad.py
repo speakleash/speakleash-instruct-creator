@@ -37,12 +37,19 @@ def create_instruction(instruction, file_path, json_path):
 
     for index, row in data.iterrows():
         if len(row["paragraphs"][0]["qas"]) != 0 and list(
-                row["paragraphs"][0]["qas"][0].keys()
-        )[1] == "answers" and list(
             row["paragraphs"][0]["qas"][0].keys()
         )[0] == "question":
             source = row["paragraphs"][0]["qas"][0]["question"]
-            target = row["paragraphs"][0]["qas"][0]["answers"][0]["generative_answer"]
+            if list(
+                row["paragraphs"][0]["qas"][0].keys()
+            )[1] == "plausible_answers":
+                target = row["paragraphs"][0]["qas"][0]["plausible_answers"][0]["generative_answer"]
+            elif list(
+                row["paragraphs"][0]["qas"][0].keys()
+            )[1] == "answers":
+                target = row["paragraphs"][0]["qas"][0]["answers"][0]["generative_answer"]
+            else:
+                continue
             instructions.append(
                 {
                  "instruct": instruction,
@@ -50,8 +57,6 @@ def create_instruction(instruction, file_path, json_path):
                  "output": target
                  }
             )
-        else:
-            continue
     random.shuffle(instructions)
 
     with open(json_path, "w", encoding='utf-8') as f:
