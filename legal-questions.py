@@ -4,6 +4,11 @@ import json
 import random
 from utils.functions import download_file
 
+source_name = os.path.basename(__file__).replace(".py", "") + " TODO"
+source_url = "https:// - TODO"
+source_description = "TODO"
+script_name = os.path.basename(__file__)
+
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, "data")
@@ -33,7 +38,7 @@ def create_instruction(instruction, file_path, json_path):
         source = row['question']
         target = row['passage_text']
         if row['relevant']:
-            instructions.append({"instruct": instruction, "input": source, "output": target})
+            instructions.append({"instruct": instruction, "input": source, "output": target, "source_name": source_name, "source_url": source_url, "source_description": source_description, "script_name": script_name})
         else:
             continue
 

@@ -7,6 +7,11 @@ import pandas as pd
 
 from utils.functions import download_file
 
+source_name = os.path.basename(__file__).replace(".py", "") + " TODO"
+source_url = "https:// - TODO"
+source_description = "TODO"
+script_name = os.path.basename(__file__)
+
 # Get the path to the currently executing python script
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -56,7 +61,7 @@ def create_instruction(instruction: str, file_path: str, json_path: str) -> None
         source = row['question']
         target = row['passage_text']
         if row['relevant']:
-            instructions.append({"instruct": instruction, "input": source, "output": target})
+            instructions.append({"instruct": instruction, "input": source, "output": target, "source_name": source_name, "source_url": source_url, "source_description": source_description, "script_name": script_name})
         else:
             continue
 

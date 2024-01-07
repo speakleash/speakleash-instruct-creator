@@ -7,6 +7,10 @@ import spacy
 
 nlp = spacy.load("pl_core_news_md")
 
+source_name = "speakleash_plwiki_lemmat_words"
+source_url = "https://speakleash.org/"
+source_description = "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy."
+script_name = os.path.basename(__file__)
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, "data")
@@ -30,7 +34,7 @@ for txt in wiki:
                 if word not in words:
                     words[word] = lemma
                     counter += 1
-                    instructions.append({"instruct": "Podaj formę podstawową (lemat) dla słowa: " + word, "input" : "", "output" : "Forma podstawowa dla słowa " + word + " to: " + lemma})
+                    instructions.append({"instruct": "Podaj formę podstawową (lemat) dla słowa: " + word, "input" : "", "output" : "Forma podstawowa dla słowa " + word + " to: " + lemma, "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
 
     if len(instructions) > 100000:
         break
