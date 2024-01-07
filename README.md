@@ -42,7 +42,7 @@ https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
 ## 5
-IC - TODO
+IC - IN PROGRESS
 https://github.com/Ermlab/polish-gec-datasets
 human_annotators_common_errors_10K.jsonl
 
@@ -68,3 +68,8 @@ Q&A extraction from SpeakLeash datasets (selected forums)
 "forum_forum_poradnikogrodniczy_pl_corpus",
 "forum_forum_wszystkodlawnetrza_pl_corpus",
 "forum_ezoforum_pl_corpus"
+
+## 10
+IC - IN PROGRESS
+https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
+Polish Analogy Dataset
