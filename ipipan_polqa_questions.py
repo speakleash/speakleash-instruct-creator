@@ -7,7 +7,7 @@ import pandas as pd
 
 from utils.functions import download_file
 
-# Mandatory dataset data for json objects
+# Mandatory dataset informationfields for json objects
 source_name = f"ipipan-{os.path.basename(__file__).replace('.py', '')}"
 source_url = 'https://huggingface.co/datasets/ipipan/polqa'
 source_description = 'Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ' \
