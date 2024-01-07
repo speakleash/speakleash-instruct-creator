@@ -4,6 +4,10 @@ import json
 import random
 from utils.functions import download_file
 
+source_name = "allegro-summarization-allegro-articles"
+source_url = "https://huggingface.co/datasets/allegro/summarization-allegro-articles/"
+source_description = "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research"
+script_name = os.path.basename(__file__)
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, "data")
@@ -14,6 +18,7 @@ if not os.path.exists(data_dir):
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
+
 
 file_path_1 = download_file("https://huggingface.co/datasets/allegro/summarization-allegro-articles/resolve/main/body_lead_to_title/train.csv?download=true", data_dir, "allegro-summarization-allegro-articles-body-lead-to-title.csv")
 json_path_1 = os.path.join(output_dir, "allegro-summarization-allegro-articles-body-lead-to-title.json")
@@ -34,7 +39,7 @@ def create_instruction(instruction, file_path, json_path):
     for index, row in data.iterrows():
         source = row['source']
         target = row['target']
-        instructions.append({"instruct": instruction, "input" : source, "output" : target})
+        instructions.append({"instruct": instruction, "input" : source, "output" : target, "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
 
     random.shuffle(instructions)
 
