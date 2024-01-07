@@ -2,7 +2,20 @@
 
 Create a script that will create a json with instructions and place it in the output folder (e.g. allegro-summarization.py). Then run merge-files.py. The script will merge all the json files into one big json file
 
-Template:
+
+Each JSON object with an instruction should containt mandatory fields like:
+```json
+{
+    ...
+    "source_name": "os.path.basename(file).replace('.py', '') + ' TODO'",
+    "source_url": "https:// - TODO",
+    "source_description": "TODO",
+    "script_name": "os.path.basename(file)"
+}
+```
+
+Plan list:
+## Dataset number
 (person's initials responsible for dataset | work status | dataset url | dataset file name)
 
 # Plan
