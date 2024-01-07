@@ -25,7 +25,7 @@ for file in files:
         counter += 1
         file_counter += 1
 
-    print("File: " + file + " - " + str(file_counter) + " instructions.")
+    print(file.upper().replace(".JSON","") + ";" + str(file_counter))
 
 random.shuffle(all)
 

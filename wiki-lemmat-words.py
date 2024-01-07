@@ -30,7 +30,7 @@ for txt in wiki:
                 if word not in words:
                     words[word] = lemma
                     counter += 1
-                    instructions.append({"instruct": "Podaj formę podstawową (lemat) podanego słowa: " + word, "input" : "", "output" : "Forma podstawowa dla słowa: " + word + " to " + lemma})
+                    instructions.append({"instruct": "Podaj formę podstawową (lemat) dla słowa: " + word, "input" : "", "output" : "Forma podstawowa dla słowa " + word + " to: " + lemma})
 
     if len(instructions) > 100000:
         break
