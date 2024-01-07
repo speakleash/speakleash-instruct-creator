@@ -21,7 +21,7 @@ scipts_to_run.append({"script_name" : "speakleash-categorization.py", "author" :
 scipts_to_run.append({"script_name" : "speakleash_forums_questions.py", "author" : "Ic & MariaF"})
 scipts_to_run.append({"script_name" : "wiki-lemmat-words.py", "author" : "Sekon"})
 scipts_to_run.append({"script_name" : "allegro-summarization.py", "author" : "Sekon"})
-
+scipts_to_run.append({"script_name" : "speakleash-create-sentence.py", "author" : "Sekon"})
 
 if generate:
     for script in scipts_to_run:
