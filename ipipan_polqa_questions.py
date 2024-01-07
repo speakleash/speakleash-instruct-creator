@@ -7,9 +7,12 @@ import pandas as pd
 
 from utils.functions import download_file
 
-source_name = os.path.basename(__file__).replace(".py", "") + " TODO"
-source_url = "https:// - TODO"
-source_description = "TODO"
+# Mandatory dataset information fields for json objects
+source_name = f"ipipan-{os.path.basename(__file__).replace('.py', '')}"
+source_url = 'https://huggingface.co/datasets/ipipan/polqa'
+source_description = 'Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ' \
+                     'ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw ' \
+                     'Informatyki Polskiej Akademii Nauk.'
 script_name = os.path.basename(__file__)
 
 # Get the path to the currently executing python script
@@ -61,7 +64,15 @@ def create_instruction(instruction: str, file_path: str, json_path: str) -> None
         source = row['question']
         target = row['passage_text']
         if row['relevant']:
-            instructions.append({"instruct": instruction, "input": source, "output": target, "source_name": source_name, "source_url": source_url, "source_description": source_description, "script_name": script_name})
+            instructions.append({
+                    "instruct": instruction,
+                    "input": source,
+                    "output": target,
+                    "source_name": source_name,
+                    "source_url": source_url,
+                    "source_description": source_description,
+                    "script_name": script_name
+            })
         else:
             continue
 
