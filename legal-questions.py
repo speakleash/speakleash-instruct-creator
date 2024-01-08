@@ -4,9 +4,12 @@ import json
 import random
 from utils.functions import download_file
 
-source_name = os.path.basename(__file__).replace(".py", "") + " TODO"
-source_url = "https:// - TODO"
-source_description = "TODO"
+source_name = os.path.basename(__file__).replace(".py", "") + " piotr-rybak-legal-questions"
+source_url = "https://huggingface.co/datasets/piotr-rybak/legal-questions/"
+source_description = "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz \
+                     ręcznie anotowanych fragmentów z artykułów prawnych zawierających \
+                     potencjalne odpowiedzi (oznaczone True/False). "
+
 script_name = os.path.basename(__file__)
 
 

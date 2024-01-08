@@ -1,3 +1,4 @@
+import json
 import numpy as np
 import os
 import pandas as pd
@@ -9,10 +10,14 @@ from langdetect import detect
 from speakleash import Speakleash
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-PROJECTS = [
-    "forum_forum_poradnikogrodniczy_pl_corpus",
+source_name = os.path.basename(__file__).replace(".py", "") + " speakleash_forums_questions"
+source_url = "https://speakleash.org"
+source_description = "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatycznie" \
+                     "pary pytania - odpowiedź (forum_forum_wszystkodlawnetrza_pl_corpus,forum_ezoforum_pl_corpus)."
+P
+ROJECTS = [
     "forum_forum_wszystkodlawnetrza_pl_corpus",
-    "forum_ezoforum_pl_corpus"
+    "forum_ezoforum_pl_corpus",
 ]
 LIMIT = 4000
 TOKENIZER = AutoTokenizer.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
@@ -81,7 +86,7 @@ def get_qa(metrics_list):
     for mi, m in enumerate(metrics_list):
         a = m['text'].loc[m['SY_S_DE'] > 0.9].index.tolist()
         q = m['text'].loc[m['SY_S_IN'] > 0.9].index.tolist()
-        if len(m.text.iloc[q].values) > 0 and len(m.text.iloc[a].values) > 0:
+        if len(m.text.iloc[q].values) > 1 and len(m.text.iloc[a].values) > 1:
             questions[mi] = m.text.iloc[q].values.tolist()
             answers[mi] = m.text.iloc[a].values.tolist()
         else:
@@ -108,7 +113,7 @@ def get_pairs(qa_df):
             MODEL.eval()
             with torch.no_grad():
                 scores = MODEL(**features).logits
-                pair_list.append([inst, qr[q], an[np.argmax(scores)]])
+                pair_list.append({"instruct": inst, "input": qr[q], "output": an[np.argmax(scores)]})
     return pair_list
 
 
@@ -120,8 +125,7 @@ if __name__ == '__main__':
     df1['text'] = df1['text'].apply(clean_forum)
     metrics_list1 = get_stylo(df1)
     qa_df1 = get_qa(metrics_list1)
-    pairs = get_pairs(qa_df1)
-    frame = pd.DataFrame(pairs, columns=["instruct", "input", "output"]).T
+    instructions = get_pairs(qa_df1)
 
-    with open("output/speakleash_forums.json", "wb", encoding='utf-8') as f:
-        frame.to_json(f)
+    with open("output/speakleash_forums.json", "w", encoding='utf-8') as f:
+        json.dump(instructions, f, indent=4, ensure_ascii=False)
