@@ -11,7 +11,7 @@ from speakleash import Speakleash
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 source_name = os.path.basename(__file__).replace(".py", "") + " speakleash_forums_questions"
-source_url = "https://speakleash.org"
+source_url = "skrypt długo się generuje, paczka przesłana ręcznie"
 source_description = "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatycznie" \
                      "pary pytania - odpowiedź (forum_forum_wszystkodlawnetrza_pl_corpus,forum_ezoforum_pl_corpus)."
 P
