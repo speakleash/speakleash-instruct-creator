@@ -8,9 +8,11 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, "data")
 output_dir = os.path.join(base_dir, "output")
 
-source_name = os.path.basename(__file__).replace(".py", "") + " TODO"
-source_url = "https:// - TODO"
-source_description = "TODO"
+source_name = os.path.basename(__file__).replace(".py", "") + " allegro/klej-dyk"
+source_url = "https://huggingface.co/datasets/allegro/klej-dyk"
+source_description = "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. " \
+                     "odpowiedzi są anotowane jako trafne (1) albo nietrafne (0)."
+
 script_name = os.path.basename(__file__)
 
 if not os.path.exists(data_dir):
