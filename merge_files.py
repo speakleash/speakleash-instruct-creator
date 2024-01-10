@@ -22,6 +22,9 @@ scipts_to_run.append({"script_name" : "speakleash_forums_questions.py", "author"
 scipts_to_run.append({"script_name" : "wiki-lemmat-words.py", "author" : "Sekon"})
 scipts_to_run.append({"script_name" : "allegro-summarization.py", "author" : "Sekon"})
 scipts_to_run.append({"script_name" : "speakleash-create-sentence.py", "author" : "Sekon"})
+scipts_to_run.append({"script_name" : "create_password.py", "author" : "Sekon"})
+scipts_to_run.append({"script_name" : "plwiki_create_random_word_list.py", "author" : "Sekon"})
+
 
 if generate:
     for script in scipts_to_run:
@@ -45,7 +48,7 @@ source_stats = {}
 
 for file in files:
     file_path = os.path.join(output_dir, file)
-    with open(file_path, "r") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     file_counter = 1
@@ -86,14 +89,14 @@ for file in files:
 
 random.shuffle(all)
 
-with open("speakleash_pl_instructions_v" + version + ".jsonl", "w") as plik:
+with open("speakleash_pl_instructions_v" + version + ".jsonl", "w", encoding="utf-8") as plik:
     for item in all:
         plik.write(json.dumps(item, ensure_ascii=False) + "\n")
 
-with open("authors_stats_v" + version + ".json", "w") as plik:
+with open("authors_stats_v" + version + ".json", "w", encoding="utf-8") as plik:
     plik.write(json.dumps(authors_stats, ensure_ascii=False))
 
-with open("source_stats_v" + version + ".json", "w") as plik:
+with open("source_stats_v" + version + ".json", "w", encoding="utf-8") as plik:
     plik.write(json.dumps(source_stats, ensure_ascii=False))
 
 print("Done!")
