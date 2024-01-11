@@ -240,6 +240,10 @@ def create_instructions(data: List[Dict],
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[type]['output'][item[type]]
 				temp['categories'] = main_dict[type]['categories']
+				temp['source_name'] = source_name
+				temp['source_url'] = source_url
+				temp['source_description'] = source_description
+				temp['script_name'] = script_name
 				output.append(temp)
 				temp = {}
 	
@@ -256,6 +260,10 @@ def create_instructions(data: List[Dict],
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[type]['output'][worker[type]]
 				temp['categories'] = main_dict[type]['categories']
+				temp['source_name'] = source_name
+				temp['source_url'] = source_url
+				temp['source_description'] = source_description
+				temp['script_name'] = script_name
 				output.append(temp)
 				temp = {}
 	
@@ -303,12 +311,9 @@ source_description = "Instrukcje powstały dzięki wykorzystaniu zestawu danych 
 script_name = os.path.basename(__file__)
 
 
-
 ### MAIN
 download_and_unzip()
 data = load_instructions()
 instructions = create_instructions(data, main_dict)
 instructions_cleared = remove_duplicates(instructions)
 save_instructions(instructions_cleared, output_dir)
-
-#następnie w pliku merge_files.py dodajecie swój pliczek i swój nick scipts_to_run.append({"script_name" : "allegro-summarization.py", "author" : "Sekon"})
