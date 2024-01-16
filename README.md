@@ -62,10 +62,9 @@ MF - DONE
 https://huggingface.co/datasets/allegro/klej-dyk
 
 ## 9
-MF - IN PROGRESS
+MF - DONE
 https://github.com/speakleash/speakleash/tree/main
 Q&A extraction from SpeakLeash datasets (selected forums)
-"forum_forum_poradnikogrodniczy_pl_corpus",
 "forum_forum_wszystkodlawnetrza_pl_corpus",
 "forum_ezoforum_pl_corpus"
 
