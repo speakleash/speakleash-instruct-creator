@@ -7,11 +7,12 @@ import spacy
 
 nlp = spacy.load("pl_core_news_md")
 
-source_name = "plwiki_creare_random_word_list"
+script_name = os.path.basename(__file__)
+source_name = script_name.replace(".py", "")
 source_url = "https://speakleash.org/"
 source_description = "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy."
-script_name = os.path.basename(__file__)
-limit = 100000
+
+limit = 120000
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, "data")
@@ -85,7 +86,7 @@ for txt in wiki:
 
 
 random.shuffle(instructions)
-with open(os.path.join(output_dir, "plwiiki_random_word_list.json"), "w", encoding='utf-8') as f:
+with open(os.path.join(output_dir, script_name.replace(".py",".json")), "w", encoding='utf-8') as f:
     json.dump(instructions, f, indent=4, ensure_ascii=False)
 print("Instructions: " + str(len(instructions)))
 
