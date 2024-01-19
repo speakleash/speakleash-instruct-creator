@@ -3,11 +3,12 @@ import os
 import random
 import subprocess
 import sys
+from datetime import datetime
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(base_dir, "output")
 data_dir = os.path.join(base_dir, "data")
-version = "0_0_2"
+version = "0_0_3"
 
 generate = False
 
@@ -23,9 +24,11 @@ scipts_to_run.append({"script_name" : "wiki-lemmat-words.py", "author" : "Sekon"
 scipts_to_run.append({"script_name" : "allegro-summarization.py", "author" : "Sekon"})
 scipts_to_run.append({"script_name" : "speakleash-create-sentence.py", "author" : "Sekon"})
 scipts_to_run.append({"script_name" : "create_password.py", "author" : "Sekon"})
-scipts_to_run.append({"script_name" : "plwiki_create_random_word_list.py", "author" : "Sekon"})
 scipts_to_run.append({"script_name" : "speakleash-simple-math-operations.py", "author" : "ChrisO"})
 scipts_to_run.append({"script_name" : "amazon-massive-pl.py", "author" : "pawkis"})
+scipts_to_run.append({"script_name" : "plwiki_random_word_list.py", "author" : "Sekon"})
+scipts_to_run.append({"script_name" : "plwiki_random_word_pos.py", "author" : "Sekon"})
+scipts_to_run.append({"script_name" : "quotes.py", "author" : "Sekon"})
 
 if generate:
     for script in scipts_to_run:
@@ -56,8 +59,9 @@ for file in files:
 
     for item in data:
 
+        print("Merging file: " + file.upper().replace(".JSON","") + " (" + str(file_counter) + ")")
         new_item = {}
-        new_item['instruct'] = item['instruct']
+        new_item['instruct'] = item.get('instruct', 'instruction')
         new_item['input'] = item['input']
         new_item['output'] = item['output']
 
@@ -90,14 +94,17 @@ for file in files:
 
 random.shuffle(all)
 
-with open("speakleash_pl_instructions_v" + version + ".jsonl", "w", encoding="utf-8") as plik:
+current_date = datetime.now()
+formatted_date = current_date.strftime("%Y_%m_%d")
+
+with open("speakleash_pl_instructions_" + formatted_date + "_v" + version + ".jsonl", "w", encoding="utf-8") as plik:
     for item in all:
         plik.write(json.dumps(item, ensure_ascii=False) + "\n")
 
-with open("authors_stats_v" + version + ".json", "w", encoding="utf-8") as plik:
+with open("authors_stats_" + formatted_date +  "_v" + version + ".json", "w", encoding="utf-8") as plik:
     plik.write(json.dumps(authors_stats, ensure_ascii=False))
 
-with open("source_stats_v" + version + ".json", "w", encoding="utf-8") as plik:
+with open("source_stats_" + formatted_date +  "_v" + version + ".json", "w", encoding="utf-8") as plik:
     plik.write(json.dumps(source_stats, ensure_ascii=False))
 
 print("Done!")

@@ -8,8 +8,7 @@ from typing import Dict, List
 
 import jsonlines
 import requests
-from datasets import load_dataset
-from tqdm import tqdm
+
 
 ### DICTS
 # Ocena trafności odczytanej intencji
