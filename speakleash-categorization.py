@@ -37,6 +37,9 @@ for item in data:
     categories = meta.get("category", {})
     category, pp = best_category(categories, 95)
 
+    if category.lower().strip() in ["akwarystyka","astronomia"]:
+        continue
+
     if quality.upper() == "HIGH" and category is not None: 
         counter += 1
         random.shuffle(prompts)
