@@ -75,8 +75,8 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
             'Usprawnij użycie słownictwa w podanym fragmencie',
             'Dokonaj korekty słów użytych niezgodnie z kontekstem',
             'Znajdź słowa niepasujące do kontekstu i popraw je',
-
     ]
+
     instruct_ort = [
             'Wyeliminuj błędy ortograficzne z tekstu',
             'Popraw wszelkie błędy pisowni w poniższym tekście',
@@ -88,8 +88,8 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
             'Wykryj i popraw wszelkie błędy pisowni w tekście',
             'Popraw wszelkie nieprawidłowości w pisowni słów',
             'Skoryguj błędy ortograficzne w poniższym fragmencie',
-
     ]
+
     instruct_synt = [
             'Popraw błędy składniowe w podanym tekście:',
             'Popraw błędy syntaktyczne:'
@@ -101,8 +101,8 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
             'Ten tekst zawiera błędy w składni, popraw je',
             'Składnia tego tekstu zawiera błędy, pozbądź się ich',
             'Spraw aby poniższy tekst nie zawierał błędów składniowych'
-
     ]
+
     instruct_flex = [
             'Popraw błędy związane z błędną odmianą słów',
             'Dokonaj korekty błędnych form odmiany słów',
@@ -115,6 +115,7 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
             'Usuń błędy związane z nieprawidłową odmianą',
             'Skoryguj błędne formy słów w podanym tekśćie.',
     ]
+
     instruct_punct = [
             'Popraw błędy interpunkcyjne',
             'Napraw błędy w użyciu znaków interpunkcyjnych',
@@ -160,8 +161,8 @@ def get_answer(error_type: str, element_correct: str) -> str:
             'Poniższy tekst zawiera już poprawnie użyte słowa',
             'Naprawiono nieprawidłowo użyte słowa',
             'Skorygowano błędne wyrazy w podanym tekście',
-
     ]
+
     answer_ort = [
             'Oto poprawiona forma tekstu, nie zawierająca błędów ortograficznych',
             'Tekst został skorygowany, eliminując błędy w pisown.',
