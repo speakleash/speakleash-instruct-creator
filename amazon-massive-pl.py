@@ -1,4 +1,4 @@
-### IMPORTS
+# IMPORTS
 import json
 import os
 import random
@@ -9,7 +9,7 @@ from typing import Dict, List
 import jsonlines
 import requests
 
-### DICTS
+# DICTS
 # Ocena trafności odczytanej intencji
 intent_score = {
 	0: "Intencja nie jest zrozumiała",
@@ -19,11 +19,13 @@ intent_score = {
 
 # Ocena składni i gramatyki
 grammar_score = {
-	0: "Nienaturalna gramatyka", # Completely unnatural (nonsensical, cannot be understood at all)
-	1: "Znaczące błędy w gramatyce", # Severe errors (the meaning cannot be understood and doesn't sound natural in your language)
-	2: "Drobne błędy w gramatyce", # Some errors (the meaning can be understood but it doesn't sound natural in your language)
-	3: "Dobra jakość gramatyki", # Good enough (easily understood and sounds almost natural in your language)
-	4: "Idealna gramatyka" # Perfect (sounds natural in your language)
+	0: "Nienaturalna gramatyka",  # Completely unnatural (nonsensical, cannot be understood at all)
+	1: "Znaczące błędy w gramatyce",
+	# Severe errors (the meaning cannot be understood and doesn't sound natural in your language)
+	2: "Drobne błędy w gramatyce",
+	# Some errors (the meaning can be understood, but it doesn't sound natural in your language)
+	3: "Dobra jakość gramatyki",  # Good enough (easily understood and sounds almost natural in your language)
+	4: "Idealna gramatyka"  # Perfect (sounds natural in your language)
 }
 
 # Poprawność 
@@ -87,7 +89,7 @@ intent = {
 	'news_query': 'zapytanie związane z wiadomościami',
 	'music_likeness': 'pozytywna ocena muzyki',
 	'music_query': 'zapytanie związane z muzyką', 
-	'iot_hue_lightup': 'zwiększenie natęzenia inteligentnego oświetlenia',
+	'iot_hue_lightup': 'zwiększenie natężenia inteligentnego oświetlenia',
 	'takeaway_order': 'zamówienie na wynos',
 	'weather_query': 'zapytanie związane z pogodą',
 	'music_settings': 'ustawienia odtwarzacza muzyki',
@@ -101,16 +103,16 @@ intent = {
 	'iot_wemo_off': 'wyłączenie inteligentnego sterowania zasilaniem',
 	'qa_stock': 'zapytanie o akcje na giełdzie', 
 	'play_radio': 'użycie radia',
-	'social_post':'post na mediach społecznościowych', 
+	'social_post': 'post na mediach społecznościowych', 
 	'recommendation_locations': 'rekomendacja celu podróży', 
 	'cooking_recipe': 'przepis na potrawę',
 	'qa_factoid': 'odpowiedź na pytanie',
 	'recommendation_events': 'rekomendacja wydarzenia',
 	'calendar_set': 'ustawienie wydarzenia lub przypomnienia w kalendarzu',
 	'play_audiobook': 'odtwarzanie audiobooka',
-	'play_podcasts': 'odtwarzanie podcastu',
+	'play_podcasts': 'odtwarzanie podkastu',
 	'social_query': 'zapytanie związane z mediami społecznościowymi',
-	'transport_query': 'zapytanie związane z podrózą', 
+	'transport_query': 'zapytanie związane z podróżą', 
 	'email_sendemail': 'wysłanie emaila', 
 	'transport_ticket': 'bilet na podróż',
 	'recommendation_movies': 'rekomendacja filmu', 
@@ -124,7 +126,7 @@ intent = {
 	'lists_remove': 'usunięcie listy', 
 	'email_querycontact': 'zapytanie związane z listą kontaktów',
 	'lists_createoradd': 'edytowanie listy', 
-	'email_addcontact': 'dodaj kontakt do ksiązki adresowej email', 
+	'email_addcontact': 'dodaj kontakt do książki adresowej email', 
 	'transport_taxi': 'zapytanie o taksówkę',
 	'qa_maths': 'zapytanie związane z matematyką', 
 	'qa_currency': 'zapytanie związane z kursem walut'
@@ -134,76 +136,88 @@ intent = {
 main_dict = {
 	"scenario": {
 		"type": "scenario",
-		"instruction": ["Przydziel poniższy tekst do jednej z podanych kategorii: ",
-				  "Sklasyfikuj tekst do jednej z podanych kategorii: ",
-				  "Określ, do której kategorii należy poniższy tekst: ",
-				  "Skategoryzuj poniższy tekst według podanych kategorii: ",
-				  "Zaklasyfikuj tekst do jednej z dostępnych kategorii: "],
+		"instruction": [
+			"Przydziel poniższy tekst do jednej z podanych kategorii: ",
+			"Sklasyfikuj tekst do jednej z podanych kategorii: ",
+			"Określ, do której kategorii należy poniższy tekst: ",
+			"Skategoryzuj poniższy tekst według podanych kategorii: ",
+			"Zaklasyfikuj tekst do jednej z dostępnych kategorii: "
+		],
 		"output": scenario,
 		"categories": list(scenario.values())
 	},
 	"intent": {
 		"type": "intent",
-		"instruction": ["Zidentyfikuj intencję w poniższym tekście i przydzidziel do jednej z podanych kategorii: ",
-				  "Skonkretyzuj zamiar zawarty w poniższym tekście i przypisz do odpowiedniej kategorii: ", 
-				  "Znajdź intencję w poniższym tekście i zaklasyfikuj ją do jednej z wymienionych kategorii: ",
-				  "Sklasyfikuj intencję w tekście i wybierz odpowiadającą kategorię: ",
-				  "Przydziel intencję zawartą w tekście do jednej z kategorii: "],
+		"instruction": [
+			"Zidentyfikuj intencję w poniższym tekście i przydziel do jednej z podanych kategorii: ",
+			"Skonkretyzuj zamiar zawarty w poniższym tekście i przypisz do odpowiedniej kategorii: ",
+			"Znajdź intencję w poniższym tekście i zaklasyfikuj ją do jednej z wymienionych kategorii: ",
+			"Sklasyfikuj intencję w tekście i wybierz odpowiadającą kategorię: ",
+			"Przydziel intencję zawartą w tekście do jednej z kategorii: "
+		],
 		"output": intent,
 		"categories": list(intent.values())
 	},
 	"intent_score": {
 		"type": "intent_score",
-		"instruction": ["Oceń trafność zidentyfikowanej intencji w poniższym tekście i sklasyfikuj intencję na podstawie podanych kategorii: ",
-				  "Sklasyfikuj trafność identyfikacji intencji i przydziel jej jedną z kategorii: ",
-				  "Skategoryzuj celność ekstrakcji intencji wiadomości i oceń jedną z kategorii: ",
-				  "Sprawdź trafność rozpoznanej intencji w poniższym tekście i sklasyfikuj ją zgodnie z dostępnymi kategoriami: ",
-				  "Dokładnie zweryfikuj intencję w tekście poniżej i przyporządkuj ją do jednej z wyznaczonych kategorii: "],
+		"instruction": [
+			"Oceń trafność zidentyfikowanej intencji w poniższym tekście i sklasyfikuj intencję"
+			" na podstawie podanych kategorii: ",
+			"Sklasyfikuj trafność identyfikacji intencji i przydziel jej jedną z kategorii: ",
+			"Skategoryzuj celność ekstrakcji intencji wiadomości i oceń jedną z kategorii: ",
+			"Sprawdź trafność rozpoznanej intencji w poniższym tekście i sklasyfikuj ją zgodnie z dostępnymi kategoriami: ",
+			"Dokładnie zweryfikuj intencję w tekście poniżej i przyporządkuj ją do jednej z wyznaczonych kategorii: "],
 		"output": intent_score,
 		"categories": list(intent_score.values())
 	},
 	"grammar_score": {
 		"type": "grammar_score",
-		"instruction": ["Oceń poprawność gramatyki w tekście i sklasyfikuj na podstawie podanych kategorii: ",
-				  "Przeanalizuj poprawność gramatyczną w tekście poniżej i przyporządkuj ją do odpowiedniej kategorii: ",
-				  "Sprawdź, czy gramatyka w tekście poniżej jest poprawna oraz przyporządkuj ją do jednej z kategorii: ",
-				  "Zweryfikuj poprawność gramatyczną w podanym tekście i sklasyfikuj ją zgodnie z dostępnymi kategoriami: ",
-				  "Na podstawie analizy jakości gramatyki, przyporządku tekst do jednej z kategorii: "],
+		"instruction": [
+			"Oceń poprawność gramatyki w tekście i sklasyfikuj na podstawie podanych kategorii: ",
+			"Przeanalizuj poprawność gramatyczną w tekście poniżej i przyporządkuj ją do odpowiedniej kategorii: ",
+			"Sprawdź, czy gramatyka w tekście poniżej jest poprawna oraz przyporządkuj ją do jednej z kategorii: ",
+			"Zweryfikuj poprawność gramatyczną w podanym tekście i sklasyfikuj ją zgodnie z dostępnymi kategoriami: ",
+			"Na podstawie analizy jakości gramatyki, przyporządkuj tekst do jednej z kategorii: "
+		],
 		"output": grammar_score,
 		"categories": list(grammar_score.values())
 	},
 	"spelling_score": {
 		"type": "spelling_score",
-		"instruction": ["Przeanalizuj poniższy tekst i sklasyfikuj ilość błędów w tekście na podstawie podanych kategorii: ",
-				  "Sprawdź podany tekst i oceń ilość błędów zgodnie z podanymi kategoriami: ",
-				  "Oceń poprawność podanego teksu i sklasyfikuj go według następujących kategorii: ",
-				  "Zweryfikuj jakość tekstu i przyporządkuj go do jednej z kategorii: ",
-				  "Przypisz podany tekst do jednej z kategorii na podstawie znalezionych w nim błędów: "],
+		"instruction": [
+			"Przeanalizuj poniższy tekst i sklasyfikuj ilość błędów w tekście na podstawie podanych kategorii: ",
+			"Sprawdź podany tekst i oceń ilość błędów zgodnie z podanymi kategoriami: ",
+			"Oceń poprawność podanego teksu i sklasyfikuj go według następujących kategorii: ",
+			"Zweryfikuj jakość tekstu i przyporządkuj go do jednej z kategorii: ",
+			"Przypisz podany tekst do jednej z kategorii na podstawie znalezionych w nim błędów: "],
 		"output": spelling_score,
 		"categories": list(spelling_score.values())
 	},
 	"language_identification": {
 		"type": "language_identification",
-		"instruction": ["Przeanalizuj poniższy tekst i sklasyfikuj język tego tekstu na podstawie podanych kategorii: ",
-				  "Oceń język jakim jest pisany tekst oraz przypisz go do właściwej kategorii: ",
-				  "Sprawdź w jakim języku został stworzony poniższy tekst i sklasyfikuj według kategorii: ",
-				  "Jaki jest język tekstu? Odpowiedź na podstawie dostępnych kategorii: ",
-				  "Przeanalizuj podany tekst i sklasyfikuj jego język mając do dyspozycji kategorie: "],
+		"instruction": [
+			"Przeanalizuj poniższy tekst i sklasyfikuj język tego tekstu na podstawie podanych kategorii: ",
+			"Oceń język jakim jest pisany tekst oraz przypisz go do właściwej kategorii: ",
+			"Sprawdź w jakim języku został stworzony poniższy tekst i sklasyfikuj według kategorii: ",
+			"Jaki jest język tekstu? Odpowiedź na podstawie dostępnych kategorii: ",
+			"Przeanalizuj podany tekst i sklasyfikuj jego język mając do dyspozycji kategorie: "
+		],
 		"output": language_identification,
 		"categories": list(language_identification.values())
 	}
 }
 
-### FUNCTIONS
-def download_and_unzip(url: str, 
-					   destination_folder: str ='downloaded'):
+# FUNCTIONS
+
+
+def download_and_unzip(url: str, destination_folder: str = 'downloaded'):
 	"""
 	Download a file from the given URL and unzip it if it is in tar.gz or tgz format.
 
 	Parameters:
 	- url (str): The URL of the file to be downloaded.
 	- destination_folder (str): The destination folder to save the downloaded and unpacked files.
-							   Defaults to 'downloaded' if not provided.
+	Defaults to 'downloaded' if not provided.
 
 	Returns:
 	- bool: True if the download and unpacking were successful, False otherwise.
@@ -237,6 +251,7 @@ def download_and_unzip(url: str,
 	else:
 		print(f"Unsupported file format: {file_name}")
 		return False
+
 
 def load_instructions():
 	"""
@@ -272,16 +287,15 @@ def load_instructions():
 		for line in f.iter():
 			data.append(line)	
 
-	# Delete unneseccasry files
+	# Delete unnecessary files
 	shutil.move(fpath, move_path)
 	shutil.rmtree('downloaded/')
 
 	print(f"Loaded {len(data)} base instructions")
 	return data
 
-def get_categories_as_string(categories: List,
-							 main_category: str = None,
-							 k: int = 4):
+
+def get_categories_as_string(categories: List, main_category: str = None):
 	"""
 	Generate a string representation of a list of random categories, including the specified main category.
 
@@ -310,22 +324,19 @@ def get_categories_as_string(categories: List,
 
 	if len(categories) > 10 and main_category: 
 		x = 0
+		random_categories = random.choices(list(categories), k=5)
 		while x != 5:
-			random_categories = random.choices(list(categories), k=5)
 			if main_category not in random_categories:
 				x = len(set(random_categories))
-		
 		random_categories.append(main_category)
-
 	else:
 		random_categories = categories
-
 	random.shuffle(random_categories)
 	output = ", ".join(random_categories) + "."
 	return output
 
-def create_instructions(data: List[Dict],
-						main_dict: Dict):
+
+def create_instructions(data: List[Dict], main_dict: Dict):
 
 	"""
 	Create a list of instructions based on input data and a provided main dictionary.
@@ -361,13 +372,13 @@ def create_instructions(data: List[Dict],
 	type_inner = ['intent_score', 'grammar_score', 'spelling_score', 'language_identification']
 
 	# Base type loop
-	for type in type_base:
+	for typ in type_base:
 		for item in data:
-			for worker in item['judgments']:
+			for _ in item['judgments']:
 
 				categories = get_categories_as_string(
-					main_category=main_dict[type]['output'][item[type]], 
-					categories=main_dict[type]['categories'])
+					main_category=main_dict[typ]['output'][item[typ]],
+					categories=main_dict[typ]['categories'])
 
 				'''
 				OPTIONAL DICTIONARY CREATION EXAMPLE
@@ -383,19 +394,18 @@ def create_instructions(data: List[Dict],
 				}
 				'''
 
-				temp['instruction'] = random.choice(main_dict[type]['instruction']) + categories
+				temp['instruction'] = random.choice(main_dict[typ]['instruction']) + categories
 				temp['input'] = item['utt']
-				temp['output'] = main_dict[type]['output'][item[type]]
+				temp['output'] = main_dict[typ]['output'][item[typ]]
 
 				# Categories not needed bue to them being included in the main instruction
-				#temp['categories'] = main_dict[type]['categories']
-				#temp['categories'] = categories
+				# temp['categories'] = main_dict[type]['categories']
+				# temp['categories'] = categories
 
 				temp['source_name'] = source_name
 				temp['source_url'] = source_url
 				temp['source_description'] = source_description
 				temp['script_name'] = script_name
-				
 
 				output.append(temp)
 				temp = {}
@@ -406,17 +416,17 @@ def create_instructions(data: List[Dict],
 	output_base_cnt = len(output)
 
 	# Inner type loop
-	for type in type_inner:
+	for typ in type_inner:
 		for item in data:
 			for worker in item['judgments']:
 
 				categories = get_categories_as_string( 
-					categories=main_dict[type]['categories'])
+					categories=main_dict[typ]['categories'])
 
-				temp['instruction'] = random.choice(main_dict[type]['instruction']) + categories
+				temp['instruction'] = random.choice(main_dict[typ]['instruction']) + categories
 				temp['input'] = item['utt']
-				temp['output'] = main_dict[type]['output'][worker[type]]
-				#temp['categories'] = main_dict[type]['categories']
+				temp['output'] = main_dict[typ]['output'][worker[typ]]
+				# temp['categories'] = main_dict[typ]['categories']
 				temp['source_name'] = source_name
 				temp['source_url'] = source_url
 				temp['source_description'] = source_description
@@ -426,9 +436,9 @@ def create_instructions(data: List[Dict],
 	
 	print(f"Inner loop finished, created {len(output) - output_base_cnt} instructions.")
 
-
 	print(f"Collected {len(output)} instructions")
 	return output
+
 
 def remove_duplicates(data, shuffle=False):
 	"""
@@ -456,7 +466,6 @@ def remove_duplicates(data, shuffle=False):
 	seen = set()
 	output = []
 
-
 	for item in data:
 		if str(item) not in seen:
 			seen.add(str(item))
@@ -472,6 +481,7 @@ def remove_duplicates(data, shuffle=False):
 		random.shuffle(output)
 
 	return output
+
 
 def save_instructions(instructions, output_dir, json_file='amazon-massive-pl.json'):
 	"""
@@ -501,8 +511,7 @@ def save_instructions(instructions, output_dir, json_file='amazon-massive-pl.jso
 	print(f"Instructions saved successfully to {fpath}")
 
 
-
-### CONFIG 
+# CONFIG
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, 'data')
 output_dir = os.path.join(base_dir, 'output')
@@ -512,9 +521,10 @@ source_description = "Instrukcje powstały dzięki wykorzystaniu zestawu danych 
 script_name = os.path.basename(__file__)
 
 
-### MAIN
-download_and_unzip(url=source_url)
-data = load_instructions()
-instructions = create_instructions(data, main_dict)
-instructions_cleared = remove_duplicates(instructions, shuffle=True)
-save_instructions(instructions_cleared, output_dir)
+# MAIN
+if __name__ == "__main__":
+	download_and_unzip(url=source_url)
+	data = load_instructions()
+	instructions = create_instructions(data, main_dict)
+	instructions_cleared = remove_duplicates(instructions, shuffle=True)
+	save_instructions(instructions_cleared, output_dir)
