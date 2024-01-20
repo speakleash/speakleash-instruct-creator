@@ -1,15 +1,13 @@
 ### IMPORTS
-import os
-import tarfile
-import shutil
-import random
 import json
+import os
+import random
+import shutil
+import tarfile
 from typing import Dict, List
 
 import jsonlines
 import requests
-from datasets import load_dataset
-from tqdm import tqdm
 
 ### DICTS
 # Ocena trafności odczytanej intencji
@@ -103,7 +101,7 @@ intent = {
 	'iot_wemo_off': 'wyłączenie inteligentnego sterowania zasilaniem',
 	'qa_stock': 'zapytanie o akcje na giełdzie', 
 	'play_radio': 'użycie radia',
-	'social_post':' post na mediach społecznościowych', 
+	'social_post':'post na mediach społecznościowych', 
 	'recommendation_locations': 'rekomendacja celu podróży', 
 	'cooking_recipe': 'przepis na potrawę',
 	'qa_factoid': 'odpowiedź na pytanie',
@@ -136,44 +134,68 @@ intent = {
 main_dict = {
 	"scenario": {
 		"type": "scenario",
-		"instruction": "Przydziel poniszy tekst do jednej z podanych kategorii: ",
+		"instruction": ["Przydziel poniższy tekst do jednej z podanych kategorii: ",
+				  "Sklasyfikuj tekst do jednej z podanych kategorii: ",
+				  "Określ, do której kategorii należy poniższy tekst: ",
+				  "Skategoryzuj poniższy tekst według podanych kategorii: ",
+				  "Zaklasyfikuj tekst do jednej z dostępnych kategorii: "],
 		"output": scenario,
 		"categories": list(scenario.values())
 	},
 	"intent": {
 		"type": "intent",
-		"instruction": "Zidentyfikuj intencję w poniższym tekście i przydzidziel do jednej z podanych kategorii: ",
+		"instruction": ["Zidentyfikuj intencję w poniższym tekście i przydzidziel do jednej z podanych kategorii: ",
+				  "Skonkretyzuj zamiar zawarty w poniższym tekście i przypisz do odpowiedniej kategorii: ", 
+				  "Znajdź intencję w poniższym tekście i zaklasyfikuj ją do jednej z wymienionych kategorii: ",
+				  "Sklasyfikuj intencję w tekście i wybierz odpowiadającą kategorię: ",
+				  "Przydziel intencję zawartą w tekście do jednej z kategorii: "],
 		"output": intent,
 		"categories": list(intent.values())
 	},
 	"intent_score": {
 		"type": "intent_score",
-		"instruction": "Oceń trafność zidentyfikowanej intencji w poniższym tekście i sklasyfikuj intencję na podstawie podanych kategorii: ",
+		"instruction": ["Oceń trafność zidentyfikowanej intencji w poniższym tekście i sklasyfikuj intencję na podstawie podanych kategorii: ",
+				  "Sklasyfikuj trafność identyfikacji intencji i przydziel jej jedną z kategorii: ",
+				  "Skategoryzuj celność ekstrakcji intencji wiadomości i oceń jedną z kategorii: ",
+				  "Sprawdź trafność rozpoznanej intencji w poniższym tekście i sklasyfikuj ją zgodnie z dostępnymi kategoriami: ",
+				  "Dokładnie zweryfikuj intencję w tekście poniżej i przyporządkuj ją do jednej z wyznaczonych kategorii: "],
 		"output": intent_score,
 		"categories": list(intent_score.values())
 	},
 	"grammar_score": {
 		"type": "grammar_score",
-		"instruction": "Oceń poprawność gramatyki w poniższym tekście i sklasyfikuj na podstawie podanych kategorii: ",
+		"instruction": ["Oceń poprawność gramatyki w tekście i sklasyfikuj na podstawie podanych kategorii: ",
+				  "Przeanalizuj poprawność gramatyczną w tekście poniżej i przyporządkuj ją do odpowiedniej kategorii: ",
+				  "Sprawdź, czy gramatyka w tekście poniżej jest poprawna oraz przyporządkuj ją do jednej z kategorii: ",
+				  "Zweryfikuj poprawność gramatyczną w podanym tekście i sklasyfikuj ją zgodnie z dostępnymi kategoriami: ",
+				  "Na podstawie analizy jakości gramatyki, przyporządku tekst do jednej z kategorii: "],
 		"output": grammar_score,
 		"categories": list(grammar_score.values())
 	},
 	"spelling_score": {
 		"type": "spelling_score",
-		"instruction": "Przeanalizuj poniższy tekst i sklasyfikuj ilość błędów w tekście na podstawie podanych kategorii: ",
+		"instruction": ["Przeanalizuj poniższy tekst i sklasyfikuj ilość błędów w tekście na podstawie podanych kategorii: ",
+				  "Sprawdź podany tekst i oceń ilość błędów zgodnie z podanymi kategoriami: ",
+				  "Oceń poprawność podanego teksu i sklasyfikuj go według następujących kategorii: ",
+				  "Zweryfikuj jakość tekstu i przyporządkuj go do jednej z kategorii: ",
+				  "Przypisz podany tekst do jednej z kategorii na podstawie znalezionych w nim błędów: "],
 		"output": spelling_score,
 		"categories": list(spelling_score.values())
 	},
 	"language_identification": {
 		"type": "language_identification",
-		"instruction": "Przeanalizuj poniższy tekst i sklasyfikuj język tego tekstu na podstawie podanych kategorii: ",
+		"instruction": ["Przeanalizuj poniższy tekst i sklasyfikuj język tego tekstu na podstawie podanych kategorii: ",
+				  "Oceń język jakim jest pisany tekst oraz przypisz go do właściwej kategorii: ",
+				  "Sprawdź w jakim języku został stworzony poniższy tekst i sklasyfikuj według kategorii: ",
+				  "Jaki jest język tekstu? Odpowiedź na podstawie dostępnych kategorii: ",
+				  "Przeanalizuj podany tekst i sklasyfikuj jego język mając do dyspozycji kategorie: "],
 		"output": language_identification,
 		"categories": list(language_identification.values())
 	}
 }
 
 ### FUNCTIONS
-def download_and_unzip(url="https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz", 
+def download_and_unzip(url, 
 					   destination_folder='downloaded'):
 	# Create destination folder 
 	os.makedirs(destination_folder, exist_ok=True)
@@ -223,6 +245,18 @@ def load_instructions():
 	print(f"Loaded {len(data)} base instructions")
 	return data
 
+def get_categories(main_category, categories, k=4):
+	x = 0
+	while x != 5:
+		random_categories = random.choices(list(categories), k=5)
+		if main_category not in random_categories:
+			x = len(set(random_categories))
+	
+	random_categories.append(main_category)
+	random.shuffle(random_categories)
+	
+	return random_categories
+
 def create_instructions(data: List[Dict],
 						main_dict: Dict,
 						):
@@ -236,14 +270,33 @@ def create_instructions(data: List[Dict],
 	for type in type_base:
 		for item in data:
 			for worker in item['judgments']:
-				temp['instruction'] = main_dict[type]['instruction']
+
+				categories = get_categories(main_category=main_dict[type]['output'][item[type]], 
+											categories=main_dict[type]['categories'])
+				'''
+				temp = {
+					'instruction': random.choice(main_dict[type]['instruction']),
+					'input': item['utt'],
+					'output': main_dict[type]['output'][item[type]],
+					'categories': main_dict[type]['categories'],
+					'source_name': source_name,
+					'source_url': source_url,
+					'source_description': source_description,
+					'script_name': script_name
+				}
+
+				'''
+				temp['instruction'] = random.choice(main_dict[type]['instruction']) + str(categories)
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[type]['output'][item[type]]
-				temp['categories'] = main_dict[type]['categories']
+				#temp['categories'] = main_dict[type]['categories']
+				#temp['categories'] = categories
 				temp['source_name'] = source_name
 				temp['source_url'] = source_url
 				temp['source_description'] = source_description
 				temp['script_name'] = script_name
+				
+
 				output.append(temp)
 				temp = {}
 	
@@ -256,7 +309,7 @@ def create_instructions(data: List[Dict],
 	for type in type_inner:
 		for item in data:
 			for worker in item['judgments']:
-				temp['instruction'] = main_dict[type]['instruction']
+				temp['instruction'] = random.choice(main_dict[type]['instruction'])
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[type]['output'][worker[type]]
 				temp['categories'] = main_dict[type]['categories']
@@ -273,7 +326,7 @@ def create_instructions(data: List[Dict],
 	print(f"Collected {len(output)} instructions")
 	return output
 
-def remove_duplicates(data):
+def remove_duplicates(data, shuffle=False):
 	seen = set()
 	output = []
 
@@ -289,7 +342,8 @@ def remove_duplicates(data):
 	print(f"Deduplication finished, found {before-after} duplicates")
 	print(f"Final output is {after} instructions")
 
-	random.shuffle(output)
+	if shuffle:
+		random.shuffle(output)
 
 	return output
 
@@ -299,6 +353,7 @@ def save_instructions(instructions, output_dir, json_file='amazon-massive-pl.jso
 		json.dump(instructions, f, indent=4, ensure_ascii=False)
 
 	print(f"Instructions saved successfully to {fpath}")
+
 
 
 ### CONFIG 
@@ -312,7 +367,7 @@ script_name = os.path.basename(__file__)
 
 
 ### MAIN
-download_and_unzip()
+download_and_unzip(url=source_url)
 data = load_instructions()
 instructions = create_instructions(data, main_dict)
 instructions_cleared = remove_duplicates(instructions)
