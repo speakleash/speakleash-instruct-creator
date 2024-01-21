@@ -12,38 +12,38 @@ import requests
 # DICTS
 # Ocena trafności odczytanej intencji
 intent_score = {
-	0: "Intencja nie jest zrozumiała",
-	1: "Intencja jest zrozumiała",
-	2: "To bardzo trafna interpretacja intencji"
+	0: "intencja nie jest zrozumiała",
+	1: "intencja jest zrozumiała",
+	2: "io bardzo trafna interpretacja intencji"
 }
 
 # Ocena składni i gramatyki
 grammar_score = {
-	0: "Nienaturalna gramatyka",  # Completely unnatural (nonsensical, cannot be understood at all)
-	1: "Znaczące błędy w gramatyce",
+	0: "nienaturalna gramatyka",  # Completely unnatural (nonsensical, cannot be understood at all)
+	1: "znaczące błędy w gramatyce",
 	# Severe errors (the meaning cannot be understood and doesn't sound natural in your language)
-	2: "Drobne błędy w gramatyce",
+	2: "drobne błędy w gramatyce",
 	# Some errors (the meaning can be understood, but it doesn't sound natural in your language)
-	3: "Dobra jakość gramatyki",  # Good enough (easily understood and sounds almost natural in your language)
-	4: "Idealna gramatyka"  # Perfect (sounds natural in your language)
+	3: "dobra jakość gramatyki",  # Good enough (easily understood and sounds almost natural in your language)
+	4: "idealna gramatyka"  # Perfect (sounds natural in your language)
 }
 
 # Poprawność 
 spelling_score = {
-	0: "Więcej niż 2 błędy",
+	0: "więcej niż 2 błędy",
 	1: "1 lub 2 błędy",
-	2: "Brak błędów"
+	2: "brak błędów"
 }
 
 # Klasyfikacja języka
 language_identification = {
-	"target": "Język polski",
-	"english": "Język angielski",
-	"other": "Inny język",
-	"target|english": "Język polski i angielski",
-	"target|other": "Język polski i inny",
-	"english|other": "Język angielski i inny",
-	"target|english|other": "Język polski, angielski i inny"
+	"target": "język polski",
+	"english": "język angielski",
+	"other": "inny język",
+	"target|english": "język polski i angielski",
+	"target|other": "język polski i inny",
+	"english|other": "język angielski i inny",
+	"target|english|other": "język polski oraz angielski i inny język"
 }
 
 # Kategorie
@@ -295,7 +295,7 @@ def load_instructions():
 	return data
 
 
-def get_categories_as_string(categories: List, main_category: str = None):
+def get_categories_as_string(categories: List, main_category: str = None, k=4, seed=42):
 	"""
 	Generate a string representation of a list of random categories, including the specified main category.
 
@@ -324,11 +324,14 @@ def get_categories_as_string(categories: List, main_category: str = None):
 
 	if len(categories) > 10 and main_category: 
 		x = 0
-		random_categories = random.choices(list(categories), k=5)
-		while x != 5:
+		
+		while x != k:
+			#random.seed(version=seed)
+			random_categories = random.choices(list(categories), k=k)
 			if main_category not in random_categories:
 				x = len(set(random_categories))
 		random_categories.append(main_category)
+
 	else:
 		random_categories = categories
 	random.shuffle(random_categories)
@@ -336,7 +339,7 @@ def get_categories_as_string(categories: List, main_category: str = None):
 	return output
 
 
-def create_instructions(data: List[Dict], main_dict: Dict):
+def create_instructions(data: List[Dict], main_dict: Dict, seed: int =42):
 
 	"""
 	Create a list of instructions based on input data and a provided main dictionary.
@@ -393,12 +396,12 @@ def create_instructions(data: List[Dict], main_dict: Dict):
 					'script_name': script_name
 				}
 				'''
-
+				#random.seed(version=seed)
 				temp['instruction'] = random.choice(main_dict[typ]['instruction']) + categories
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[typ]['output'][item[typ]]
 
-				# Categories not needed bue to them being included in the main instruction
+				# Categories not needed due to them being included in the main instruction
 				# temp['categories'] = main_dict[type]['categories']
 				# temp['categories'] = categories
 
@@ -423,6 +426,7 @@ def create_instructions(data: List[Dict], main_dict: Dict):
 				categories = get_categories_as_string( 
 					categories=main_dict[typ]['categories'])
 
+				#random.seed(version=seed)
 				temp['instruction'] = random.choice(main_dict[typ]['instruction']) + categories
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[typ]['output'][worker[typ]]
