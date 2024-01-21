@@ -4,6 +4,11 @@ import json
 import random
 from utils.functions import download_file
 
+source_name = os.path.basename(__file__).replace(".py", "") + " clarin-pl-poquad"
+source_url = "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad"
+source_description = "Instrukcje zawierające: tytuł artykułu z Wikipedii,\
+                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź."
+script_name = os.path.basename(__file__)
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, "data")
@@ -52,9 +57,13 @@ def create_instruction(instruction, file_path, json_path):
                 continue
             instructions.append(
                 {
-                 "instruct": instruction,
-                 "input": source + ' ' + row["paragraphs"][0]["context"],
-                 "output": target
+                    "instruct": instruction,
+                    "input": source + ' ' + row["paragraphs"][0]["context"],
+                    "output": target,
+                    "source_name": source_name,
+                    "source_url": source_url,
+                    "source_description": source_description,
+                    "script_name": script_name,
                  }
             )
     random.shuffle(instructions)

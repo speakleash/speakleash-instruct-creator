@@ -4,10 +4,16 @@ import json
 import random
 from utils.functions import download_file
 
-
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(base_dir, "data")
 output_dir = os.path.join(base_dir, "output")
+
+source_name = os.path.basename(__file__).replace(".py", "") + " allegro/klej-dyk"
+source_url = "https://huggingface.co/datasets/allegro/klej-dyk"
+source_description = "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. " \
+                     "odpowiedzi są anotowane jako trafne (1) albo nietrafne (0)."
+
+script_name = os.path.basename(__file__)
 
 if not os.path.exists(data_dir):
     os.makedirs(data_dir)
@@ -39,7 +45,7 @@ def create_instruction(instruction, file_path, json_path):
         source = row['question']
         target = row['answer']
         if row['target'] == 1:
-            instructions.append({"instruct": instruction, "input": source, "output": target})
+            instructions.append({"instruct": instruction, "input": source, "output": target, "source_name": source_name, "source_url": source_url, "source_description": source_description, "script_name": script_name})
         else:
             continue
 
