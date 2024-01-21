@@ -14,7 +14,7 @@ import requests
 intent_score = {
 	0: "intencja nie jest zrozumiała",
 	1: "intencja jest zrozumiała",
-	2: "io bardzo trafna interpretacja intencji"
+	2: "to bardzo trafna interpretacja intencji"
 }
 
 # Ocena składni i gramatyki
