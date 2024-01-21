@@ -181,7 +181,7 @@ def get_answer(error_type: str, element_correct: str) -> str:
     return f"{random.choice(answer_map.get(error_type))}:\n{element_correct}"
 
 
-def crate_dirs() -> None:
+def create_dirs() -> None:
     """
     Create storage directories for both downloaded dataset and created JSON instructions file.
     """
@@ -246,6 +246,6 @@ def create_instruction(file_path: str, json_path: str) -> None:
 
 
 if __name__ == '__main__':
-    crate_dirs()
+    create_dirs()
     file_path, json_path = downloader(SOURCE_URL, FILE)
     create_instruction(file_path, json_path)
