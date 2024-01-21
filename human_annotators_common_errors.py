@@ -10,8 +10,8 @@ from utils.functions import download_file
 # Mandatory dataset data for json objects
 SOURCE_NAME = f"{os.path.basename(__file__).replace('.py', '')}"
 SOURCE_DESCRIPTION = 'Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ' \
-                     'ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autore zestawu ' \
-                     'danych to Ermlab'
+                     'ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu ' \
+                     'danych jest Ermlab'
 
 SOURCE_URL = 'https://github.com/Ermlab/polish-gec-datasets/tree/main/'
 FILE = 'human_annotators_common_errors_10K.jsonl'
@@ -40,7 +40,7 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
 
     :param error_type: Type of the error in the text.
     :param element_incorrect: Incorrect text which contains error.
-    :return: Generated insturction.
+    :return: Generated instruction.
     """
     error_map = {
             'lex': [
@@ -51,7 +51,7 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
                     'Popraw błędy leksykalne, aby tekst był poprawny',
                     'W tekście występują nieprawidłowo użyte słowa, popraw je',
                     'Wyszukaj i popraw wszelkie błędne wyrazy w tekście',
-                    'Usprawnij użycie słownictwa w podanym fragmencie',
+                    'Dostosuj użycie słownictwa w podanym fragmencie',
                     'Dokonaj korekty słów użytych niezgodnie z kontekstem',
                     'Znajdź słowa niepasujące do kontekstu i popraw je',
             ],
@@ -64,44 +64,44 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
                     'Zidentyfikuj błędy w pisowni i napraw je',
                     'Sprawdź tekst pod kątem literówek i popraw je',
                     'Wykryj i popraw wszelkie błędy pisowni w tekście',
-                    'Popraw wszelkie nieprawidłowości w pisowni słów',
+                    'Popraw wszelkie nieprawidłowości w pisowni',
                     'Skoryguj błędy ortograficzne w poniższym fragmencie',
             ],
             'synt': [
                     'Popraw błędy składniowe w podanym tekście:',
-                    'Popraw błędy syntaktyczne'
+                    'Popraw błędy syntaktyczne',
                     'Skoryguj podany tekst, poprawiając błędy składniowe',
                     'Usuń błędy składniowe z poniższego tekstu',
                     'Poniższy tekst zawiera błędy składniowe, usuń je',
                     'Pozbądź się błędów syntaktycznych z poniższego tekstu',
-                    'Znajdź i poraw błędy składniowe w poniższym tekście',
+                    'Znajdź i popraw błędy składniowe w poniższym tekście',
                     'Ten tekst zawiera błędy w składni, popraw je',
                     'Składnia tego tekstu zawiera błędy, pozbądź się ich',
-                    'Spraw aby poniższy tekst nie zawierał błędów składniowych'
+                    'Spraw, aby poniższy tekst nie zawierał błędów składniowych'
             ],
             'flex': [
                     'Popraw błędy związane z błędną odmianą słów',
-                    'Dokonaj korekty błędnych form odmiany słów',
+                    'Dokonaj korekty błędnych form odmiany',
                     'Znajdź i popraw niepoprawne formy słów',
-                    'Skoryguj błędy w odmianie przez przypadki, liczby lub osoby',
+                    'Skoryguj błędy w odmianie przez przypadki, liczby, rodzaje lub osoby',
                     'W tekście występują błędy fleksyjne, napraw je',
                     'Ten tekst zawiera błędy związane z błędną odmianą słów, popraw je',
                     'Znajdź i skoryguj błędy fleksyjne, które znajdują się w poniższym tekście',
                     'Napraw błędne formy słów w danym tekście',
                     'Usuń błędy związane z nieprawidłową odmianą',
-                    'Skoryguj błędne formy słów w podanym tekśćie.',
+                    'Skoryguj błędne formy słów w podanym tekście',
             ],
             'punct': [
                     'Popraw błędy interpunkcyjne',
                     'Napraw błędy w użyciu znaków interpunkcyjnych',
-                    'Znajdź i usunąć błędy w stosowaniu przecinków, kropek itd',
+                    'Znajdź i usuń błędy w stosowaniu przecinków, kropek itd.',
                     'Skoryguj interpunkcję w tekście',
                     'Usuń wszelkie błędy w użyciu znaków interpunkcyjnych',
                     'Popraw błędne użycie znaków interpunkcyjnych w tekście',
                     'Dokonaj korekty interpunkcji w podanym fragmencie',
                     'Znajdź i napraw błędy w stosowaniu przecinków i kropek',
                     'Popraw wszelkie nieprawidłowości w użyciu znaków interpunkcyjnych',
-                    'Skoryguj błędy w użyciu interpunkcji, takie jak przecinki, kropki',
+                    'Skoryguj błędy w użyciu interpunkcji, takie jak przecinki czy kropki',
             ]
     }
 
@@ -123,50 +123,50 @@ def get_answer(error_type: str, element_correct: str) -> str:
                     'Tekst z poprawionymi błędami leksykalnymi prezentuje się następująco',
                     'Naprawiono tekst, usuwając niewłaściwie użyte słowa',
                     'Tekst z niewłaściwie użytym wyrazem wygląda następująco',
-                    'Poprawiono słownictwo w poniższym tekście. Ma on nastepującą postać',
+                    'Poprawiono słownictwo w poniższym tekście. Ma on następującą postać',
                     'Poniższy tekst zawiera już poprawnie użyte słowa',
                     'Naprawiono nieprawidłowo użyte słowa',
                     'Skorygowano błędne wyrazy w podanym tekście',
             ],
             'ort': [
-                    'Oto poprawiona forma tekstu, nie zawierająca błędów ortograficznych',
-                    'Tekst został skorygowany, eliminując błędy w pisown.',
+                    'Oto poprawiona forma tekstu, niezawierająca błędów ortograficznych',
+                    'Tekst poprawiono, eliminując błędy w pisowni',
                     'Naprawiono literówki i błędy pisowni, oto poprawiony tekst',
                     'Tekst pozbawiono błędów ortograficznych, oto jego poprawiona forma',
                     'Tekst z poprawioną pisownią prezentuje się następująco',
                     'Naprawiono błędy pisowni, oto wynik korekty',
                     'Tekst po korekcie ortograficznej brzmi teraz w taki sposób',
-                    'Usunięto nieprawidłowe pisownie słów, oto poprawiony tekst',
+                    'Usunięto nieprawidłową pisownię, oto poprawiony tekst',
                     'Tekst po usunięciu literówek prezentuje się następująco',
                     'Oto tekst po korekcie ortograficznej'
             ],
             'synt': [
-                    'Oto poprawiona forma tekstu, nie zawierająca błędów składniowych',
-                    'Tekst został skorygowany, eliminując błędy syntaktyczne',
+                    'Oto poprawiona forma tekstu, niezawierająca błędów składniowych',
+                    'Tekst poprawiono, eliminując błędy syntaktyczne',
                     'Naprawiono składnię tekstu, oto jego poprawiona forma',
                     'Tekst pozbawiono błędów w konstrukcji zdania, oto wynik korekty',
                     'Tekst z poprawioną składnią prezentuje się następująco',
-                    'Naprawiono błędy w ułożeniu słów, oto poprawiony tekst',
+                    'Naprawiono błędy szyku, oto poprawiony tekst',
                     'Tekst po korekcie syntaktycznej brzmi teraz poprawnie',
-                    'Usunięto błędne ułożenie elementów w zdaniu, oto poprawiony tekst',
-                    'Tekst po usunięciu błędnych składni prezentuje się następująco',
+                    'Usunięto błędny szyk elementów w zdaniu, oto poprawiony tekst',
+                    'Tekst po usunięciu błędów w składni prezentuje się następująco',
                     'Oto tekst po korekcie składniowej'
             ],
             'flex': [
-                    'Oto poprawiona forma tekstu, nie zawierająca błędów fleksyjnych',
-                    'Tekst został skorygowany, eliminując błędy w odmianie słów',
-                    'Naprawiono formy odmiany słów, oto poprawiony tekst',
+                    'Oto poprawiona forma tekstu, niezawierająca błędów fleksyjnych',
+                    'Tekst poprawiono, eliminując błędy w odmianie słów',
+                    'Naprawiono formy gramatyczne, oto poprawiony tekst',
                     'Tekst pozbawiono błędnych końcówek słów, oto wynik korekty',
                     'Tekst z poprawionymi błędami fleksyjnymi prezentuje się następująco',
-                    'Naprawiono błędne odmiany słów, oto poprawiony tekst',
+                    'Naprawiono błędną odmianę, oto poprawiony tekst',
                     'Tekst po korekcie fleksyjnej brzmi teraz poprawnie',
                     'Usunięto nieprawidłowe formy odmiany, oto poprawiony tekst',
                     'Tekst po usunięciu błędnych końcówek prezentuje się następująco',
                     'Oto tekst po korekcie fleksyjnej'
             ],
             'punct': [
-                    'Oto poprawiona forma tekstu, nie zawierająca błędów interpunkcyjnych',
-                    'Tekst został skorygowany, eliminując błędy w interpunkcji',
+                    'Oto poprawiona forma tekstu, niezawierająca błędów interpunkcyjnych',
+                    'Tekst poprawiono, eliminując błędy w interpunkcji',
                     'Naprawiono interpunkcję, oto poprawiony tekst',
                     'Tekst pozbawiono błędnych znaków interpunkcyjnych, oto wynik korekty',
                     'Tekst z poprawioną interpunkcją prezentuje się następująco',
@@ -195,7 +195,7 @@ def crate_dirs() -> None:
     # Create directory for downloading data from server / link
     os.makedirs(data_dir, exist_ok=True)
 
-    # Create directory (if does not exists) for created instructions json files
+    # Create directory (if it does not exist yet) for created instructions json files
     os.makedirs(output_dir, exist_ok=True)
 
 
@@ -207,7 +207,7 @@ def _convert_github_url(git_url: str) -> str:
     :param git_url: Link to the github repository file
     :return: Link to the github repository in raw format, if conditions are met.
     """
-    if 'github' in git_url and '/tree/' in git_url and not 'raw' in git_url:
+    if 'github' in git_url and '/tree/' in git_url and 'raw' not in git_url:
         return git_url.replace('/tree/', '/raw/', 1)
     return git_url
 
@@ -216,7 +216,6 @@ def create_instruction(file_path: str, json_path: str) -> None:
     """
     Create instructions in JSON format from a JSON file and save them in a JSON file.
 
-    :param instruction: The instruction text to be included in the JSON output file.
     :param file_path: The path to the downloaded CSV file.
     :param json_path: The path to the output JSON file.
     """
