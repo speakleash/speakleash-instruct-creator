@@ -8,7 +8,7 @@ from datetime import datetime
 base_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(base_dir, "output")
 data_dir = os.path.join(base_dir, "data")
-version = "0_0_4"
+version = "0_0_5"
 
 generate = False
 
@@ -30,6 +30,7 @@ scipts_to_run.append({"script_name" : "plwiki_random_word_list.py", "author" : "
 scipts_to_run.append({"script_name" : "plwiki_random_word_pos.py", "author" : "Sekon", "category": "NLP_WORD_POS"})
 scipts_to_run.append({"script_name" : "quotes.py", "author" : "Sekon", "category": "NLP_QUOTES"})
 scipts_to_run.append({"script_name" : "vulgar_words.py", "author" : "Sekon", "category": "NLP_VULGAR_DETECTION"})
+scipts_to_run.append({"script_name" : "sentiment_detection.py", "author" : "Sekon", "category": "NLP_SENTIMENT_DETECTION"})
 
 if generate:
     for script in scipts_to_run:

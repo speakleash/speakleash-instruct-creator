@@ -72,3 +72,21 @@ Q&A extraction from SpeakLeash datasets (selected forums)
 IC - IN PROGRESS
 https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
 Polish Analogy Dataset
+
+
+##POMYSŁY
+https://huggingface.co/datasets/WiktorS/polish-news
+Można generować tytułu i abstrakty na podstawie tekstu
+
+
+https://huggingface.co/datasets/ptaszynski/PolishCyberbullyingDataset
+https://huggingface.co/datasets/Paul/hatecheck-polish
+Do wykrywania mowy-nienawiści
+
+
+https://huggingface.co/datasets/klima7/polish-tales
+Bajki wyciągnąłbym kilka kluczowych rzeczowników i powiedział opowiedz mi bajkę o kocie. Trochę zabawy
+
+https://huggingface.co/datasets/sepidmnorozy/Polish_sentiment
+
+
