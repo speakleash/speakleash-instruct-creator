@@ -73,6 +73,10 @@ IC - IN PROGRESS
 https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
 Polish Analogy Dataset
 
+## 11
+MF - IN PROGRESS
+https://github.com/ZILiAT-NASK/BAN-PL/data/BAN-PL_1.zip
+BAN-PL.csv
 
 ##POMYSŁY
 https://huggingface.co/datasets/WiktorS/polish-news
@@ -88,5 +92,6 @@ https://huggingface.co/datasets/klima7/polish-tales
 Bajki wyciągnąłbym kilka kluczowych rzeczowników i powiedział opowiedz mi bajkę o kocie. Trochę zabawy
 
 https://huggingface.co/datasets/sepidmnorozy/Polish_sentiment
+
 
 
