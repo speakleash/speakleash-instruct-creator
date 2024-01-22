@@ -74,7 +74,7 @@ https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
 Polish Analogy Dataset
 
 ## 11
-MF - IN PROGRESS
+MF - DONE
 https://github.com/ZILiAT-NASK/BAN-PL/data/BAN-PL_1.zip
 BAN-PL.csv
 
