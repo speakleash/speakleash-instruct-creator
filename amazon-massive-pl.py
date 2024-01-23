@@ -397,7 +397,7 @@ def create_instructions(data: List[Dict], main_dict: Dict, seed: int =42):
 				}
 				'''
 				#random.seed(version=seed)
-				temp['instruction'] = random.choice(main_dict[typ]['instruction']) + categories
+				temp['instruct'] = random.choice(main_dict[typ]['instruction']) + categories
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[typ]['output'][item[typ]]
 
@@ -427,7 +427,7 @@ def create_instructions(data: List[Dict], main_dict: Dict, seed: int =42):
 					categories=main_dict[typ]['categories'])
 
 				#random.seed(version=seed)
-				temp['instruction'] = random.choice(main_dict[typ]['instruction']) + categories
+				temp['instruct'] = random.choice(main_dict[typ]['instruction']) + categories
 				temp['input'] = item['utt']
 				temp['output'] = main_dict[typ]['output'][worker[typ]]
 				# temp['categories'] = main_dict[typ]['categories']
