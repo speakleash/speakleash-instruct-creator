@@ -1,3 +1,4 @@
+"""Instructions creator based on Emplocity owca dataset."""
 from datasets import load_dataset
 import os
 import random
@@ -11,6 +12,7 @@ SOURCE_URL = "https://huggingface.co/datasets/emplocity/owca"
 SOURCE_DESCRIPTION = "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford."
 
 OUTPUT_DIR = 'output'
+
 
 def create_dirs() -> None:
     """
@@ -26,13 +28,19 @@ def create_dirs() -> None:
     
 
 def download_dataset(dataset: str = "emplocity/owca", split:str = "train") -> pd.DataFrame:
+    """
+    Download and load a dataset to the frame.
+
+    :param dataset: The name or path of the dataset.
+    :param split: The dataset split to download (e.g., "train", "validation", "test").
+    :return: A Pandas DataFrame containing the downloaded dataset.
+    """
     dataset = load_dataset(dataset, split=split)
     
     dataset.set_format('pandas')
     frame = dataset[:]
     
     return frame 
-
 
 
 def create_instruction(frame: pd.DataFrame) -> None:
@@ -43,7 +51,6 @@ def create_instruction(frame: pd.DataFrame) -> None:
     :param json_path: The path to the output JSON file.
     """
 
-   
     instructions = []
 
     for index, row in frame.iterrows():
@@ -70,13 +77,8 @@ def create_instruction(frame: pd.DataFrame) -> None:
     with open(output_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
-        
-
 
 if __name__ == '__main__':
     create_dirs()
     frame = download_dataset()
     create_instruction(frame)
-
-
-
