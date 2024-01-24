@@ -1,3 +1,4 @@
+"""Instructions creator based on EXAMS dataset."""
 from datasets import load_dataset
 import os
 import random
@@ -11,6 +12,7 @@ SOURCE_URL = "https://huggingface.co/datasets/exams"
 SOURCE_DESCRIPTION = "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions."
 
 OUTPUT_DIR = 'output'
+
 
 def create_dirs() -> None:
     """
@@ -26,6 +28,14 @@ def create_dirs() -> None:
     
 
 def download_dataset(dataset: str = "exams", subset:str = "crosslingual_pl", split:str = "train") -> pd.DataFrame:
+    """
+    Download and load a dataset to the frame.
+
+    :param dataset: The name or path of the dataset.
+    :param subset: The subset or category of the dataset to download.
+    :param split: The dataset split to download (e.g., "train", "validation", "test").
+    :return: A Pandas DataFrame containing the downloaded dataset.
+    """
     dataset = load_dataset(dataset, subset, split=split)
     
     dataset.set_format('pandas')
@@ -35,7 +45,12 @@ def download_dataset(dataset: str = "exams", subset:str = "crosslingual_pl", spl
 
 
 def _parse_dataset_row(row):
-    
+    """
+    Parse a row from the dataset and extract input and output.
+
+    :param row: A row from the dataset.
+    :return: A tuple containing input and output strings.
+    """
     question = row['question']['stem']
     choices = row['question']['choices']['text']
     choicesKey = row['question']['choices']['label']
@@ -51,6 +66,7 @@ def _parse_dataset_row(row):
     output = answerKey + ". " + answer[answerKey]
     return input, output
 
+
 def create_instruction(frame: pd.DataFrame) -> None:
     """
     Create instructions in JSON format from a JSON file and save them in a JSON file.
@@ -58,7 +74,6 @@ def create_instruction(frame: pd.DataFrame) -> None:
     :param frame: pandas dataframe with data..
     :param json_path: The path to the output JSON file.
     """
-
     INSTRUCT_LIST = [
         "Podaj odpowiedź na poniższe pytanie.", 
         "Jaka jest prawidłowa odpowiedź?",
@@ -93,13 +108,8 @@ def create_instruction(frame: pd.DataFrame) -> None:
     with open(output_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
-        
-
 
 if __name__ == '__main__':
     create_dirs()
     frame = download_dataset()
     create_instruction(frame)
-
-
-
