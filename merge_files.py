@@ -8,7 +8,7 @@ from datetime import datetime
 base_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = os.path.join(base_dir, "output")
 data_dir = os.path.join(base_dir, "data")
-version = "0_0_5"
+version = "0_0_8"
 
 generate = False
 
@@ -31,6 +31,12 @@ scipts_to_run.append({"script_name" : "plwiki_random_word_pos.py", "author" : "S
 scipts_to_run.append({"script_name" : "quotes.py", "author" : "Sekon", "category": "NLP_QUOTES"})
 scipts_to_run.append({"script_name" : "vulgar_words.py", "author" : "Sekon", "category": "NLP_VULGAR_DETECTION"})
 scipts_to_run.append({"script_name" : "sentiment_detection.py", "author" : "Sekon", "category": "NLP_SENTIMENT_DETECTION"})
+
+scipts_to_run.append({"script_name" : "BAN-PL_hatespeech_detection.py", "author" : "Maria", "category": "NLP_HATESPEECH_DETECTION"})
+scipts_to_run.append({"script_name" : "exams_questions.py", "author" : "Jan.Maria", "category": "KNOWLEDGE_QA"})
+scipts_to_run.append({"script_name" : "human_annotators_common_errors.py", "author" : "Ic", "category": "NLP_CORRECTION"})
+scipts_to_run.append({"script_name" : "ipipan_polqa_questions.py", "author" : "Ic", "category": "KNOWLEDGE_QA"})
+scipts_to_run.append({"script_name" : "emplocity_owca_questions.py", "author" : "Jan.Maria", "category": "KNOWLEDGE_QA"})
 
 if generate:
     for script in scipts_to_run:
@@ -69,9 +75,13 @@ for file in files:
 
         print("Merging file: " + file.upper().replace(".JSON","") + " (" + str(file_counter) + ")")
         new_item = {}
-        new_item['instruct'] = item.get('instruct', 'instruction')
-        new_item['input'] = item['input']
+        new_item['instruct'] = item.get('instruct', item.get('instruction', ''))    
+        new_item['input'] = item.get('input', '')
         new_item['output'] = item['output']
+
+        if new_item['output'].strip() == "":
+            continue
+
         category = item.get('category', get_category(item['script_name']))
 
         print("Category: " + category)
