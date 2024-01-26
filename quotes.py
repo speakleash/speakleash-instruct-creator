@@ -130,6 +130,10 @@ with open(os.path.join(download_dir, "quotes_output.json"), "r", encoding="utf-8
     data = json.load(f)
 
 keywords = {}
+
+# f"Wypisz {quotes_count_in_words} znane cytaty dotyczące {words[0]}.",
+# f"Podaj {quotes_count_in_words} powszechnie znane cytaty o {words[2]}.",
+
 keywords["Zmysły"] = ["zmysłów", "z zmysłami", "zmysłach"]
 keywords["Miłość"] = ["miłości", "z miłością", "miłości"]
 keywords["Życie"] = ["życia", "z życiem", "życiu"]
@@ -139,6 +143,16 @@ keywords["Praca"] = ["pracy", "z pracą", "pracy"]
 keywords["Pieniądze"] = ["pieniędzy", "z pieniędzmi", "pieniędzmi"]
 keywords["Czas"] = ["czasu", "z czasem", "czasie"]
 keywords["Rodzina"] = ["rodziny", "z rodziną", "rodzinie"]
+
+keywords["Mądrość"] = ["mądrości", "z mądrością", "mądrości"]
+keywords["Sukces"] = ["sukcesu", "z sukcesem", "sukcesie"]
+keywords["Przyszłość"] = ["przyszłości", "z przyszłością", "przyszłości"]
+keywords["Wiedza"] = ["wiedzy", "z wiedzą", "wiedzy"]
+keywords["Wolność"] = ["wolności", "z wolnością", "wolności"]
+keywords["Prawda"] = ["prawdy", "z prawdą", "prawdzie"]
+keywords["Wojna"] = ["wojny", "z wojną", "wojnie"]
+keywords["Prawo"] = ["prawa", "z prawem", "prawie"]
+keywords["Zdrowie"] = ["zdrowia", "ze zdrowiem", "zdrowiu"]
 
 # Wypisz dwa znane cytaty dotyczące miłości
 

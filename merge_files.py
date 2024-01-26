@@ -11,10 +11,11 @@ data_dir = os.path.join(base_dir, "data")
 version = "0_0_8"
 
 generate = False
+exclude_tests = True
 
 scipts_to_run = []
 scipts_to_run.append({"script_name" : "allegro_klej_dyk_questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_QA"})
-scipts_to_run.append({"script_name" : "legal-questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_LEGAL_QA"})
+scipts_to_run.append({"script_name" : "legal-questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_LEGAL_QA", "test" : True})
 scipts_to_run.append({"script_name" : "polish-summaries-corpus.py", "author" : "Ic & MariaF", "category": "NLP_SUMMARIZATION"})
 scipts_to_run.append({"script_name" : "polqa_questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "poquad_text_extraction.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_QA"})
@@ -37,6 +38,7 @@ scipts_to_run.append({"script_name" : "exams_questions.py", "author" : "Jan.Mari
 scipts_to_run.append({"script_name" : "human_annotators_common_errors.py", "author" : "Ic", "category": "NLP_CORRECTION"})
 scipts_to_run.append({"script_name" : "ipipan_polqa_questions.py", "author" : "Ic", "category": "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "emplocity_owca_questions.py", "author" : "Jan.Maria", "category": "KNOWLEDGE_QA"})
+scipts_to_run.append({"script_name" : "polish-news-summarization.py", "author" : "Jan.Maria", "category": "NLP_SUMMARIZATION"})
 
 if generate:
     for script in scipts_to_run:
@@ -53,6 +55,11 @@ def get_category(script_name):
     for script in scipts_to_run:
         if script["script_name"] == script_name:
             return script["category"]
+        
+def get_test(script_name):
+    for script in scipts_to_run:
+        if script["script_name"] == script_name:
+            return script.get("test", False)
 
 print("Merging files...")
 
@@ -79,10 +86,18 @@ for file in files:
         new_item['input'] = item.get('input', '')
         new_item['output'] = item['output']
 
-        if new_item['output'].strip() == "":
+
+        if not new_item.get('output',''):
+            continue
+
+        if new_item['output'].strip() == '':
             continue
 
         category = item.get('category', get_category(item['script_name']))
+        test = get_test(item['script_name'])
+
+        if test and exclude_tests:
+            continue
 
         print("Category: " + category)
 
