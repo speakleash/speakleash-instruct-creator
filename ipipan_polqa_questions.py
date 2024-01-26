@@ -1,4 +1,9 @@
-"""Instructions creator based on polqa dataset"""
+"""
+Instructions creator based on polqa dataset
+
+Removed test subset in Pull Request #15
+"""
+
 import json
 import os
 import random
@@ -85,7 +90,7 @@ def create_instruction(instruction: str, file_path: str, json_path: str) -> None
 
 
 if __name__ == '__main__':
-    files = ['test', 'train', 'valid']
+    files = ['train', 'valid']
     for file in files:
         file_path, json_path = downloader(file)
         create_instruction("Odpowiedz na pytanie.", file_path, json_path)
