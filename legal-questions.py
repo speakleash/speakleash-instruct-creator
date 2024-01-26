@@ -1,3 +1,8 @@
+"""
+Instructions creator based on legal-questions
+
+DISCLAIMER: the dataset is based on the test subset, so it was removed from instructions merging in the PR#15
+"""
 import os
 import pandas as pd
 import json
