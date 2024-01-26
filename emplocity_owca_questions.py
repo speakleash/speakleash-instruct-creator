@@ -32,7 +32,7 @@ def download_dataset(dataset: str = "emplocity/owca", split:str = "train") -> pd
     Download and load a dataset to the frame.
 
     :param dataset: The name or path of the dataset.
-    :param split: The dataset split to download (e.g., "train", "validation", "test").
+    :param split: The dataset split to download (e.g., "train", "validation").
     :return: A Pandas DataFrame containing the downloaded dataset.
     """
     dataset = load_dataset(dataset, split=split)

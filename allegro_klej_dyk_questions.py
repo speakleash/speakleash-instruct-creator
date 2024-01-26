@@ -1,3 +1,9 @@
+"""
+Instructions creator based on allegro klej-dyk dataset
+
+Removed test subset in Pull Request #15
+"""
+
 import os
 import pandas as pd
 import json
@@ -21,12 +27,13 @@ if not os.path.exists(data_dir):
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
-file_path_1 = download_file(
-    "https://huggingface.co/datasets/allegro/klej-dyk/resolve/main/test.csv?download=true",
-    data_dir,
-    "allegro-klej-dyk-test.csv"
-)
-json_path_1 = os.path.join(output_dir, "allegro-klej-dyk_test.json")
+# Removed in Pull Request #15
+# file_path_1 = download_file(
+#     "https://huggingface.co/datasets/allegro/klej-dyk/resolve/main/test.csv?download=true",
+#     data_dir,
+#     "allegro-klej-dyk-test.csv"
+# )
+# json_path_1 = os.path.join(output_dir, "allegro-klej-dyk_test.json")
 
 file_path_2 = download_file(
     "https://huggingface.co/datasets/allegro/klej-dyk/resolve/main/train.csv?download=true",
@@ -55,5 +62,5 @@ def create_instruction(instruction, file_path, json_path):
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
 
-create_instruction("Odpowiedz na pytanie.", file_path_1, json_path_1)
+# create_instruction("Odpowiedz na pytanie.", file_path_1, json_path_1) # Removed in Pull Request #15
 create_instruction("Odpowiedz na pytanie.", file_path_2, json_path_2)
