@@ -81,4 +81,8 @@ def create_instruction(frame: pd.DataFrame) -> None:
 if __name__ == '__main__':
     create_dirs()
     frame = download_dataset()
+    
+    #skip rows with empty output
+    frame = frame[frame.output.str.len() > 0]
+
     create_instruction(frame)
