@@ -82,7 +82,7 @@ BAN-PL.csv
 IC - IN PROGRESS 
 https://github.com/Ermlab/polish-gec-datasets/tree/main
 
-##POMYSŁY
+## POMYSŁY
 https://huggingface.co/datasets/WiktorS/polish-news
 Można generować tytułu i abstrakty na podstawie tekstu
 
