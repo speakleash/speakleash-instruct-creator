@@ -1,4 +1,4 @@
-"""Generate samples of the JSON files insturctions."""
+"""Generate samples of the JSON files instructions."""
 import os
 import json
 
