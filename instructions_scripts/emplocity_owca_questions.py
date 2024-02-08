@@ -21,7 +21,7 @@ SOURCE_DESCRIPTION = "The OWCA dataset is a Polish-translated dataset of instruc
 OUTPUT_DIR = 'output'
 
 
-def create_dirs() -> None:
+def create_dirs() -> str:
     """
     Create storage directories for both downloaded dataset and created JSON instructions file.
     """
@@ -32,6 +32,7 @@ def create_dirs() -> None:
 
     # Create directory (if it does not exist yet) for created instructions json files
     os.makedirs(output_dir, exist_ok=True)
+    return output_dir
     
 
 def download_dataset(dataset: str = "emplocity/owca", split:str = "train") -> pd.DataFrame:
@@ -50,7 +51,7 @@ def download_dataset(dataset: str = "emplocity/owca", split:str = "train") -> pd
     return frame 
 
 
-def create_instruction(frame: pd.DataFrame) -> None:
+def create_instruction(frame: pd.DataFrame, output_path: str) -> None:
     """
     Create instructions in JSON format from a JSON file and save them in a JSON file.
 
@@ -78,18 +79,18 @@ def create_instruction(frame: pd.DataFrame) -> None:
     # Randomly change the order of the elements
     random.shuffle(instructions)
 
-    output_path = os.path.join(OUTPUT_DIR, SCRIPT_NAME.replace(".py",".json"))
+    final_output_path = os.path.join(output_path, SCRIPT_NAME.replace(".py",".json"))
     
     # Write prepared instructions to the output file
-    with open(output_path, "w", encoding='utf-8') as f:
+    with open(final_output_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
 
 if __name__ == '__main__':
-    create_dirs()
+    output_path = create_dirs()
     frame = download_dataset()
     
     #skip rows with empty output
     frame = frame[frame.output.str.len() > 0]
 
-    create_instruction(frame)
+    create_instruction(frame, output_path)

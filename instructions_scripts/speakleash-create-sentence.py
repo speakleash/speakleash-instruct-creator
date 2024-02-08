@@ -69,12 +69,6 @@ for item in data:
         
 
 random.shuffle(instructions)
-with open(os.path.join(output_dir, "speakleash-create-question.json"), "w", encoding='utf-8') as f:
+with open(os.path.join(output_dir, "speakelash-create-sentence.json"), "w", encoding='utf-8') as f:
     json.dump(instructions, f, indent=4, ensure_ascii=False)
 print("Instructions: " + str(len(instructions)), counter)
-
-
-
-
-
-

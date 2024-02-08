@@ -58,7 +58,7 @@ def _convert_github_url(git_url: str) -> str:
     return git_url
 
 
-def download_and_extract(download_url: str, file: str, password: str) -> tuple:
+def download_and_extract(download_url: str, file: str, password: str, data_dir: str, output_dir: str) -> tuple:
     """
     Download dataset file, return its file path and corresponding JSON file path.
 
@@ -68,11 +68,13 @@ def download_and_extract(download_url: str, file: str, password: str) -> tuple:
     :return: A tuple containing path to downloaded file and output JSON file.
     """
     download_url = _convert_github_url(download_url)
-    file_path = download_file(f"{download_url}/{file}", DATA_DIR, file)
+    file_path = download_file(f"{download_url}/{file}", data_dir, file)
     with ZipFile(file_path, mode='r') as zf:
-        zf.extract(path=DATA_DIR, member=MEMBER_FILE, pwd=bytes(password, 'utf-8'))
-    updated_file_path = f'{DATA_DIR}/{MEMBER_FILE}'
-    json_path = os.path.join(OUTPUT_DIR, 'BAN-PL.json')
+        zf.extract(path=data_dir, member=MEMBER_FILE, pwd=bytes(password, 'utf-8'))
+    updated_file_path = f'{data_dir}/{MEMBER_FILE}'
+    json_path = os.path.join(output_dir, 'BAN-PL.json')
+    print(f'---- json_path = {json_path}')
+    print(f'---- updated_file_path = {updated_file_path}')
     return updated_file_path, json_path
 
 
@@ -103,5 +105,5 @@ def create_instruction(file_path, json_path):
 
 if __name__ == '__main__':
     _data_dir, _output_dir = create_dirs()
-    _file_path, _json_path = download_and_extract(SOURCE_URL, FILE, PASSWORD)
+    _file_path, _json_path = download_and_extract(SOURCE_URL, FILE, PASSWORD, _data_dir, _output_dir)
     create_instruction(_file_path, _json_path)

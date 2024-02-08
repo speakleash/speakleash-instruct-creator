@@ -18,10 +18,8 @@ source_description = "Instrukcje powstały podstawie cytatów z polskiej Wikicyt
 instruction_limit = 150000
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-data_dir = get_dir_path("data") or os.path.join(base_dir, "data")
 output_dir = get_dir_path("output") or os.path.join(base_dir, "output")
-replicate_to = os.path.join(base_dir, "datasets")
-download_dir = os.path.join(base_dir, "download")
+download_dir = get_dir_path("data") or os.path.join(base_dir, "data")
 
 url = "http://instruct.speakleash.space/raw/quotes_output.json"
 

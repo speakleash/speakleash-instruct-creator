@@ -1,5 +1,4 @@
 import os
-from utils.functions import get_dir_path
 from speakleash import Speakleash
 import random
 import json

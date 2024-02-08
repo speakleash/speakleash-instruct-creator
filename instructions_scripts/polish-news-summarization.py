@@ -21,7 +21,7 @@ SOURCE_DESCRIPTION = "This dataset contains more than 250k articles obtained fro
 OUTPUT_DIR = 'output'
 
 
-def create_dirs() -> None:
+def create_dirs() -> str:
     """
     Create storage directories for both downloaded dataset and created JSON instructions file.
     """
@@ -32,6 +32,7 @@ def create_dirs() -> None:
 
     # Create directory (if it does not exist yet) for created instructions json files
     os.makedirs(output_dir, exist_ok=True)
+    return output_dir
     
 
 def download_dataset(dataset: str = "WiktorS/polish-news", split:str = "train") -> pd.DataFrame:
@@ -51,7 +52,7 @@ def download_dataset(dataset: str = "WiktorS/polish-news", split:str = "train") 
     return frame 
 
 
-def create_instruction(frame: pd.DataFrame) -> None:
+def create_instruction(frame: pd.DataFrame, output_dir: str) -> None:
     """
     Create instructions in JSON format from a dataframe and save them in a JSON file.
 
@@ -87,7 +88,7 @@ def create_instruction(frame: pd.DataFrame) -> None:
     # Randomly change the order of the elements
     random.shuffle(instructions)
 
-    output_path = os.path.join(OUTPUT_DIR, SCRIPT_NAME.replace(".py",".json"))
+    output_path = os.path.join(output_dir, SCRIPT_NAME.replace(".py",".json"))
     
     # Write prepared instructions to the output file
     with open(output_path, "w", encoding='utf-8') as f:
@@ -95,6 +96,6 @@ def create_instruction(frame: pd.DataFrame) -> None:
 
 
 if __name__ == '__main__':
-    create_dirs()
+    output_dir = create_dirs()
     frame = download_dataset()
-    create_instruction(frame)
+    create_instruction(frame, output_dir)

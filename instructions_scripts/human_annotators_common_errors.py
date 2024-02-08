@@ -25,20 +25,6 @@ OUTPUT_DIR = 'output'
 SCRIPT_NAME = os.path.basename(__file__)
 
 
-def downloader(download_url: str, file: str) -> tuple:
-    """
-    Download dataset file, return its file path and corresponding JSON file path.
-
-    :param download_url: Url address of the dataset file.
-    :param file: The name of the dataset file to be downloaded.
-    :return: A tuple containing path to downloaded file and output JSON file.
-    """
-    download_url = _convert_github_url(download_url)
-    file_path = download_file(f"{download_url}/{file}", DATA_DIR, file)
-    json_path = os.path.join(OUTPUT_DIR, f"{file}")
-    return file_path, json_path
-
-
 def get_instruct(error_type: str, element_incorrect: str) -> str:
     """
     Generate instruct based on the provided error and correct, input text.
@@ -185,6 +171,19 @@ def get_answer(error_type: str, element_correct: str) -> str:
 
     return f"{random.choice(answer_map.get(error_type))}:\n{element_correct}"
 
+def downloader(download_url: str, file: str, data_dir:str, output_dir: str) -> tuple:
+    """
+    Download dataset file, return its file path and corresponding JSON file path.
+
+    :param download_url: Url address of the dataset file.
+    :param file: The name of the dataset file to be downloaded.
+    :return: A tuple containing path to downloaded file and output JSON file.
+    """
+    download_url = _convert_github_url(download_url)
+    file_path = download_file(f"{download_url}/{file}", data_dir, file)
+    json_path = os.path.join(output_dir, f"{file}")
+    return file_path, json_path
+
 
 def create_dirs() -> None:
     """
@@ -202,6 +201,7 @@ def create_dirs() -> None:
 
     # Create directory (if it does not exist yet) for created instructions json files
     os.makedirs(output_dir, exist_ok=True)
+    return data_dir, output_dir
 
 
 def _convert_github_url(git_url: str) -> str:
@@ -251,6 +251,6 @@ def create_instruction(file_path: str, json_path: str) -> None:
 
 
 if __name__ == '__main__':
-    create_dirs()
-    file_path, json_path = downloader(SOURCE_URL, FILE)
+    data_dir, output_dir = create_dirs()
+    file_path, json_path = downloader(SOURCE_URL, FILE, data_dir, output_dir)
     create_instruction(file_path, json_path)
