@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: pozostawali",
+        "input": "",
+        "output": "Forma podstawowa dla słowa pozostawali to: pozostawać",
+        "source_name": "speakleash_plwiki_lemmat_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "wiki-lemmat-words.py"
+    },
+    {
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: Berdyczowie",
+        "input": "",
+        "output": "Forma podstawowa dla słowa Berdyczowie to: Berdyczowa",
+        "source_name": "speakleash_plwiki_lemmat_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "wiki-lemmat-words.py"
+    },
+    {
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: Dziejów",
+        "input": "",
+        "output": "Forma podstawowa dla słowa Dziejów to: Dzieje",
+        "source_name": "speakleash_plwiki_lemmat_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "wiki-lemmat-words.py"
+    }
+]

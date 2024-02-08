@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Czy potrafisz określić, jaką częścią mowy jest to słowo?",
+        "input": "grab",
+        "output": "rzeczownik",
+        "source_name": "plwiki_random_word_pos",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "plwiki_random_word_pos.py"
+    },
+    {
+        "instruct": "Czy jesteś w stanie zidentyfikować, jaką częścią mowy jest dane słowo?",
+        "input": "Leczniczo",
+        "output": "przymiotnik",
+        "source_name": "plwiki_random_word_pos",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "plwiki_random_word_pos.py"
+    },
+    {
+        "instruct": "Czy wiesz, jaką częścią mowy jest dane słowo?",
+        "input": "agnostykiem",
+        "output": "rzeczownik",
+        "source_name": "plwiki_random_word_pos",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "plwiki_random_word_pos.py"
+    }
+]

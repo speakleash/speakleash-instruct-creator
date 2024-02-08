@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Udziel odpowiedzi na pytanie.",
+        "input": "W pompach ciepła typu split czynnościom konserwacyjnym nie podlega\nA. parownik.\nB. filtr w układzie wodnym.\nC. obudowa pompy ciepła.\nD. tacka skroplin.",
+        "output": "C. obudowa pompy ciepła.",
+        "source_name": "exams_questions",
+        "source_url": "https://huggingface.co/datasets/exams",
+        "source_description": "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions.",
+        "script_name": "exams_questions.py"
+    },
+    {
+        "instruct": "Jaka jest prawidłowa odpowiedź?",
+        "input": "Aby zapewnić stały dostęp do wody pojedynczym kwiatom cymbidium, wykorzystuje się\nA. fiolki florystyczne.\nB. hydrożele.\nC. kostki lodu.\nD. taśmy kauczukowe.",
+        "output": "A. fiolki florystyczne.",
+        "source_name": "exams_questions",
+        "source_url": "https://huggingface.co/datasets/exams",
+        "source_description": "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions.",
+        "script_name": "exams_questions.py"
+    },
+    {
+        "instruct": "Jaka jest prawidłowa odpowiedź?",
+        "input": "Natarcie to forma działań gaśniczych polegająca na\nA. podejmowaniu działań w stosunku do obiektów zagrożonych przez ognie lotne, wybuchy\nB. oddziaływaniu określonymi środkami na obiekty zagrożone pożarem.\nC. zmniejszaniu szybkości rozprzestrzeniania się pożaru i obronę obiektów położonych bezpośrednio przy jego froncie.\nD. oddziaływaniu określonymi środkami na ognisko pożaru.",
+        "output": "D. oddziaływaniu określonymi środkami na ognisko pożaru.",
+        "source_name": "exams_questions",
+        "source_url": "https://huggingface.co/datasets/exams",
+        "source_description": "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions.",
+        "script_name": "exams_questions.py"
+    }
+]

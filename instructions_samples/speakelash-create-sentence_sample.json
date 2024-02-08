@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: historia, lubicie, dobry.",
+        "input": "",
+        "output": "Przykładowe pytania: Lubicie jRPG i zastanawiacie się w co teraz zagrać, a może lubicie dobre historie i japoński klimat, ale nigdy nie mieliście do czynienia z grami tego typu?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    },
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: zakończyć, przygoda, kulinarny.",
+        "input": "",
+        "output": "Przykładowe pytania: Jak zakończyła się jego kulinarna przygoda w tomaszowskiej restauracji?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    },
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: miejsce, szukasz, idealny.",
+        "input": "",
+        "output": "Przykładowe pytania: Szukasz idealnego miejsca na ferie czy weekendowy wypoczynek?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    }
+]
