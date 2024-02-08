@@ -30,7 +30,7 @@ create_directory(merged_instructions_path, output_dir, data_dir)
 
 version = "0_0_8"
 
-generate = True
+generate = False
 exclude_tests = True
 
 scipts_to_run = []
