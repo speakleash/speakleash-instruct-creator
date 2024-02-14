@@ -43,15 +43,13 @@ instructions = []
 for item in data:
     txt, meta = item
     quality = meta.get("quality", "")
-    print(f'---- quality = {quality}')
     categories = meta.get("category", {})
-    print(f'---- categories = {categories}')
     category, pp = best_category(categories, 95)
 
-    if category.lower().strip() in ["akwarystyka","astronomia"]:
+    if category and category.lower().strip() in ["akwarystyka", "astronomia"]:
         continue
 
-    if quality.upper() == "HIGH" and category is not None: 
+    if quality.upper() == "HIGH" and category:
         counter += 1
         random.shuffle(prompts)
         outputs = []
