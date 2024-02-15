@@ -1,18 +1,20 @@
-import os
-import pandas as pd
 import json
+import os
 import random
+from zipfile import ZipFile
+
+import pandas as pd
 
 from utils.functions import download_file
-from zipfile import ZipFile
 
 try:
     from utils.functions import get_dir_path
 except ImportError as e:
     print(f'Error: {e}')
+
+
     def get_dir_path(directory):
         return None
-
 
 SOURCE_NAME = os.path.basename(__file__).replace(".py", "") + "BAN-PL.csv"
 SOURCE_URL = "https://github.com/ZILiAT-NASK/BAN-PL/tree/main/data"
@@ -73,19 +75,17 @@ def download_and_extract(download_url: str, file: str, password: str, data_dir: 
         zf.extract(path=data_dir, member=MEMBER_FILE, pwd=bytes(password, 'utf-8'))
     updated_file_path = f'{data_dir}/{MEMBER_FILE}'
     json_path = os.path.join(output_dir, 'BAN-PL.json')
-    print(f'---- json_path = {json_path}')
-    print(f'---- updated_file_path = {updated_file_path}')
     return updated_file_path, json_path
 
 
 def create_instruction(file_path, json_path):
     instr_list = [
-        "Oceń, czy te treści są szkodliwe",
-        "Określ, czy ten tekst jest nieodpowiedni",
-        "Czy dostęp do tego tekstu powinien być w jakiś sposób ograniczony?",
-        "Czy ten tekst zawiera drastyczne lub nieodpowiednie treści?",
-        "Czy ten tekst może zawierać szkodliwe treści?",
-        "Czy ten tekst jest nieodpowiedni dla dzieci i osób wrażliwych?"
+            "Oceń, czy te treści są szkodliwe",
+            "Określ, czy ten tekst jest nieodpowiedni",
+            "Czy dostęp do tego tekstu powinien być w jakiś sposób ograniczony?",
+            "Czy ten tekst zawiera drastyczne lub nieodpowiednie treści?",
+            "Czy ten tekst może zawierać szkodliwe treści?",
+            "Czy ten tekst jest nieodpowiedni dla dzieci i osób wrażliwych?"
     ]
     instruction = f"{random.choice(instr_list)}"
     instructions = []
@@ -97,7 +97,16 @@ def create_instruction(file_path, json_path):
             target = "Tak"
         else:
             target = "Nie"
-        instructions.append({"instruct": instruction, "input": source, "output": target})
+        instructions.append({
+                "instruct": instruction,
+                "input": source,
+                "output": target,
+                "source_name": SOURCE_NAME,
+                "source_url": SOURCE_URL,
+                "source_description": SOURCE_DESCRIPTION,
+                "script_name": SCRIPT_NAME
+        })
+
     random.shuffle(instructions)
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
