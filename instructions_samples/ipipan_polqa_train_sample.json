@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Jak nazywa się zewnętrzna warstwa półkul mózgowych?",
+        "output": "Półkule mózgu u niższych gatunków nie mają dużych rozmiarów, zaś kora mózgowa – skupisko ciał komórkowych neuronów pokrywające półkule – jest gładka. Oglądając mózgowie takich zwierząt, uwagę przykuwają znajdujące się do przodu opuszki węchowe, mające względnie znaczne rozmiary w stosunku do rozmiarów całego mózgowia. Podobnie śródmózgowie, tworzące tzw. płaty wzrokowe, jest wyraźnie widoczne (zob. rysunek obok – mózgowie żaby).",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Czy utwór „Mikołaja Doświadczyńskiego przypadki” Ignacego Krasickiego napisany jest wierszem, czy prozą?",
+        "output": "Mikołaja Doświadczyńskiego przypadki – powieść Ignacego Krasickiego, datowana przez autora na 26 lutego 1775, opublikowana 15 marca 1776 w wydawnictwie Michała Grölla. Utwór uznawany jest za pierwszą polską powieść.",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "W którym europejskim mieście znajduje się lotnisko Szeremietiewo?",
+        "output": "Aerofłot ma główną siedzibę w Centralnym okręgu administracyjnym Moskwy, a hub linii lotniczej to Międzynarodowy Port Lotniczy Moskwa-Szeremietiewo.",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    }
+]

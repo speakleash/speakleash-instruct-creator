@@ -1,0 +1,26 @@
+[
+    {
+        "instruct": "Pozbądź się błędów syntaktycznych z poniższego tekstu:\nŻadnych map, notatek, politycznych druków, materiałów w dorosłych.",
+        "output": "Oto tekst po korekcie składniowej:\nŻadnych map, notatek, politycznych druków, materiałów dla dorosłych.",
+        "source_name": "human_annotators_common_errors",
+        "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
+        "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
+        "script_name": "human_annotators_common_errors.py"
+    },
+    {
+        "instruct": "Dostosuj użycie słownictwa w podanym fragmencie:\nOddział ściśle współpracował z fajnym sztabem czwartej grupy operacyjnej w Mereczu na Litwie podległej Białoruskiej Partii Socjalistów-Rewolucjonistów, która dążyła do utworzenia niezależnej Białorusi.",
+        "output": "Poprawiono słownictwo w poniższym tekście. Ma on następującą postać:\nOddział ściśle współpracował z tajnym sztabem czwartej grupy operacyjnej w Mereczu na Litwie podległej Białoruskiej Partii Socjalistów-Rewolucjonistów, która dążyła do utworzenia niezależnej Białorusi.",
+        "source_name": "human_annotators_common_errors",
+        "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
+        "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
+        "script_name": "human_annotators_common_errors.py"
+    },
+    {
+        "instruct": "Usuń niewłaściwe słownictwo z tekstu:\n– Tak właśnie posiedział.",
+        "output": "Poniższy tekst zawiera już poprawnie użyte słowa:\n– Tak właśnie powiedział.",
+        "source_name": "human_annotators_common_errors",
+        "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
+        "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
+        "script_name": "human_annotators_common_errors.py"
+    }
+]

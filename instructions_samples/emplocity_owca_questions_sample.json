@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Dokonaj edycji następującego zdania: \"Dzisiaj zrobiłem dużo zakupów online.\" \n\nMożliwe warianty poprawki:\n\n- Dzisiaj dokonałem wielu zakupów w sieci.\n- W dzisiejszym dniu zrobiłem wiele zakupów przez internet.\n- Dziś przeprowadziłem wiele zakupów online.",
+        "input": "Dziś zrobiłam spore zakupy przez internet.",
+        "output": "Dzisiaj zrobiłem dużo zakupów online i zaoszczędziłem sporo pieniędzy.",
+        "source_name": "emplocity_owca_questions",
+        "source_url": "https://huggingface.co/datasets/emplocity/owca",
+        "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
+        "script_name": "emplocity_owca_questions.py"
+    },
+    {
+        "instruct": "Proszę wyjaśnić podaną równość matematyczną.",
+        "input": "X = Y/( (1+Z)^n)",
+        "output": "Równanie X = Y/( (1+Z)^n) mówi nam, że X jest równy stosunkowi Y do (1+Z) podniesionego do potęgi n. Innymi słowy, obliczamy go poprzez podzielenie Y przez (1+Z) podniesione do potęgi n.",
+        "source_name": "emplocity_owca_questions",
+        "source_url": "https://huggingface.co/datasets/emplocity/owca",
+        "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
+        "script_name": "emplocity_owca_questions.py"
+    },
+    {
+        "instruct": "Proszę przepisać poniższy akapit w sposób bardziej zwięzły.",
+        "input": "Pieniądze sprawiają, że świat się kręci, mówią, i to prawda, że mają ogromny wpływ na nasze życie i to, jak je przeżywamy. Pieniądze mogą decydować o tym, gdzie mieszkasz, jaki rodzaj edukacji otrzymujesz, a nawet kogo poślubisz. Pieniądze mogą nie kupić szczęścia, ale mają ogromny wpływ na jakość życia, które prowadzisz.",
+        "output": "Pieniądze są ważnym czynnikiem determinującym styl życia: wpływają na takie czynniki jak miejsce zamieszkania, edukację i partnerów. Chociaż pieniądze niekoniecznie przynoszą szczęście, niewątpliwie mają duży wpływ na jakość życia.",
+        "source_name": "emplocity_owca_questions",
+        "source_url": "https://huggingface.co/datasets/emplocity/owca",
+        "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
+        "script_name": "emplocity_owca_questions.py"
+    }
+]

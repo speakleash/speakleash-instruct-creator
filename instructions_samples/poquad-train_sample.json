@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "W jakiej kategorii przyznano Oscara produkcji zatytułowanej Charakter? W 1993 wziął udział w pierwszej części obliczonego na sześć odcinków cyklu Outsider Jana Jakuba Kolskiego, z którego ostatecznie powstał jedynie film Magneto. Znalazł się w obsadzie holenderskiego dramatu Mike’a van Diema Charakter (1997), obsypanego wieloma nagrodami na całym świecie, w tym Oscara dla najlepszego filmu nieanglojęzycznego. Waldemar Krzystek zaangażował go do roli porucznika Szczerby w przebojowej Małej Moskwie (2008). Zagrał potem w Helu (2009) Kingi Dębskiej, komedii sensacyjnej Ostatnia akcja (2009) Michała Rogalskiego, Świnkach (2009) Roberta Glińskiego, Kołysance (2010) Juliusza Machulskiego, Różyczce (2010) Jana Kidawy-Błońskiego, Ostatnim piętrze (2012) Tadeusza Króla, Hardkor Disko (2014) Krzysztofa Skoniecznego, Służb specjalnych (2014) Patryka Vegi i Wołyniu (2016) Wojciecha Smarzowskiego. Za rolę Wiktora w ekranizacji Made in Poland (2010) odebrał Złote Lwy w Gdyni.",
+        "output": "najlepszy film nieanglojęzyczny",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    },
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Czy susły perełkowate zapadają w sen zimowy? Zimę suseł perełkowany spędza w stanie hibernacji. Susły zimują samotnie, każdy w oddzielnej norze. Impulsem zewnętrznym hibernacji jest obniżenie się temperatury otoczenia do 10 °C. Dzięki okresowemu spowolnieniu procesów metabolicznych temperatura ciała obniża się do 2,8 °C, częstotliwość pracy serca zmniejsza się z 300 do 4–7 skurczów na minutę, a aktywność płuc spada nawet do 1 oddechu na minutę. Nerki i pozostałe narządy wewnętrzne także spowalniają pracę – aktywność ruchowa zamiera. Na czas hibernacji suseł zwija się w kłębek i chowa głowę oraz łapy pod tułowiem. Śpi przez 6 miesięcy, rzadko się budząc. Śmiertelność susłów w czasie zimy jest duża. Może być skutkiem wyjątkowo ostrej, ale także wyjątkowo łagodnej zimy. Gdy temperatura otoczenia jest za wysoka, suseł zbyt często się przebudza, co skutkuje znaczną redukcją tkanki tłuszczowej brunatnej i w konsekwencji szybkim zmniejszaniem zapasów energetycznych organizmu. Badania przeprowadzone w latach 1982–1983 wykazały, że między sierpniem a majem w kolonii w rezerwacie Popówka zginęło 32% susłów. Badania z lat 1961–66 wykazały śmiertelność susłów z kolonii w Sławęcinie na poziomie 63%.",
+        "output": "tak",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    },
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Co wydarzyło się w marcu 1940 roku? 6 marca 1940 został postrzelony w szczękę. Pocisk odbił się po uderzeniu i opuścił jego głowę. Zanim stracił przytomność, zdążył jeszcze zastrzelić radzieckiego żołnierza, który go zranił. Jeden z żołnierzy, którzy odnosili go do punktu opatrunkowego, opowiadał, iż „brakowało mu połowy głowy”. Odzyskał przytomność 13 marca, w dzień zawarcia pokoju. Wkrótce po wojnie marszałek Carl Gustaf Mannerheim awansował go z rangi kaprala do stopnia podporucznika. Nikt inny w historii Finlandii nie został awansowany tak wysoko w tak krótkim czasie.",
+        "output": "został postrzelony w szczękę",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    }
+]
