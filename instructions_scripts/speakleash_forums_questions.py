@@ -17,6 +17,7 @@ except ImportError as e:
     def get_dir_path(directory):
         return None
 
+
 source_name = os.path.basename(__file__).replace(".py", "") + " speakleash_forums_questions"
 source_url = "skrypt długo się generuje, paczka przesłana ręcznie"
 source_description = "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatycznie" \
@@ -25,6 +26,7 @@ PROJECTS = [
     "forum_forum_wszystkodlawnetrza_pl_corpus",
     "forum_ezoforum_pl_corpus",
 ]
+
 LIMIT = 4000
 TOKENIZER = AutoTokenizer.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
 MODEL = AutoModelForSequenceClassification.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
