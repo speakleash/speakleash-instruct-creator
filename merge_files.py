@@ -30,17 +30,19 @@ create_directory(merged_instructions_path, output_dir, data_dir)
 
 version = "0_0_8"
 
-generate = False
+generate = True
 exclude_tests = True
 
 scipts_to_run = []
 scipts_to_run.append({"script_name" : "allegro_klej_dyk_questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "legal-questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_LEGAL_QA", "test" : True})
 scipts_to_run.append({"script_name" : "polish-summaries-corpus.py", "author" : "Ic & MariaF", "category": "NLP_SUMMARIZATION"})
-scipts_to_run.append({"script_name" : "polqa_questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_QA"})
+scipts_to_run.append({"script_name" : "ipipan_polqa_questions.py", "author" : "Ic & MariaF", "category":
+    "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "poquad_text_extraction.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_QA"})
-scipts_to_run.append({"script_name" : "speakleash-categorization.py", "author" : "Amarok & Sekon", "category": "NLP_CLASSIFICATION"})
-scipts_to_run.append({"script_name" : "speakleash_forums_questions.py", "author" : "Ic & MariaF", "category": "KNOWLEDGE_QA"})
+scipts_to_run.append({"script_name" : "speakleash-categorization.py", "author" : "Amarok & Sekon", "category": "NLP_CLASSIFICATION"}) ##
+scipts_to_run.append({"script_name" : "speakleash_forums_questions.py", "author" : "Ic & MariaF", "category":
+    "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "wiki-lemmat-words.py", "author" : "Sekon", "category": "NLP_LEMMATIZATION"})
 scipts_to_run.append({"script_name" : "allegro-summarization.py", "author" : "Sekon", "category": "NLP_SUMMARIZATION"})
 scipts_to_run.append({"script_name" : "speakleash-create-sentence.py", "author" : "Sekon", "category": "NLP_SENTENCE_CREATION"})
@@ -51,9 +53,10 @@ scipts_to_run.append({"script_name" : "plwiki_random_word_list.py", "author" : "
 scipts_to_run.append({"script_name" : "plwiki_random_word_pos.py", "author" : "Sekon", "category": "NLP_WORD_POS"})
 scipts_to_run.append({"script_name" : "quotes.py", "author" : "Sekon", "category": "NLP_QUOTES"})
 scipts_to_run.append({"script_name" : "vulgar_words.py", "author" : "Sekon", "category": "NLP_VULGAR_DETECTION"})
-scipts_to_run.append({"script_name" : "sentiment_detection.py", "author" : "Sekon", "category": "NLP_SENTIMENT_DETECTION"})
+scipts_to_run.append({"script_name" : "sentiment_detection.py", "author" : "Sekon", "category":
+"NLP_SENTIMENT_DETECTION"})
 
-scipts_to_run.append({"script_name" : "BAN-PL_hatespeech_detection.py", "author" : "Maria", "category": "NLP_HATESPEECH_DETECTION"})
+scipts_to_run.append({"script_name" : "BAN-PL_hatespeech_detection.py", "author" : "Maria", "category": "NLP_HATESPEECH_DETECTION"}) ##
 scipts_to_run.append({"script_name" : "exams_questions.py", "author" : "Jan.Maria", "category": "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "human_annotators_common_errors.py", "author" : "Ic", "category": "NLP_CORRECTION"})
 scipts_to_run.append({"script_name" : "ipipan_polqa_questions.py", "author" : "Ic", "category": "KNOWLEDGE_QA"})
@@ -62,7 +65,6 @@ scipts_to_run.append({"script_name" : "polish-news-summarization.py", "author" :
 
 if generate:
     for script in scipts_to_run:
-        print("Running: " + script["script_name"])
         result = subprocess.run([sys.executable, os.path.join(scripts_dir_path, script["script_name"])],
                                 capture_output=True,
                                 text=True)
@@ -98,7 +100,7 @@ category_stats = {}
 
 for file in files:
     file_path = os.path.join(output_dir, file)
-    with open(file_path, "r", encoding="utf-8") as f:
+    with open(file_path, "rb") as f:
         data = json.load(f)
 
     file_counter = 1
@@ -116,7 +118,7 @@ for file in files:
 
         if new_item['output'].strip() == '':
             continue
-        print(f'---- item = {item}')
+
         category = item.get('category', get_category(item['script_name']))
         test = get_test(item['script_name'])
 

@@ -1,8 +1,9 @@
-import os
-from speakleash import Speakleash
-import random
 import json
+import os
+import random
+
 import spacy
+from speakleash import Speakleash
 
 try:
     from utils.functions import get_dir_path
@@ -34,7 +35,6 @@ words = {}
 
 
 def get_random_word(words, words_count, lemma_mode, char):
-
     random_words = []
     new_words = []
 
@@ -42,7 +42,7 @@ def get_random_word(words, words_count, lemma_mode, char):
         new_words = list(words.values())
     else:
         new_words = list(words.keys())
-    
+
     random.shuffle(new_words)
 
     for word in new_words:
@@ -51,50 +51,50 @@ def get_random_word(words, words_count, lemma_mode, char):
         else:
             if word[0] == char:
                 random_words.append(word)
-        
+
         if len(random_words) == words_count:
             break
-    
+
     return random_words
 
-def bulleting(words, mode):
 
+def bulleting(words, mode):
     if mode == 0:
         return "\n".join([f"• {word}" for word in words])
     else:
-        return "\n".join([f"{i+1}. {word}" for i, word in enumerate(words)])
+        return "\n".join([f"{i + 1}. {word}" for i, word in enumerate(words)])
+
 
 def number_2_10_in_words(nr):
-    
     if nr == 2:
         return "dwa"
-    
+
     if nr == 3:
         return "trzy"
-    
+
     if nr == 4:
         return "cztery"
-    
+
     if nr == 5:
         return "pięć"
-    
+
     if nr == 6:
         return "sześć"
-    
-    if nr == 7: 
+
+    if nr == 7:
         return "siedem"
-    
+
     if nr == 8:
         return "osiem"
-    
+
     if nr == 9:
         return "dziewięć"
-    
+
     if nr == 10:
         return "dziesięć"
 
-def create_instruct(verbs, nouns, adjs, instruct_type):
 
+def create_instruct(verbs, nouns, adjs, instruct_type):
     words_count = random.randint(4, 10)
     words_count_in_words = number_2_10_in_words(words_count)
     lemma_mode = random.randint(0, 1)
@@ -121,67 +121,67 @@ def create_instruct(verbs, nouns, adjs, instruct_type):
 
     if lemma_mode == 0 and char != ' ':
         instruct = random.choice([
-            f"Podaj {words_count_in_words} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".", 
-            f"Podaj {words_count} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".",
-            f"Wymień {words_count_in_words} słów (formie podstawowej), które zaczynają się na literę \"{char}\".", 
-            f"Wymień {words_count} słów (formie podstawowej), które zaczynają się na literę \"{char}\".",
-            f"Czy możesz podać {words_count_in_words} słów (formie podstawowej) zaczynających się na literę \"{char}\".",
-            f"Czy możesz podać {words_count} słów (formie podstawowej) zaczynających się na literę \"{char}\".",
-            f"Czy jesteś w stanie wymienić {words_count_in_words} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".",
-            f"Czy jesteś w stanie wymienić {words_count} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".",
-            f"Czy możesz wymienić {words_count_in_words} słów (formie podstawowej), które zaczynają się na literę \"{char}\".",
-            f"Czy możesz wymienić {words_count} słów (formie podstawowej), które zaczynają się na literę \"{char}\".",
+                f"Podaj {words_count_in_words} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".",
+                f"Podaj {words_count} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".",
+                f"Wymień {words_count_in_words} słów (formie podstawowej), które zaczynają się na literę \"{char}\".",
+                f"Wymień {words_count} słów (formie podstawowej), które zaczynają się na literę \"{char}\".",
+                f"Czy możesz podać {words_count_in_words} słów (formie podstawowej) zaczynających się na literę \"{char}\".",
+                f"Czy możesz podać {words_count} słów (formie podstawowej) zaczynających się na literę \"{char}\".",
+                f"Czy jesteś w stanie wymienić {words_count_in_words} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".",
+                f"Czy jesteś w stanie wymienić {words_count} słów (formie podstawowej) rozpoczynających się na literę \"{char}\".",
+                f"Czy możesz wymienić {words_count_in_words} słów (formie podstawowej), które zaczynają się na literę \"{char}\".",
+                f"Czy możesz wymienić {words_count} słów (formie podstawowej), które zaczynają się na literę \"{char}\".",
         ])
 
     if lemma_mode == 0 and char == ' ':
         instruct = random.choice([
-            f"Podaj {words_count_in_words} słów (w formie podstawowej).", 
-            f"Podaj {words_count} słów (w formie podstawowej).",
-            f"Wymień {words_count_in_words} słów (w formie podstawowej).",
-            f"Wymień {words_count} słów (w formie podstawowej).",
-            f"Czy możesz podać {words_count_in_words} słów (w formie podstawowej).",
-            f"Czy możesz podać {words_count} słów (w formie podstawowej).",
-            f"Czy jesteś w stanie wymienić {words_count_in_words} słów (w formie podstawowej).",
-            f"Czy jesteś w stanie wymienić {words_count} słów (w formie podstawowej).",
-            f"Czy możesz wymienić {words_count_in_words} słów (formie podstawowej).",
-            f"Czy możesz wymienić {words_count} słów (formie podstawowej).",
+                f"Podaj {words_count_in_words} słów (w formie podstawowej).",
+                f"Podaj {words_count} słów (w formie podstawowej).",
+                f"Wymień {words_count_in_words} słów (w formie podstawowej).",
+                f"Wymień {words_count} słów (w formie podstawowej).",
+                f"Czy możesz podać {words_count_in_words} słów (w formie podstawowej).",
+                f"Czy możesz podać {words_count} słów (w formie podstawowej).",
+                f"Czy jesteś w stanie wymienić {words_count_in_words} słów (w formie podstawowej).",
+                f"Czy jesteś w stanie wymienić {words_count} słów (w formie podstawowej).",
+                f"Czy możesz wymienić {words_count_in_words} słów (formie podstawowej).",
+                f"Czy możesz wymienić {words_count} słów (formie podstawowej).",
         ])
 
     if lemma_mode == 1 and char != ' ':
         instruct = random.choice([
-            f"Podaj {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
-            f"Podaj {words_count} słów rozpoczynających się na literę \"{char}\".", 
-            f"Wymień {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
-            f"Wymień {words_count} słów rozpoczynających się na literę \"{char}\".",
-            f"Czy możesz podać {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
-            f"Czy możesz podać {words_count} słów rozpoczynających się na literę \"{char}\".",
-            f"Czy jesteś w stanie wymienić {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
-            f"Czy jesteś w stanie wymienić {words_count} słów rozpoczynających się na literę \"{char}\".",
-            f"Czy możesz wymienić {words_count_in_words} słów, które zaczynają się na literę \"{char}\".",
-            f"Czy możesz wymienić {words_count} słów, które zaczynają się na literę \"{char}\".",
+                f"Podaj {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
+                f"Podaj {words_count} słów rozpoczynających się na literę \"{char}\".",
+                f"Wymień {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
+                f"Wymień {words_count} słów rozpoczynających się na literę \"{char}\".",
+                f"Czy możesz podać {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
+                f"Czy możesz podać {words_count} słów rozpoczynających się na literę \"{char}\".",
+                f"Czy jesteś w stanie wymienić {words_count_in_words} słów rozpoczynających się na literę \"{char}\".",
+                f"Czy jesteś w stanie wymienić {words_count} słów rozpoczynających się na literę \"{char}\".",
+                f"Czy możesz wymienić {words_count_in_words} słów, które zaczynają się na literę \"{char}\".",
+                f"Czy możesz wymienić {words_count} słów, które zaczynają się na literę \"{char}\".",
         ])
 
     if lemma_mode == 1 and char == ' ':
         instruct = random.choice([
-            f"Podaj {words_count_in_words} słów.", 
-            f"Podaj {words_count} słów.",
-            f"Wymień {words_count_in_words} słów.",
-            f"Wymień {words_count} słów.",
-            f"Czy możesz podać {words_count_in_words} słów.",
-            f"Czy możesz podać {words_count} słów.",
-            f"Czy jesteś w stanie wymienić {words_count_in_words} słów.",
-            f"Czy jesteś w stanie wymienić {words_count} słów.",
-            f"Czy możesz wymienić {words_count_in_words} słów.",
-            f"Czy możesz wymienić {words_count} słów.",
+                f"Podaj {words_count_in_words} słów.",
+                f"Podaj {words_count} słów.",
+                f"Wymień {words_count_in_words} słów.",
+                f"Wymień {words_count} słów.",
+                f"Czy możesz podać {words_count_in_words} słów.",
+                f"Czy możesz podać {words_count} słów.",
+                f"Czy jesteś w stanie wymienić {words_count_in_words} słów.",
+                f"Czy jesteś w stanie wymienić {words_count} słów.",
+                f"Czy możesz wymienić {words_count_in_words} słów.",
+                f"Czy możesz wymienić {words_count} słów.",
         ])
 
     output = random.choice([
-    ", ".join(words),
-    " ".join(words),
-    "\n".join(words),
-    "/".join(words),
-    "\n".join([f"• {word}" for word in words]),
-    "\n".join([f"{i+1}. {word}" for i, word in enumerate(words)])
+            ", ".join(words),
+            " ".join(words),
+            "\n".join(words),
+            "/".join(words),
+            "\n".join([f"• {word}" for word in words]),
+            "\n".join([f"{i + 1}. {word}" for i, word in enumerate(words)])
     ])
 
     return instruct, input, output, words_count, len(words)
@@ -226,10 +226,11 @@ for i in range(instruction_limit):
     print("Instrukcje: " + str(len(instructions)) + " z " + str(instruction_limit))
     instruct, input, output, count1, count2 = create_instruct(verbs, nouns, adjs, instruction_type)
     if count1 == count2:
-        instructions.append({"instruct": instruct, "input" : input, "output" : output, "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
-    
+        instructions.append({"instruct": instruct, "input": input, "output": output, "source_name": source_name,
+                             "source_url": source_url, "source_description": source_description,
+                             "script_name": script_name})
 
 random.shuffle(instructions)
-with open(os.path.join(output_dir, script_name.replace(".py",".json")), "w", encoding='utf-8') as f:
+with open(os.path.join(output_dir, script_name.replace(".py", ".json")), "w", encoding='utf-8') as f:
     json.dump(instructions, f, indent=4, ensure_ascii=False)
 print("Instructions: " + str(len(instructions)))

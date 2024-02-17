@@ -11,15 +11,12 @@ try:
     from utils.functions import get_dir_path
 except ImportError as e:
     print(f'Error: {e}')
-
-
     def get_dir_path(directory):
         return None
 
 SOURCE_NAME = os.path.basename(__file__).replace(".py", "") + "BAN-PL.csv"
 SOURCE_URL = "https://github.com/ZILiAT-NASK/BAN-PL/tree/main/data"
-SOURCE_DESCRIPTION = "Instrukcje zawierające tekst z potencjalnie szkodliwymi treściami \
-                    oraz klasyfikację tego tekstu: zawiera/nie zawiera szkodliwych treści"
+SOURCE_DESCRIPTION = "Instrukcje zawierające tekst z potencjalnie szkodliwymi treściami oraz klasyfikację tego tekstu: zawiera/nie zawiera szkodliwych treści"
 SCRIPT_NAME = os.path.basename(__file__)
 FILE = "BAN-PL_1.zip"
 DATA_DIR = "data"

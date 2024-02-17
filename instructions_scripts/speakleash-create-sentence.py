@@ -1,9 +1,9 @@
-import os 
-from speakleash import Speakleash
-import random
 import json
-import sys
+import os
+import random
+
 import spacy
+from speakleash import Speakleash
 
 try:
     from utils.functions import get_dir_path
@@ -24,7 +24,6 @@ source_url = "https://speakleash.org/"
 source_description = "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu."
 script_name = os.path.basename(__file__)
 
-
 sl = Speakleash(replicate_to)
 counter = 0
 data = sl.get("news_8_general_corpus").ext_data
@@ -39,9 +38,9 @@ for item in data:
     if quality.upper() == "HIGH":
         doc = nlp(txt)
         counter += 1
-    
+
         for sent in doc.sents:
-            if  sent.text.strip().endswith("?") and sent.text[0].isupper():  
+            if sent.text.strip().endswith("?") and sent.text[0].isupper():
                 verb = ""
                 noun = ""
                 adj = ''
@@ -56,17 +55,19 @@ for item in data:
                     if token.pos_ == "ADJ" and adj == "":
                         adj = token.lemma_.strip().lower()
                         words.append(token.lemma_.strip().lower())
-                    
+
                 if verb != "" and noun != "" and adj != "":
                     random.shuffle(words)
                     instruct = "Stwórz przykładowe pytania składające się ze słów: " + ", ".join(words) + "."
                     output = "Przykładowe pytania: " + sent.text
-                    instructions.append({"instruct": instruct, "input" : "", "output" : output, "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
+                    instructions.append(
+                            {"instruct": instruct, "input": "", "output": output, "source_name": source_name,
+                             "source_url": source_url, "source_description": source_description,
+                             "script_name": script_name})
                     print("Instructions: " + str(len(instructions)), counter)
 
     if len(instructions) > 100000:
         break
-        
 
 random.shuffle(instructions)
 with open(os.path.join(output_dir, "speakelash-create-sentence.json"), "w", encoding='utf-8') as f:

@@ -19,6 +19,7 @@ except ImportError as e:
 
 
 source_name = os.path.basename(__file__).replace(".py", "") + " speakleash_forums_questions"
+script_name = os.path.basename(__file__)
 source_url = "skrypt długo się generuje, paczka przesłana ręcznie"
 source_description = "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatycznie" \
                      "pary pytania - odpowiedź (forum_forum_wszystkodlawnetrza_pl_corpus,forum_ezoforum_pl_corpus)."
@@ -121,7 +122,15 @@ def get_pairs(qa_df):
             MODEL.eval()
             with torch.no_grad():
                 scores = MODEL(**features).logits
-                pair_list.append({"instruct": inst, "input": qr[q], "output": an[np.argmax(scores)]})
+                pair_list.append({
+                        "instruct": inst,
+                        "input": qr[q],
+                        "output": an[np.argmax(scores)],
+                        "source_name": source_name,
+                        "source_url": source_url,
+                        "source_description": source_description,
+                        "script_name": script_name
+                })
     return pair_list
 
 

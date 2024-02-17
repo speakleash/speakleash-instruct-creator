@@ -14,7 +14,6 @@ source_name = script_name.replace(".py", "")
 source_url = "https://pl.wikiquote.org/wiki/"
 source_description = "Instrukcje powstały podstawie cytatów z polskiej Wikicytaty."
 
-
 instruction_limit = 150000
 
 base_dir = os.path.dirname(os.path.abspath(__file__))

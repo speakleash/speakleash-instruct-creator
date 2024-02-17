@@ -1,8 +1,9 @@
-import os
-from speakleash import Speakleash
-import random
 import json
+import os
+import random
+
 import spacy
+from speakleash import Speakleash
 
 try:
     from utils.functions import get_dir_path

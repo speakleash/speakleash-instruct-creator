@@ -76,7 +76,6 @@ mode = ["sylabic", "random"]
 
 
 for i in range(10000):
-    
     random.shuffle(chars)
     random.shuffle(digits)
     random.shuffle(special_chars)

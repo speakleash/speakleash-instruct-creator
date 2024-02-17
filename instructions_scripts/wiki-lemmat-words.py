@@ -49,5 +49,3 @@ random.shuffle(instructions)
 with open(os.path.join(output_dir, "wiki-lemmat-words.json"), "w", encoding='utf-8') as f:
     json.dump(instructions, f, indent=4, ensure_ascii=False)
 print("Instructions: " + str(len(instructions)))
-
-
