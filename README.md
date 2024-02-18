@@ -20,6 +20,9 @@ https://github.com/speakleash/speakleash/issues/10
 To generate one final instructions JSON file, merge them using the ```merge_files.py``` script. It will be created in the output
 directory along with statistical files describing the instructions data.
 To update instruction samples, run the ```generate_samples.py``` script. It will generate JSON files with three records each.
+### Important information:
+```sentiment_detection.py``` -> requires HuggingFace token.<br>
+```speakleash_forums_questions.py``` -> if installed requirements won't work, follow the steps included in this documentation: https://github.com/ZILiAT-NASK/StyloMetrix
 
 
 ## Mandatory instructions fields
