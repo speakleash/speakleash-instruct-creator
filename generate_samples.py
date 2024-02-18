@@ -2,6 +2,8 @@
 import os
 import json
 
+from utils.functions import create_directory
+
 # Output directory for the samples of the instructions
 SAMPLES_DIR = 'instructions_samples'
 
@@ -12,6 +14,9 @@ INSTRUCTIONS_FILES_DIR = 'output'
 base_dir = os.path.dirname(os.path.abspath(__file__))
 samples_path = os.path.join(base_dir, SAMPLES_DIR)
 instructions_files_path = os.path.join(base_dir, INSTRUCTIONS_FILES_DIR)
+
+# Create instructions samples directory if it does not exist
+create_directory(samples_path)
 
 # Get the list of the generated instructions files
 instructions_files = os.listdir(instructions_files_path)
