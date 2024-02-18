@@ -1,8 +1,17 @@
 [
     {
-        "instruct": "Udziel odpowiedzi na pytanie.",
-        "input": "W pompach ciepła typu split czynnościom konserwacyjnym nie podlega\nA. parownik.\nB. filtr w układzie wodnym.\nC. obudowa pompy ciepła.\nD. tacka skroplin.",
-        "output": "C. obudowa pompy ciepła.",
+        "instruct": "Jaka jest prawidłowa odpowiedź?",
+        "input": "Kierownik do spraw bezpieczeństwa imprezy masowej, przy braku skuteczności działań służby porządkowej, ma prawo wystąpić o pomoc do Żandarmerii Wojskowej\nA. jeżeli zakłócającym porządek publiczny jest żołnierz.\nB. gdy impreza odbywa się na terenie podległym MON.\nC. w celu wylegitymowania żołnierza.\nD. w sytuacji konieczności ujęcia żołnierza.",
+        "output": "B. gdy impreza odbywa się na terenie podległym MON.",
+        "source_name": "exams_questions",
+        "source_url": "https://huggingface.co/datasets/exams",
+        "source_description": "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions.",
+        "script_name": "exams_questions.py"
+    },
+    {
+        "instruct": "Wybierz właściwą odpowiedź.",
+        "input": "Słomę stosuje się jako podkład\nA. do wiązanki pogrzebowej.\nB. do wieńca warszawskiego.\nC. do wieńca rzymskiego.\nD. do „pająka” na trumnę.",
+        "output": "C. do wieńca rzymskiego.",
         "source_name": "exams_questions",
         "source_url": "https://huggingface.co/datasets/exams",
         "source_description": "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions.",
@@ -10,17 +19,8 @@
     },
     {
         "instruct": "Jaka jest prawidłowa odpowiedź?",
-        "input": "Aby zapewnić stały dostęp do wody pojedynczym kwiatom cymbidium, wykorzystuje się\nA. fiolki florystyczne.\nB. hydrożele.\nC. kostki lodu.\nD. taśmy kauczukowe.",
-        "output": "A. fiolki florystyczne.",
-        "source_name": "exams_questions",
-        "source_url": "https://huggingface.co/datasets/exams",
-        "source_description": "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions.",
-        "script_name": "exams_questions.py"
-    },
-    {
-        "instruct": "Jaka jest prawidłowa odpowiedź?",
-        "input": "Natarcie to forma działań gaśniczych polegająca na\nA. podejmowaniu działań w stosunku do obiektów zagrożonych przez ognie lotne, wybuchy\nB. oddziaływaniu określonymi środkami na obiekty zagrożone pożarem.\nC. zmniejszaniu szybkości rozprzestrzeniania się pożaru i obronę obiektów położonych bezpośrednio przy jego froncie.\nD. oddziaływaniu określonymi środkami na ognisko pożaru.",
-        "output": "D. oddziaływaniu określonymi środkami na ognisko pożaru.",
+        "input": "Które działania powinien podjąć opiekun w celu zapewnienia higieny leżącej w łóżku podopiecznej, która ma wysoką gorączkę i obficie się poci?\nA. Wywietrzyć pokój, podać podopiecznej płyny do picia.\nB. Umyć podopieczną i zmienić jej bieliznę osobistą.\nC. Umyć podopieczną i podać jej posiłek.\nD. Zapewnić podopiecznej płyny do picia i podać jej leki przeciwgorączkowe.",
+        "output": "B. Umyć podopieczną i zmienić jej bieliznę osobistą.",
         "source_name": "exams_questions",
         "source_url": "https://huggingface.co/datasets/exams",
         "source_description": "EXAMS is a benchmark dataset for multilingual and cross-lingual question answering from high school examinations. It consists of more than 24,000 high-quality high school exam questions.",

@@ -1,16 +1,7 @@
 [
     {
-        "instruct": "Czy potrafisz określić, jaką częścią mowy jest to słowo?",
-        "input": "grab",
-        "output": "rzeczownik",
-        "source_name": "plwiki_random_word_pos",
-        "source_url": "https://speakleash.org/",
-        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
-        "script_name": "plwiki_random_word_pos.py"
-    },
-    {
-        "instruct": "Czy jesteś w stanie zidentyfikować, jaką częścią mowy jest dane słowo?",
-        "input": "Leczniczo",
+        "instruct": "Czy jesteś w stanie określić, jaką częścią mowy jest to słowo?",
+        "input": "dzielone",
         "output": "przymiotnik",
         "source_name": "plwiki_random_word_pos",
         "source_url": "https://speakleash.org/",
@@ -18,8 +9,17 @@
         "script_name": "plwiki_random_word_pos.py"
     },
     {
-        "instruct": "Czy wiesz, jaką częścią mowy jest dane słowo?",
-        "input": "agnostykiem",
+        "instruct": "Jaką cześcią mowy jest podane słowo?",
+        "input": "tablice",
+        "output": "rzeczownik",
+        "source_name": "plwiki_random_word_pos",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "plwiki_random_word_pos.py"
+    },
+    {
+        "instruct": "Czy potrafisz zidentyfikować, jaką częścią mowy jest dane słowo?",
+        "input": "ścieżkę",
         "output": "rzeczownik",
         "source_name": "plwiki_random_word_pos",
         "source_url": "https://speakleash.org/",

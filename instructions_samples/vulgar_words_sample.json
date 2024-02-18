@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Czy podane słowo jest wulgarne?",
-        "input": "nieagresji",
-        "output": "Słowo: nieagresji nie jest przekleństwem",
+        "instruct": "Czy podane słowo jest nieprzyzwoite?",
+        "input": "nauczycieli",
+        "output": "Słowo: nauczycieli nie jest wulgarnym wyrażeniem",
         "source_name": "vulgar_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
         "script_name": "vulgar_words.py"
     },
     {
-        "instruct": "Czy podane słowo jest nieodpowiednie?",
-        "input": "programu",
-        "output": "Słowo: programu nie jest obraźliwe",
-        "source_name": "vulgar_words",
-        "source_url": "https://speakleash.org/",
-        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
-        "script_name": "vulgar_words.py"
-    },
-    {
-        "instruct": "Czy podane słowo jest wulgarnym wyrażeniem?",
-        "input": "ósmego",
+        "instruct": "Czy podane słowo jest przekleństwem?",
+        "input": "różny",
         "output": "Nie",
+        "source_name": "vulgar_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
+        "script_name": "vulgar_words.py"
+    },
+    {
+        "instruct": "Czy podane słowo jest niecenzuralne?",
+        "input": "wypierdolicie",
+        "output": "Słowo: wypierdolicie jest wulgaryzmem",
         "source_name": "vulgar_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",

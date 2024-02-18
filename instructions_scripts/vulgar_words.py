@@ -650,9 +650,9 @@ vulgar = [
 ]
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-data_dir = get_dir_path("data") if not None else os.path.join(base_dir, "data")
-output_dir = get_dir_path("output") if not None else os.path.join(base_dir, "output")
-replicate_to = os.path.join(base_dir, "datasets")
+# data_dir = get_dir_path("data") or os.path.join(base_dir, "data") #  commented out until Speakleash package update
+output_dir = get_dir_path("output") or os.path.join(base_dir, "output")
+replicate_to = get_dir_path("data_speakleash") or os.path.join(base_dir, "data_speakleash")
 
 sl = Speakleash(replicate_to)
 counter = 0

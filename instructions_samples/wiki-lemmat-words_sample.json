@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Podaj formę podstawową (lemat) dla słowa: pozostawali",
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: wartością",
         "input": "",
-        "output": "Forma podstawowa dla słowa pozostawali to: pozostawać",
+        "output": "Forma podstawowa dla słowa wartością to: wartość",
         "source_name": "speakleash_plwiki_lemmat_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
         "script_name": "wiki-lemmat-words.py"
     },
     {
-        "instruct": "Podaj formę podstawową (lemat) dla słowa: Berdyczowie",
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: narodowym",
         "input": "",
-        "output": "Forma podstawowa dla słowa Berdyczowie to: Berdyczowa",
+        "output": "Forma podstawowa dla słowa narodowym to: narodowy",
         "source_name": "speakleash_plwiki_lemmat_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
         "script_name": "wiki-lemmat-words.py"
     },
     {
-        "instruct": "Podaj formę podstawową (lemat) dla słowa: Dziejów",
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: wbudowane",
         "input": "",
-        "output": "Forma podstawowa dla słowa Dziejów to: Dzieje",
+        "output": "Forma podstawowa dla słowa wbudowane to: wbudować",
         "source_name": "speakleash_plwiki_lemmat_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",

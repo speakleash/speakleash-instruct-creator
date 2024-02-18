@@ -1,23 +1,23 @@
 [
     {
-        "instruct": "Pozbądź się błędów syntaktycznych z poniższego tekstu:\nŻadnych map, notatek, politycznych druków, materiałów w dorosłych.",
-        "output": "Oto tekst po korekcie składniowej:\nŻadnych map, notatek, politycznych druków, materiałów dla dorosłych.",
+        "instruct": "Usuń błędy składniowe z poniższego tekstu:\nTymczasem pani Agnieszka dokonuje cud.",
+        "output": "Naprawiono błędy szyku, oto poprawiony tekst:\nTymczasem pani Agnieszka dokonuje cudu.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_annotators_common_errors.py"
     },
     {
-        "instruct": "Dostosuj użycie słownictwa w podanym fragmencie:\nOddział ściśle współpracował z fajnym sztabem czwartej grupy operacyjnej w Mereczu na Litwie podległej Białoruskiej Partii Socjalistów-Rewolucjonistów, która dążyła do utworzenia niezależnej Białorusi.",
-        "output": "Poprawiono słownictwo w poniższym tekście. Ma on następującą postać:\nOddział ściśle współpracował z tajnym sztabem czwartej grupy operacyjnej w Mereczu na Litwie podległej Białoruskiej Partii Socjalistów-Rewolucjonistów, która dążyła do utworzenia niezależnej Białorusi.",
+        "instruct": "Popraw błędy syntaktyczne:\nPierwsze konstrukcje okrętów podwodnych było dziełem entuzjastów, innowatoruw, tworzących swoje projektory w oparciu o prywatne fundusze.",
+        "output": "Oto poprawiona forma tekstu, niezawierająca błędów składniowych:\nPierwsze konstrukcje okrętów podwodnych były dziełem entuzjastów, innowatorów, tworzących swoje projekty w oparciu o prywatne fundusze.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_annotators_common_errors.py"
     },
     {
-        "instruct": "Usuń niewłaściwe słownictwo z tekstu:\n– Tak właśnie posiedział.",
-        "output": "Poniższy tekst zawiera już poprawnie użyte słowa:\n– Tak właśnie powiedział.",
+        "instruct": "Skoryguj błędy w pisowni słów:\nKarzdy ruch i dotyk jest namaszczeniem chwili, powolną kontemplacją.",
+        "output": "Tekst po korekcie ortograficznej brzmi teraz w taki sposób:\nKażdy ruch i dotyk jest namaszczeniem chwili, powolną kontemplacją.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",

@@ -1,8 +1,8 @@
 [
     {
         "instruct": "Stwórz tytuł dla podanego wstępu.",
-        "input": "Wiele z was myśli, że w domu można ubrać się byle jak, bo nie trzeba zwracać uwagi na to, jak się wygląda. Wiele w tym racji. Musisz jednak zrozumieć, że bylejakość nie musi wcale oznaczać nijakości i bezbarwności. Ważne, by domowa wygoda była kontrolowana. W naszym poradniku proponujemy domowy niezbędnik z rzeczami, dzięki którym stworzysz wygodną, swobodną, ale jednocześnie modną stylizację. W kilka chwil zmienią one twój zwykły ubiór w niecodzienny look.",
-        "output": "Moda i wygoda – bądź trendy także w domu",
+        "input": "O spokojny sen dziecka rodzice dbają już od chwili narodzin. Maluszek najchętniej zasypia w objęciach mamy i znacznie łatwiej dogodzić mu pościelą niż asertywnemu przedszkolakowi. Ten wręcz może domagać się (zwykle w nocy) odpowiedniej pościeli, pod którą właśnie chce się położyć.",
+        "output": "Modne komplety pościeli z postaciami z bajek do 100 zł",
         "source_name": "allegro-summarization-allegro-articles",
         "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
         "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",
@@ -10,8 +10,8 @@
     },
     {
         "instruct": "Stwórz tytuł dla podanego wstępu.",
-        "input": "Na pokazach mody prezentujących trendy wiosna-lato 2016 królowały stonowane propozycje makijażu: świetlista cera, cienie do powiek w cielistych odcieniach, wyregulowane brwi i delikatnie podkreślone usta. Ale nie zabrakło także zdecydowanych make-upów, które mogą stać się doskonałą inspiracją do wykonania makijażu wieczorowego. Podpowiadamy, jak zrobić taki makijaż, aby dodawał charakteru naszej kreacji.",
-        "output": "Makijaż wieczorowy krok po kroku – trendy wiosna 2016",
+        "input": "1 marca: Zmiany w Regulaminie Allegro",
+        "output": "1 marca: Zmiany w Regulaminie Allegro",
         "source_name": "allegro-summarization-allegro-articles",
         "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
         "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",
@@ -19,8 +19,8 @@
     },
     {
         "instruct": "Stwórz tytuł dla podanego wstępu.",
-        "input": "Wierzycie w duchy? To trudne pytanie, które wywołuje bardzo różne, często skrajne reakcje. Są osoby przekonane o ich istnieniu i znacznie większa grupa ludzi, którzy na wzmiankę o duchach śmieją się. Książka Janis Heaphy Durham może, o dziwo, okazać się interesującą lekturą dla jednych i drugich.",
-        "output": "„Ślad na lustrze” Janis Heaphy Durham - recenzja",
+        "input": "Według statystyk prawie 30% dzieci w wieku szkolnym nie uczęszcza na zajęcia wychowania fizycznego. Sporą część z nich stanowią uczniowie noszący okulary.",
+        "output": "Okulary dziecięce na wf",
         "source_name": "allegro-summarization-allegro-articles",
         "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
         "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",

@@ -12,9 +12,9 @@ except ImportError as e:
 
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-data_dir = get_dir_path("data") or os.path.join(base_dir, "data")
+# data_dir = get_dir_path("data") or os.path.join(base_dir, "data") #  commented out until Speakleash package update
 output_dir = get_dir_path("output") or os.path.join(base_dir, "output")
-replicate_to = get_dir_path("data") or os.path.join(base_dir, "data")
+replicate_to = get_dir_path("data_speakleash") or os.path.join(base_dir, "data_speakleash")
 
 
 source_name = "news_9_general_corpus"

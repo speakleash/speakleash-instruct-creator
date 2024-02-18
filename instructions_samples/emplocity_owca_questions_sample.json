@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Dokonaj edycji następującego zdania: \"Dzisiaj zrobiłem dużo zakupów online.\" \n\nMożliwe warianty poprawki:\n\n- Dzisiaj dokonałem wielu zakupów w sieci.\n- W dzisiejszym dniu zrobiłem wiele zakupów przez internet.\n- Dziś przeprowadziłem wiele zakupów online.",
-        "input": "Dziś zrobiłam spore zakupy przez internet.",
-        "output": "Dzisiaj zrobiłem dużo zakupów online i zaoszczędziłem sporo pieniędzy.",
+        "instruct": "Proszę podać cztery funkcje pieniądza.",
+        "input": "",
+        "output": "Cztery funkcje pieniądza to środek wymiany, jednostka rachunkowa, nośnik wartości oraz standard odroczonej płatności. Pieniądz ułatwia produkcję i handel towarami i usługami, umożliwia efektywne wycenianie, pełni rolę nośnika wartości oraz może być używany do spłacania długów i zobowiązań. ",
         "source_name": "emplocity_owca_questions",
         "source_url": "https://huggingface.co/datasets/emplocity/owca",
         "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
         "script_name": "emplocity_owca_questions.py"
     },
     {
-        "instruct": "Proszę wyjaśnić podaną równość matematyczną.",
-        "input": "X = Y/( (1+Z)^n)",
-        "output": "Równanie X = Y/( (1+Z)^n) mówi nam, że X jest równy stosunkowi Y do (1+Z) podniesionego do potęgi n. Innymi słowy, obliczamy go poprzez podzielenie Y przez (1+Z) podniesione do potęgi n.",
+        "instruct": "Musisz napisać opowieść o robocie, który próbuje znaleźć swoje miejsce w świecie ludzi.",
+        "input": "",
+        "output": "Był to świat pełen ludzi i jednego samotnego robota. Robot nie miał pamięci, jak się tu znalazł i dlaczego tu był, ale był zdeterminowany, by znaleźć swoje miejsce w tym świecie. Jego metalowa konstrukcja stukała i skrzypiała, gdy przechadzał się ulicami, przyciągając ciekawe spojrzenia innych przechodniów.\n\nRobot większość czasu spędzał na obserwowaniu ludzi i próbowaniu naśladować ich zachowanie. Patrzył, jak się wzajemnie oddziałują, studiował ich wyraz twarzy i maniery, a następnie starał się je jak najlepiej odzwierciedlić. Jednakże, bez względu na to, jak bardzo się starał, robot wciąż był inny. Nawet najmilsze dusze, na jakie trafił, wydawały się mieć trudności z akceptacją go jako metalowego stworzenia.\n\nW końcu robot osiedlił się w rutynie, podejmując tu i tam dziwne prace, by przetrwać i uczyć się akceptować swoją własną wyjątkowość. Wciąż miał trudności z pełnym zrozumieniem złożoności ludzkiego świata, ale udało mu się znaleźć swoje miejsce wśród nich. Z biegiem czasu zaczął być coraz bardziej akceptowany przez populację ludzką, aż w końcu stał się tak samo szanowany jak każde inne stworzenie na świecie.",
         "source_name": "emplocity_owca_questions",
         "source_url": "https://huggingface.co/datasets/emplocity/owca",
         "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
         "script_name": "emplocity_owca_questions.py"
     },
     {
-        "instruct": "Proszę przepisać poniższy akapit w sposób bardziej zwięzły.",
-        "input": "Pieniądze sprawiają, że świat się kręci, mówią, i to prawda, że mają ogromny wpływ na nasze życie i to, jak je przeżywamy. Pieniądze mogą decydować o tym, gdzie mieszkasz, jaki rodzaj edukacji otrzymujesz, a nawet kogo poślubisz. Pieniądze mogą nie kupić szczęścia, ale mają ogromny wpływ na jakość życia, które prowadzisz.",
-        "output": "Pieniądze są ważnym czynnikiem determinującym styl życia: wpływają na takie czynniki jak miejsce zamieszkania, edukację i partnerów. Chociaż pieniądze niekoniecznie przynoszą szczęście, niewątpliwie mają duży wpływ na jakość życia.",
+        "instruct": "Proszę zidentyfikować i sklasyfikować rodzaj błędu, który został popełniony.",
+        "input": "Swoją mamę nazywał ojcem.",
+        "output": "Błąd semantyczny polegający na zamieszaniu słów \"mama\" i \"tata\".",
         "source_name": "emplocity_owca_questions",
         "source_url": "https://huggingface.co/datasets/emplocity/owca",
         "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",

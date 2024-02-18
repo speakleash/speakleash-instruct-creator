@@ -29,6 +29,7 @@ PROJECTS = [
 ]
 
 LIMIT = 4000
+
 TOKENIZER = AutoTokenizer.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
 MODEL = AutoModelForSequenceClassification.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
 
@@ -136,7 +137,7 @@ def get_pairs(qa_df):
 
 if __name__ == '__main__':
     base_dir = "./"
-    replicate_to = get_dir_path("data") or os.path.join(base_dir, "data")
+    replicate_to = get_dir_path("data_speakleash") or os.path.join(base_dir, "data_speakleash")
     output_dir = get_dir_path("output") or os.path.join(base_dir, "output")
     sl = Speakleash(replicate_to)
     df1 = get_frame()

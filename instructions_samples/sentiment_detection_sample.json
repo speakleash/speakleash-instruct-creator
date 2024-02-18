@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Czy następujący tekst ma pozytywne, neutralne czy negatywne znaczenie?",
+        "input": "Ciężkie wózka jest ciągnięcie więc go Ewie dam w prezencie, tak pomyślał i tak zrobił, sam się w szarfę prezydenta przyozdobił :-)",
+        "output": "neutralne",
+        "source_name": "sentiment_detection",
+        "source_url": "https://huggingface.co/datasets/Brand24/mms",
+        "source_description": "Instrukcje powstały dzięki zestawowi danych: Massive Multilingual Sentiment Corpora (MMS)",
+        "script_name": "sentiment_detection.py"
+    },
+    {
+        "instruct": "Określ, czy następujący tekst ma konotacje pozytywne, neutralne czy negatywne?",
+        "input": "9:10 albo 9:15 musze byc u andzi",
+        "output": "neutralne",
+        "source_name": "sentiment_detection",
+        "source_url": "https://huggingface.co/datasets/Brand24/mms",
+        "source_description": "Instrukcje powstały dzięki zestawowi danych: Massive Multilingual Sentiment Corpora (MMS)",
+        "script_name": "sentiment_detection.py"
+    },
+    {
+        "instruct": "Czy podany tekst wyraża emocje pozytywne, neutralne czy negatywne?",
+        "input": "RT @s_staszewski: Celtic łączy z Legią całkiem sporo. Artur Boruc, Łukasz Załuska, Dariusz Dziekanowski i Wdowczyk. Sami legioniści. Może z…",
+        "output": "pozytywne",
+        "source_name": "sentiment_detection",
+        "source_url": "https://huggingface.co/datasets/Brand24/mms",
+        "source_description": "Instrukcje powstały dzięki zestawowi danych: Massive Multilingual Sentiment Corpora (MMS)",
+        "script_name": "sentiment_detection.py"
+    }
+]

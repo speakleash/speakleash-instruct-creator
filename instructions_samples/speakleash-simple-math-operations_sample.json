@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Jaki będzie wynik, gdy do 17 dodamy 8?",
+        "instruct": "Igor ma 31 gruszek. Obok stoi Maria i zabiera 10 gruszek. Oblicz ile teraz Igor ma gruszek.",
         "input": "",
-        "output": "Odpowiedź to 25.",
+        "output": "Odpowiedź: 21.",
         "source_name": "simple_math_operations",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",
         "script_name": "speakleash-simple-math-operations.py"
     },
     {
-        "instruct": "Wykonaj działanie: -4 * -9 =",
+        "instruct": "Oblicz ile to będzie 16 dodać -1.",
         "input": "",
-        "output": "36",
+        "output": "16 plus -1 to 15",
         "source_name": "simple_math_operations",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",
         "script_name": "speakleash-simple-math-operations.py"
     },
     {
-        "instruct": "Oblicz różnicę liczb -9 i -9.",
+        "instruct": "Gdy Szymek miał 36 banknotów, oddał koleżance 10 banknotów. Oblicz ile banknotów pozostało.",
         "input": "",
-        "output": "Wynikiem tego odejmowania jest 0.",
+        "output": "26 banknotów",
         "source_name": "simple_math_operations",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",

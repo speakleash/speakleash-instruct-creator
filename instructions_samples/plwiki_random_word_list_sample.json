@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Podaj 6 słów rozpoczynających się na literę \"h\".",
+        "instruct": "Wymień 10 słów (formie podstawowej), które zaczynają się na literę \"l\".",
         "input": "",
-        "output": "• hemiceluloz\n• higienę\n• harfa\n• herose\n• herbaciana\n• hiszpański",
+        "output": "lista/linia/ludy/listopada/liczby/lutego/liter/litera/length/literami",
         "source_name": "plwiki_random_word_list",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
         "script_name": "plwiki_random_word_list.py"
     },
     {
-        "instruct": "Wymień 6 słów (w formie podstawowej).",
+        "instruct": "Podaj 8 słów rozpoczynających się na literę \"a\".",
         "input": "",
-        "output": "domagającej/wyrafinowana/donna/zestrzelonych/akweduktem/oskrzeli",
+        "output": "alternatywny, algebraiczny, arabski, asocjacyjny, awk, alfabetyczny, absorpcyjny, alergiczny",
         "source_name": "plwiki_random_word_list",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
         "script_name": "plwiki_random_word_list.py"
     },
     {
-        "instruct": "Czy możesz podać siedem słów rozpoczynających się na literę \"b\".",
+        "instruct": "Wymień 7 słów rozpoczynających się na literę \"f\".",
         "input": "",
-        "output": "1. bohema\n2. bierzmować\n3. bielski\n4. będąca\n5. bliskiego\n6. biblijny\n7. brzmiącą",
+        "output": "• format\n• folia\n• formula_29\n• funkcja\n• funkcj\n• forma\n• fuzja",
         "source_name": "plwiki_random_word_list",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
