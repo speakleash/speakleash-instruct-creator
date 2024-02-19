@@ -41,7 +41,7 @@ Each JSON object with an instruction should containt mandatory fields like:
 }
 ```
 <details>
-<summary>Instructions list to do:</summary><br>
+<summary>Instructions list to do (expandable list):</summary><br>
 
 ## Dataset number
 (person's initials responsible for dataset | work status | dataset url | dataset file name)
