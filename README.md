@@ -27,7 +27,7 @@ If you are facing problems with dependencies, execute manual installation of the
 ```pip install http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz```<br>
 ```pip install https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl```<br>
 ```pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.7.3/en_core_web_trf-3.7.3-py3-none-any.whl```<br>
-It is temporary solution but will work.
+It is a temporary solution but will work.
 
 ## Mandatory instructions fields
 Each JSON object with an instruction should containt mandatory fields like:
