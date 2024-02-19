@@ -24,9 +24,9 @@ To update instruction samples, run the ```generate_samples.py``` script. It will
 ```sentiment_detection.py``` -> requires HuggingFace token.<br>
 ```speakleash_forums_questions.py``` -> if installed requirements won't work, follow the steps included in this documentation: https://github.com/ZILiAT-NASK/StyloMetrix
 If you are facing problems with dependencies, execute manual installation of the following libraries:
-```pip install http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz```
-```pip install https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl```
-```pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.7.3/en_core_web_trf-3.7.3-py3-none-any.whl```
+```pip install http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz```<br>
+```pip install https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl```<br>
+```pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.7.3/en_core_web_trf-3.7.3-py3-none-any.whl```<br>
 It is temporary solution but will work.
 
 ## Mandatory instructions fields
