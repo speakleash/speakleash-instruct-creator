@@ -3,7 +3,7 @@
 Generate instruction JSON files using implemented instruction scripts.
 
 ## Introduction:
-To contribute, clone this repository and add a new instruction script (e.g., ```allegro-summarization.py```) to the ```instructions_scripts``` directory.
+To contribute, clone this repository and add a new instructions script (e.g., ```allegro-summarization.py```) to the ```instructions_scripts``` directory.
 
 Instruction files are generated in the ```output``` directory.
 
