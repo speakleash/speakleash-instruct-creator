@@ -4,7 +4,7 @@ import random
 import json
 
 try:
-    from utils.functions import get_dir_path
+    from utils.functions import get_dir_path, create_directory
 except ImportError as e:
     print(f'Error: {e}')
     def get_dir_path(directory):
@@ -21,6 +21,9 @@ instruction_limit = 150000
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = get_dir_path("data") if not None else os.path.join(base_dir, "data")
 output_dir = get_dir_path("output") if not None else os.path.join(base_dir, "output")
+
+# Create directory instructions file
+create_directory(output_dir)
 
 counter = 0
 instructions = []

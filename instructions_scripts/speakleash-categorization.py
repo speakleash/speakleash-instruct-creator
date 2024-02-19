@@ -4,7 +4,7 @@ import random
 import json
 
 try:
-    from utils.functions import get_dir_path
+    from utils.functions import get_dir_path, create_directory
 except ImportError as e:
     print(f'Error: {e}')
     def get_dir_path(directory):
@@ -16,6 +16,8 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = get_dir_path("output") or os.path.join(base_dir, "output")
 replicate_to = get_dir_path("data_speakleash") or os.path.join(base_dir, "data_speakleash")
 
+# Create directory instructions file
+create_directory(output_dir)
 
 source_name = "news_9_general_corpus"
 source_url = "https://speakleash.org/"

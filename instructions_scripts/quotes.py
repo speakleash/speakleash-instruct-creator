@@ -3,7 +3,7 @@ import random
 import json
 
 try:
-    from utils.functions import download_file, get_dir_path
+    from utils.functions import download_file, get_dir_path, create_directory
 except ImportError as e:
     print(f'Error: {e}')
     def get_dir_path(directory):
@@ -19,6 +19,9 @@ instruction_limit = 150000
 base_dir = os.path.dirname(os.path.abspath(__file__))
 output_dir = get_dir_path("output") or os.path.join(base_dir, "output")
 download_dir = get_dir_path("data") or os.path.join(base_dir, "data")
+
+# Create directory instructions file
+create_directory(output_dir)
 
 url = "http://instruct.speakleash.space/raw/quotes_output.json"
 
