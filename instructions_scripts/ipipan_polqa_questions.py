@@ -10,7 +10,12 @@ import random
 
 import pandas as pd
 
-from utils.functions import download_file
+try:
+    from utils.functions import download_file, get_dir_path
+except ImportError as e:
+    print(f'Error: {e}')
+    def get_dir_path(directory):
+        return None
 
 # Mandatory dataset information fields for json objects
 source_name = f"ipipan-{os.path.basename(__file__).replace('.py', '')}"
@@ -24,8 +29,8 @@ script_name = os.path.basename(__file__)
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Define directories name for downloaded and output files
-data_dir = os.path.join(base_dir, "data")
-output_dir = os.path.join(base_dir, "output")
+data_dir = get_dir_path("data") or os.path.join(base_dir, "data")
+output_dir = get_dir_path("output") or os.path.join(base_dir, "output")
 
 # Create directory for downloading data from server / link
 os.makedirs(data_dir, exist_ok=True)

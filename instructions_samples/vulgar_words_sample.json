@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Czy podane słowo jest nieprzyzwoite?",
+        "input": "nauczycieli",
+        "output": "Słowo: nauczycieli nie jest wulgarnym wyrażeniem",
+        "source_name": "vulgar_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
+        "script_name": "vulgar_words.py"
+    },
+    {
+        "instruct": "Czy podane słowo jest przekleństwem?",
+        "input": "różny",
+        "output": "Nie",
+        "source_name": "vulgar_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
+        "script_name": "vulgar_words.py"
+    },
+    {
+        "instruct": "Czy podane słowo jest niecenzuralne?",
+        "input": "wypierdolicie",
+        "output": "Słowo: wypierdolicie jest wulgaryzmem",
+        "source_name": "vulgar_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
+        "script_name": "vulgar_words.py"
+    }
+]

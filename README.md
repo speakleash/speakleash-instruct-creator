@@ -1,8 +1,35 @@
 # speakleash-instruct-creator
 
-Create a script that will create a json with instructions and place it in the output folder (e.g. allegro-summarization.py). Then run merge-files.py. The script will merge all the json files into one big json file
+Generate instruction JSON files using implemented instruction scripts.
+
+## Introduction:
+To contribute, clone this repository and add a new instruction script (e.g., ```allegro-summarization.py```) to the ```instructions_scripts``` directory.
+
+Instruction files are generated in the ```output``` directory.
+
+External datasets are downloaded to the ```data``` directory.
+
+Internal datasets from the ```Speakleash``` package are downloaded separately to the ```data_speakleash``` directory. This temporary solution
+is implemented due to the current version of the ```Speakleash``` package. The ```manifests``` files are downloaded automatically to the same
+directory as ```datasets```, so spearating both directories was done for better readability. This functionality was done with the purpose but
+we are working on some changes, described in this ```issue```:
+https://github.com/speakleash/speakleash/issues/10
 
 
+## Generate files
+To generate one final instructions JSON file, merge them using the ```merge_files.py``` script. It will be created in the output
+directory along with statistical files describing the instructions data.
+To update instruction samples, run the ```generate_samples.py``` script. It will generate JSON files with three records each.
+### Important information:
+```sentiment_detection.py``` -> requires HuggingFace token.<br>
+```speakleash_forums_questions.py``` -> if installed requirements won't work, follow the steps included in this documentation: https://github.com/ZILiAT-NASK/StyloMetrix
+If you are facing problems with dependencies, execute manual installation of the following libraries:
+```pip install http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz```
+```pip install https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl```
+```pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.7.3/en_core_web_trf-3.7.3-py3-none-any.whl```
+It is temporary solution but will work.
+
+## Mandatory instructions fields
 Each JSON object with an instruction should containt mandatory fields like:
 ```json
 {
@@ -13,12 +40,13 @@ Each JSON object with an instruction should containt mandatory fields like:
     "script_name": "os.path.basename(file)"
 }
 ```
+<details>
+<summary>Instructions list to do:</summary><br>
 
-Plan list:
 ## Dataset number
 (person's initials responsible for dataset | work status | dataset url | dataset file name)
 
-# Plan
+## Plan
 ## 1 
 SK - DONE
 https://huggingface.co/datasets/allegro/summarization-polish-summaries-corpus
@@ -97,5 +125,4 @@ Bajki wyciągnąłbym kilka kluczowych rzeczowników i powiedział opowiedz mi b
 
 https://huggingface.co/datasets/sepidmnorozy/Polish_sentiment
 
-
-
+</details>

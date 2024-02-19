@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Do czego jest proporcjonalna wielkość limitu przyznawanego producentowi suszu?",
+        "output": "Art. 60. 1. Wielkość limitu przyznanego producentowi suszu jest proporcjonalna do wielkości produkowanego suszu w poprzednim roku, jeżeli wielkość limitu krajowego określonego przez ministra właściwego do spraw rynków rolnych nie przekracza limitu ustalonego w poprzednim roku. 2. Jeżeli limit krajowy jest wyższy od limitu roku poprzedniego, nadwyżkę dzieli się między producentów. 3. Producent suszu rozpoczynający produkcję może ubiegać się o przyznanie limitu wyłącznie w ramach podziału nadwyżki limitu, o którym mowa w ust. 2.",
+        "source_name": "legal-questions piotr-rybak-legal-questions",
+        "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
+        "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
+        "script_name": "legal-questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Czy zamknięcie składowiska odpadów lub jego wydzielonej części wymaga zgody właściwego organu?",
+        "output": "Art. 54. 1. Zamknięcie składowiska odpadów lub jego wydzielonej części wymaga zgody właściwego organu. 2. Zgodę na zamknięcie składowiska odpadów lub jego wydzielonej części wydaje, na wniosek zarządzającego składowiskiem odpadów, w drodze decyzji: 1) wojewoda - dla przedsięwzięć mogących znacząco oddziaływać na środowisko, dla których obowiązek sporządzania raportu o oddziaływaniu przedsięwzięcia na środowisko wynika z przepisów o ochronie środowiska oraz gdy dotyczy eksploatacji składowiska na terenach zakładów zaliczanych do tych przedsięwzięć, 2) starosta - dla pozostałych przedsięwzięć po przeprowadzeniu kontroli składowiska odpadów przez wojewódzkiego inspektora ochrony środowiska. 3. Wniosek, o którym mowa w ust. 2, powinien zawierać: 1) określenie technicznego sposobu zamknięcia składowiska odpadów lub jego wydzielonej części, 2) harmonogram działań związanych z rekultywacją składowiska odpadów. 4. Zgoda, o której mowa w ust. 1, na zamknięcie składowiska odpadów lub jego wydzielonej części określa: 1) techniczny sposób zamknięcia składowiska odpadów lub jego wydzielonej części, 2) harmonogram działań związanych z rekultywacją składowiska odpadów, 3) warunki sprawowania nadzoru nad zrekultywowanym składowiskiem odpadów. 5. Zarządzający składowiskiem, po wykonaniu obowiązków określonych w decyzji o zgodzie na zamknięcie składowiska, może złożyć wniosek o uchylenie ustanowionego zabezpieczenia roszczeń. Przepis art. 35 ust. 2 stosuje się odpowiednio.",
+        "source_name": "legal-questions piotr-rybak-legal-questions",
+        "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
+        "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
+        "script_name": "legal-questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Kto powołuje rachmistrzów spisowych?",
+        "output": "Art. 15. 1. Spis przeprowadzą rachmistrze spisowi, powołani przez dyrektora wojewódzkiego urzędu statystycznego na wniosek wójta, burmistrza lub prezydenta miasta. 2. Rachmistrzowi spisowemu przysługuje ochrona prawna przewidziana dla funkcjonariuszy publicznych.",
+        "source_name": "legal-questions piotr-rybak-legal-questions",
+        "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
+        "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
+        "script_name": "legal-questions.py"
+    }
+]

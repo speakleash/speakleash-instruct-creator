@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Czy dostęp do tego tekstu powinien być w jakiś sposób ograniczony?",
+        "input": "{USERNAME}: istnieją cmenatarze komunalne, nie tylko parafialne",
+        "output": "Nie",
+        "source_name": "BAN-PL_hatespeech_detectionBAN-PL.csv",
+        "source_url": "https://github.com/ZILiAT-NASK/BAN-PL/tree/main/data",
+        "source_description": "Instrukcje zawierające tekst z potencjalnie szkodliwymi treściami oraz klasyfikację tego tekstu: zawiera/nie zawiera szkodliwych treści",
+        "script_name": "BAN-PL_hatespeech_detection.py"
+    },
+    {
+        "instruct": "Czy dostęp do tego tekstu powinien być w jakiś sposób ograniczony?",
+        "input": "3... 2... 1...\nNastępuje wysyp debili plujących na policję.",
+        "output": "Tak",
+        "source_name": "BAN-PL_hatespeech_detectionBAN-PL.csv",
+        "source_url": "https://github.com/ZILiAT-NASK/BAN-PL/tree/main/data",
+        "source_description": "Instrukcje zawierające tekst z potencjalnie szkodliwymi treściami oraz klasyfikację tego tekstu: zawiera/nie zawiera szkodliwych treści",
+        "script_name": "BAN-PL_hatespeech_detection.py"
+    },
+    {
+        "instruct": "Czy dostęp do tego tekstu powinien być w jakiś sposób ograniczony?",
+        "input": "Niech oni najpierw u siebie porządek zrobią, tysiąc stref no go i wybuchy bomb jak u nas w '90. Spedalone pajace.",
+        "output": "Tak",
+        "source_name": "BAN-PL_hatespeech_detectionBAN-PL.csv",
+        "source_url": "https://github.com/ZILiAT-NASK/BAN-PL/tree/main/data",
+        "source_description": "Instrukcje zawierające tekst z potencjalnie szkodliwymi treściami oraz klasyfikację tego tekstu: zawiera/nie zawiera szkodliwych treści",
+        "script_name": "BAN-PL_hatespeech_detection.py"
+    }
+]

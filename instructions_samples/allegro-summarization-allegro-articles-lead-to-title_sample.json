@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Stwórz tytuł dla podanego wstępu.",
+        "input": "O spokojny sen dziecka rodzice dbają już od chwili narodzin. Maluszek najchętniej zasypia w objęciach mamy i znacznie łatwiej dogodzić mu pościelą niż asertywnemu przedszkolakowi. Ten wręcz może domagać się (zwykle w nocy) odpowiedniej pościeli, pod którą właśnie chce się położyć.",
+        "output": "Modne komplety pościeli z postaciami z bajek do 100 zł",
+        "source_name": "allegro-summarization-allegro-articles",
+        "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",
+        "script_name": "allegro-summarization.py"
+    },
+    {
+        "instruct": "Stwórz tytuł dla podanego wstępu.",
+        "input": "1 marca: Zmiany w Regulaminie Allegro",
+        "output": "1 marca: Zmiany w Regulaminie Allegro",
+        "source_name": "allegro-summarization-allegro-articles",
+        "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",
+        "script_name": "allegro-summarization.py"
+    },
+    {
+        "instruct": "Stwórz tytuł dla podanego wstępu.",
+        "input": "Według statystyk prawie 30% dzieci w wieku szkolnym nie uczęszcza na zajęcia wychowania fizycznego. Sporą część z nich stanowią uczniowie noszący okulary.",
+        "output": "Okulary dziecięce na wf",
+        "source_name": "allegro-summarization-allegro-articles",
+        "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",
+        "script_name": "allegro-summarization.py"
+    }
+]

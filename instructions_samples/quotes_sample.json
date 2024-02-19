@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Przedstaw None znane cytaty dotyczące wybranej osoby lub której są autorstwa",
+        "input": "Dariusz Mioduski",
+        "output": "1. Wczoraj zrealizował się czarny scenariusz i niczym nie można tego usprawiedliwić. Tak jak i Wy, czuję rozgoryczenie, złość i wstyd. W poprzednim sezonie trzeci raz z rzędu zdobyliśmy mistrzostwo Polski, ale popełniliśmy też błędy. Największym było to, że sztab szkoleniowy na nowy sezon oparliśmy na trenerze bez wystarczającego doświadczenia.",
+        "source_name": "quotes",
+        "source_url": "https://pl.wikiquote.org/wiki/",
+        "source_description": "Instrukcje powstały podstawie cytatów z polskiej Wikicytaty.",
+        "script_name": "quotes.py"
+    },
+    {
+        "instruct": "Podaj 1 popularne cytaty związane z daną osobą lub której są autorstwem.",
+        "input": "Anna Okopińska",
+        "output": "• Anka – drobna i szczupła – już swoją budową predestynowana była do chodzenia po górach wysokich, a jej udział w wyprawach w Pamir i w Himalaje w pełni to potwierdził. Z natury skryta i zamknięta, sprawiająca wrażenie nieśmiałej i biernej, potrafiła nieoczekiwanie podjąć trudną i samodzielną inicjatywę, jak na przykład przejście latem z Danutą Szelenbaum całej grani Tatr Wysokich. Z podziwem patrzyłam na wyprawie, jak łatwo przychodzi jej poruszanie się na wysokościach nawet z ciężkim bagażem na plecach.",
+        "source_name": "quotes",
+        "source_url": "https://pl.wikiquote.org/wiki/",
+        "source_description": "Instrukcje powstały podstawie cytatów z polskiej Wikicytaty.",
+        "script_name": "quotes.py"
+    },
+    {
+        "instruct": "Przytocz 3 słynne cytaty powiązane z określoną osobą lub które napisała",
+        "input": "Andrzej Zawada",
+        "output": "• Najwyższa góra świata nadal będzie popularna, bo każdy kraj będzie chciał mieć na jej wierzchołku swego przedstawiciela. Teraz jednak staje się aktualne pytanie – jak zdobywać Mount Everest? Wanda Rutkiewicz rozwiązała nam ten problem. Jako pierwsza z polskich alpinistów weszła na szczyt klasyczną drogą pierwszych zdobywców. Ja zaś byłem przeciwnikiem organizowania polskiej wyprawy narodowej, która zdobywałaby Everest tą właśnie drogą.\n• Alpinizm, mimo udogodnień technicznych, to wciąż kontakt z przyrodą, nieskażoną cywilizacją i nieustanna walka, w której nie zawsze jest dane zwyciężyć człowiekowi.\n• Nieważne, jak się wspina, ważne, jak się o tym pisze...",
+        "source_name": "quotes",
+        "source_url": "https://pl.wikiquote.org/wiki/",
+        "source_description": "Instrukcje powstały podstawie cytatów z polskiej Wikicytaty.",
+        "script_name": "quotes.py"
+    }
+]

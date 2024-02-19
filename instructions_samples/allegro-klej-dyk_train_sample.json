@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "o czym informuje żołnierza amerykańskiego list Dear John?",
+        "output": "Poinformowanie o zerwaniu w formie listu Dear John jest uważane za jeden z najbardziej bezosobowych sposobów przekazania osobistej wiadomości, która ma druzgocący wpływ na nic niespodziewającego się odbiorcę. W przypadku żołnierza będącego na misji wojskowej tysiące kilometrów od domu, otrzymanie listu Dear John lub Dear Jane sprawia, że żołnierz traci wiarę w przyszłość.",
+        "source_name": "allegro_klej_dyk_questions allegro/klej-dyk",
+        "source_url": "https://huggingface.co/datasets/allegro/klej-dyk",
+        "source_description": "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. odpowiedzi są anotowane jako trafne (1) albo nietrafne (0).",
+        "script_name": "allegro_klej_dyk_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "kto wygrał stoczoną w 1656 roku Bitwę pod Lubrzem?",
+        "output": "bitwa pod Gołębiem, 19 lutego 1656, zwycięstwo militarne Szwedów, taktyczne Polaków bitwa pod Jarosławiem, 15 marca 1656, zwycięstwo Polaków bitwa pod Niskiem, 28 marca 1656, zwycięstwo Polaków bitwa pod Kozienicami, 6 kwietnia 1656, zwycięstwo Polaków bitwa pod Warką, 7 kwietnia 1656, zwycięstwo Polaków bitwa pod Kłeckiem, 7 maja 1656, zwycięstwo Szwedów bitwa pod Warszawą, 28-30 lipca 1656, zwycięstwo Szwedów bitwa pod Łowiczem, 25 sierpnia 1656, zwycięstwo Polaków bitwa pod Lubrzem, 28 sierpnia 1656, zwycięstwo Polaków bitwa pod Prostkami, 8 października 1656, zwycięstwo Polaków bitwa pod Filipowem, 22 października 1656, zwycięstwo szwedzko-brandeburskie-pruskie",
+        "source_name": "allegro_klej_dyk_questions allegro/klej-dyk",
+        "source_url": "https://huggingface.co/datasets/allegro/klej-dyk",
+        "source_description": "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. odpowiedzi są anotowane jako trafne (1) albo nietrafne (0).",
+        "script_name": "allegro_klej_dyk_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "które pająki noszą na grzbiecie wzór przypominający uśmiechniętego klauna?",
+        "output": "Theridion grallator osiąga długość 5 mm. U niektórych postaci na żółtym odwłoku występuje wzór przypominający uśmiechniętą lub śmiejącą się twarz klowna.",
+        "source_name": "allegro_klej_dyk_questions allegro/klej-dyk",
+        "source_url": "https://huggingface.co/datasets/allegro/klej-dyk",
+        "source_description": "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. odpowiedzi są anotowane jako trafne (1) albo nietrafne (0).",
+        "script_name": "allegro_klej_dyk_questions.py"
+    }
+]

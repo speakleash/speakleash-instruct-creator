@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Jakie nagrody zdobyła Natalia Janoszek w regionalnym konkursie Miss Polski Nastolatek? W wieku 16 lat dostała możliwość wystartowania w regionalnym konkursie Miss Polski Nastolatek, zdobyła na nim tytuł Miss Talent oraz nagrodę publiczności. Od tego czasu reprezentowała Polskę w 40 międzynarodowych konkursach piękności, takich jak m.in. Miss Peace International 2009 (zdobyła tytuł Miss Friendship), Miss Ocean International 2011 (tytuł Miss Congeniality), Supermodel International 2012 (tytuł Best Dress), Swimsuit USA 2012, Tropic Beauty 2013 (tytuł Best Dress), Miss Bikini Universe 2013 (tytuł Best Talent) czy Miss World Peace 2015 (tytuł Best Talent). Została zauważona podczas Supermodel International 2012 w Bangkoku i jeszcze w tym samym roku zadebiutowała w Bollywood główną rolą w filmie Dreamz. W 2015 zagrała w amerykańskim dokumencie The Green Fairy u boku Lindy Blair. W 2016 nakładem Grupy Wydawniczej Helion na rynku pojawiła się jej pierwsza książka „Za kulisami Bollywood”, w której opisała własną karierę w Indiach.",
+        "output": "tytuł Miss Talent oraz nagrodę publiczności",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    },
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Jak nazywa się trzecia produkcja nakręcona w ramach tryptyku śląskiego? Kolejny swój film zadedykował zmarłemu w 1971 ojcu. Paciorki jednego różańca (1979), ostatni film tryptyku śląskiego, realizował w katowickiej dzielnicy Giszowiec. W czasie tworzenia filmu dokumentował, jak niegdysiejsza architektura (domki wzorowane na chatach wiejskich) była bezmyślnie niszczona, a na jej miejscu powstawały wieżowce. Głównym bohaterem filmu uczynił emeryta, dawnego powstańca śląskiego (Augustyn Halotta), który nie zamierza opuścić swojej zagrożonej wyburzeniem chałupy. Film wywołał olbrzymie kontrowersje: partyjni aktywiści oskarżali Kazimierza Kutza o „kłamstwo” i „fałszywy obraz Śląska”. Paciorki jednego różańca ostatecznie jednak dopuszczono do dystrybucji, a film został obsypany nagrodami w kraju i za granicą (Złote Lwy na Festiwalu Polskich Filmów Fabularnych, Nagroda Specjalna Jury na Międzynarodowym Festiwalu Filmowym w Karlowych Warach). Jak pisała Ilona Copik: „To m.in. dzięki trzeciemu śląskiemu filmowi sprawa Giszowca stała się głośna, a wskutek uporu garstki zapaleńców udało się ocalić osiedle przed ostateczną materialną i kulturową destrukcją”.",
+        "output": "Paciorki jednego różańca",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    },
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Jakiej narodowości był Georg Thoma? Konkursy olimpijskie w ramach Zimowych Igrzysk Olimpijskich 1960 rozegrano w lutym 1960. 21 lutego na skoczni K60 rywalizowali kombinatorzy norwescy. W części skokowej najlepszy okazał się Niemiec Georg Thoma, drugi był reprezentujący Związek Radziecki Dmitrij Koczkin, a trzeci Japończyk Yōsuke Etō. Thoma oddanym wówczas skokiem na odległość 69 m ustanowił rekord skoczni K60. W całej kombinacji, po rozegraniu części biegowej, złoty medal zdobył Thoma, srebrny Norweg Tormod Knutsen, a brąz reprezentujący ZSRR Nikołaj Gusakow. Konkurs skoków narciarskich odbył się 28 lutego, podczas ostatniego dnia igrzysk. Na skoczni K80 najlepszy okazał się Niemiec Helmut Recknagel, drugi był Fin Niilo Halonen, a trzeci Austriak Otto Leodolter. Recknagel skokiem na odległość 93,5 m ustanowił nowy rekord największego obiektu w kompleksie Papoose Peak Jumps.",
+        "output": "niemieckiej",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    }
+]

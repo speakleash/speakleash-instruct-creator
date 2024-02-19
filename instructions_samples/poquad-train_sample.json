@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Kiedy Davis po raz pierwszy przyjechał do Toronto? Po powrocie do Toronto w późnych latach 70. Davis pracował kilka lat jako reżyser sztuk radiowych oraz wykładowca w Humber College. W okresie tym realizował się jako nauczyciel aktorstwa i aktor po przeszło dwudziestu latach nieobecności w zawodzie. Davis podejmował się wielu ról teatralnych i filmowych. Następnie uzyskał nominację na stanowisko dyrektora artystycznego Vancouver Playhouse Acting School, która wymagała od niego przeprowadzki wraz z żoną i dziećmi. Aktor wspomina ten moment w swoim pamiętniku następująco: „Tak więc jesienią 1985 roku przymocowaliśmy naszą używaną łódź do naszego używanego samochodu i ruszyliśmy przez kraj”.",
+        "output": "w późnych latach 70",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    },
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Jakie były jedyne społeczności, które bojkotowały film? Film wzbudzał wiele kontrowersji na długo przed jego ukończeniem, szczególnie wśród środowisk katolickich. Wątpliwości dotyczyły m.in. tego, czy sposób ukazania losu Chrystusa, nie będzie graniczył z bluźnierstwem. Protestowały również środowiska żydowskie, dopatrujące się w filmie silnych akcentów antysemickich w kwestii bezpośredniego obwinienia Żydów za śmierć Chrystusa. Niedługo przed premierą kopie filmu zaprezentowano katolickim duchownym, którzy aprobowali film, zachęcając do jego obejrzenia. Pojawiły się jednak liczne głosy krytykujące twórcę za ukazanie nadmiernego okrucieństwa i sadyzmu.",
+        "output": "katolickie, żydowskie",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    },
+    {
+        "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
+        "input": "Kiedy Beach opublikował projekt okładki \"Everybody\"? Wytwórnia Sire Records wydała singel „Everybody” 6 października 1982 roku. Lou Beach zaprojektował jego okładkę. Rysunek przedstawia kolaż nowojorskiej ulicy i jest utrzymany w konwencji hip-hopowej. Ze względu na brak zdjęcia Madonny na okładce i brzmienie w stylu R&B, singel ukształtował fałszywe przekonanie, że jest artystką czarnoskórą. Wytwórnia Sire celowo zastosowała taki zabieg, by piosenka trafiła do radiowych playlist kierowanych do społeczności afroamerykańskiej. „Everybody” jest ósmym i ostatnim utworem na albumie studyjnym Madonna, wydanym 27 lipca 1983 roku. Remiks piosenki znalazł się na remix albumie Madonny You Can Dance z 1987 roku. W 1997 roku Stephen Bray wydał nieautoryzowany przez Madonnę album Pre-Madonna z demonstracyjnymi nagraniami piosenkarki. Wśród nich znalazły się dwie wersje „Everybody” – oryginalna z 1981 roku oraz przerobiona współcześnie przez Braya. W 2001 roku ukazała się reedycja albumu Madonna, na której „Everybody” zastąpiono (względem pierwotnej edycji) dłuższą, ponad sześciominutową wersją. W 2009 roku utwór znalazł się na kompilacji największych przebojów Madonny, Celebration, choć tylko w edycji dwupłytowej.",
+        "output": "6 października 1982",
+        "source_name": "poquad_text_extraction clarin-pl-poquad",
+        "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "script_name": "poquad_text_extraction.py"
+    }
+]

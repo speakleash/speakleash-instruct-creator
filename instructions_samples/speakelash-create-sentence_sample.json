@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: wspólny, czwartk, mieć.",
+        "input": "",
+        "output": "Przykładowe pytania: Co Google ma wspólnego z tłustym czwartkiem?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    },
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: dobry, przepis, szukasz.",
+        "input": "",
+        "output": "Przykładowe pytania: Szukasz przepisu na najlepsze ciasto na Wielkanoc?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    },
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: wyglądać, domowy, królestwo.",
+        "input": "",
+        "output": "Przykładowe pytania: Jak wyglądają domowe królestwa najbardziej znanych mistrzów kuchni?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    }
+]
