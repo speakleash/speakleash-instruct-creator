@@ -65,6 +65,8 @@ scipts_to_run.append({"script_name" : "human_annotators_common_errors.py", "auth
 scipts_to_run.append({"script_name" : "ipipan_polqa_questions.py", "author" : "Ic", "category": "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "emplocity_owca_questions.py", "author" : "Jan.Maria", "category": "KNOWLEDGE_QA"})
 scipts_to_run.append({"script_name" : "polish-news-summarization.py", "author" : "Jan.Maria", "category": "NLP_SUMMARIZATION"})
+scipts_to_run.append({"script_name" : "almost_like_an_alpaca.py", "author" : "Sekon", "category": "ALMOST_LIKE_AN_ALPACA"})
+
 
 if generate:
     for script in scipts_to_run:

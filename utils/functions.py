@@ -17,6 +17,8 @@ def download_file(url: str, download_dir: str, file_name: str) -> str:
 
     if not os.path.exists(file_path):
         r = requests.get(url, allow_redirects=True)
+        if r.status_code != 200:
+            return None
         with open(file_path, 'wb') as file:
             file.write(r.content)
 
