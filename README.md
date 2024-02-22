@@ -17,8 +17,8 @@ https://github.com/speakleash/speakleash/issues/10
 
 
 ## Generate files
-To generate one final instructions JSON file, merge them using the ```merge_files.py``` script. It will be created in the output
-directory along with statistical files describing the instructions data.
+To generate one final instructions JSON file, merge them using the ```merge_files.py``` script. It will be created in the
+directory called ```instructions_merged_and_stats``` along with statistical files describing the instructions data.
 To update instruction samples, run the ```generate_samples.py``` script. It will generate JSON files with three records each.
 ### Important information:
 ```sentiment_detection.py``` -> requires HuggingFace token.<br>
