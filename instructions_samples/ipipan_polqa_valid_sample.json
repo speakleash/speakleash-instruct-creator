@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "W którym wieku żył Arystoteles?",
+        "output": "Lykeion, lykejon, likejon (gr. Λύκειον, Lýkeion) – szkoła filozoficzna (przy czym przez filozofię rozumiano wtedy ogół racjonalnej wiedzy) założona przez ucznia Platona – Arystotelesa w IV wieku p.n.e.",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Deuter jest izotopem którego pierwiastka?",
+        "output": "deuter – izotop wodoru „Deuter” – muzyk niemiecki Deuter – polski zespół punkrockowy \"Deuter\" – album zespołu Dezerter z 1995 roku",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Która dyscyplina sportowa jest oznaczana skrótem MTB?",
+        "output": "1. Mistrzostwa Świata w Maratonie MTB – zawody sportowe, które odbyły się w ramach 14. mistrzostw świata w kolarstwie górskim, 31 sierpnia 2003 roku w szwajcarskim Lugano. Wyniki mężczyzn na stronie Sports123.com Wyniki kobiet na stronie Sports123.com",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    }
+]

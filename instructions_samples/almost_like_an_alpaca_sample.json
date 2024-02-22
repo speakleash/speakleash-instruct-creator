@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Co napisać w uzasadnieniu pracy zdalnej?",
+        "input": "",
+        "output": "Wyłóż powody, dla których zdalny system pracy uczyni cię bardziej produktywnym i sprawi, że będziesz miał lepsze wyniki w pracy. Możesz też wskazać praktyczny przykład z pracy, gdy wykazałeś się samodzielnością i świetną organizacją swojego czasu, bez nadzoru.",
+        "source_name": "almost_like_an_alpaca",
+        "source_url": "http://instruct.speakleash.space/",
+        "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
+        "script_name": "almost_like_an_alpaca.py"
+    },
+    {
+        "instruct": "Na co pomaga joga?",
+        "input": "",
+        "output": "CO DAJĄ ĆWICZENIA JOGI?\nrozluźnia i wzmacnia mięśnie,\nwyrównuje gospodarkę hormonalną,\nuwalnia od bólu odcinek lędźwiowy,\nniweluje bóle stawów,\nzwalcza bezsenność,\nleczy depresję,\npoprawia odporność,\nwyrównuje wagę.",
+        "source_name": "almost_like_an_alpaca",
+        "source_url": "http://instruct.speakleash.space/",
+        "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
+        "script_name": "almost_like_an_alpaca.py"
+    },
+    {
+        "instruct": "Jaki biznes jednoosobowy?",
+        "input": "",
+        "output": "12 NAJLEPSZYCH POMYSŁÓW NA FIRMĘ JEDNOOSOBOWĄ, KTÓRE MOŻESZ ZACZĄĆ REALIZOWAĆ JUŻ DZIŚ\nBloger.\nTwórca treści – wideo i podcasty.\nProjektowanie graficzne i fotografia.\nCopywriting.\nPielęgnacja i wyprowadzanie psów.\nKonsulting.\nTrener personalny.\nProgramista stron internetowych, oprogramowania lub aplikacji mobilnych.",
+        "source_name": "almost_like_an_alpaca",
+        "source_url": "http://instruct.speakleash.space/",
+        "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
+        "script_name": "almost_like_an_alpaca.py"
+    }
+]

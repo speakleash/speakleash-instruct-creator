@@ -59,5 +59,7 @@ for item in all:
                 "script_name": script_name
         })
 
+random.shuffle(instructions)
+
 with open(os.path.join(output_dir,script_name.replace(".py", ".json")), "w", encoding='utf-8') as f:
     json.dump(instructions, f, indent=4, ensure_ascii=False)
