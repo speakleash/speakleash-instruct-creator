@@ -1,16 +1,7 @@
 [
     {
-        "instruct": "Skonkretyzuj zamiar zawarty w poniższym tekście i przypisz do odpowiedniej kategorii: zapytanie o akcje na giełdzie, dodaj kontakt do książki adresowej email, zamówienie na wynos, odpowiedź na pytanie, użycie radia.",
-        "input": "czy cezary pazura jest żonaty",
-        "output": "odpowiedź na pytanie",
-        "source_name": "amazon-massive-nlu-v1.1/pl-PL.json",
-        "source_url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
-        "source_description": "Instrukcje powstały dzięki wykorzystaniu zestawu danych Amazon Massive NLU Dataset, version 1.1.",
-        "script_name": "amazon-massive-pl.py"
-    },
-    {
-        "instruct": "Przeanalizuj podany tekst i sklasyfikuj jego język mając do dyspozycji kategorie: język angielski, język polski i inny, język polski i angielski, język polski oraz angielski i inny język, inny język, język angielski i inny, język polski.",
-        "input": "ile łap ma pies",
+        "instruct": "Przeanalizuj poniższy tekst i sklasyfikuj język tego tekstu na podstawie podanych kategorii: język angielski, język polski, inny język, język polski i inny, język polski oraz angielski i inny język, język angielski i inny, język polski i angielski.",
+        "input": "czy będe potrzebował parasol w tym tygodniu",
         "output": "język polski",
         "source_name": "amazon-massive-nlu-v1.1/pl-PL.json",
         "source_url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
@@ -18,8 +9,17 @@
         "script_name": "amazon-massive-pl.py"
     },
     {
-        "instruct": "Przeanalizuj poprawność gramatyczną w tekście poniżej i przyporządkuj ją do odpowiedniej kategorii: dobra jakość gramatyki, nienaturalna gramatyka, znaczące błędy w gramatyce, idealna gramatyka, drobne błędy w gramatyce.",
-        "input": "jaka jest dziś pogoda",
+        "instruct": "Skategoryzuj celność ekstrakcji intencji wiadomości i oceń jedną z kategorii: intencja nie jest zrozumiała, to bardzo trafna interpretacja intencji, intencja jest zrozumiała.",
+        "input": "wznów piosenkę z audiobooka autorstwa madonna",
+        "output": "intencja jest zrozumiała",
+        "source_name": "amazon-massive-nlu-v1.1/pl-PL.json",
+        "source_url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+        "source_description": "Instrukcje powstały dzięki wykorzystaniu zestawu danych Amazon Massive NLU Dataset, version 1.1.",
+        "script_name": "amazon-massive-pl.py"
+    },
+    {
+        "instruct": "Przeanalizuj poprawność gramatyczną w tekście poniżej i przyporządkuj ją do odpowiedniej kategorii: nienaturalna gramatyka, drobne błędy w gramatyce, idealna gramatyka, znaczące błędy w gramatyce, dobra jakość gramatyki.",
+        "input": "włącz podcast imponderabilia",
         "output": "idealna gramatyka",
         "source_name": "amazon-massive-nlu-v1.1/pl-PL.json",
         "source_url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",

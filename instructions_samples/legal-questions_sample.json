@@ -1,8 +1,8 @@
 [
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Do czego jest proporcjonalna wielkość limitu przyznawanego producentowi suszu?",
-        "output": "Art. 60. 1. Wielkość limitu przyznanego producentowi suszu jest proporcjonalna do wielkości produkowanego suszu w poprzednim roku, jeżeli wielkość limitu krajowego określonego przez ministra właściwego do spraw rynków rolnych nie przekracza limitu ustalonego w poprzednim roku. 2. Jeżeli limit krajowy jest wyższy od limitu roku poprzedniego, nadwyżkę dzieli się między producentów. 3. Producent suszu rozpoczynający produkcję może ubiegać się o przyznanie limitu wyłącznie w ramach podziału nadwyżki limitu, o którym mowa w ust. 2.",
+        "input": "Których członków rodziny funkcjonariusza uwzględnia się przy przydziale lokalu?",
+        "output": "Art. 63. Członkami rodziny funkcjonariusza, których uwzględnia się przy przydziale lokalu mieszkalnego, są pozostający z funkcjonariuszem we wspólnym gospodarstwie domowym: 1) małżonek; 2) dzieci własne lub małżonka, przysposobione lub przyjęte na wychowanie w ramach rodziny zastępczej, pozostające na jego utrzymaniu do czasu ukończenia 18 roku życia, a w razie uczęszczania do szkoły lub odbywania studiów w szkole wyższej - do czasu ukończenia nauki, nie dłużej jednak niż do ukończenia przez nie 25 roku życia, chyba że przed osiągnięciem takiego wieku orzeczono o ich całkowitej niezdolności do pracy; 3) rodzice funkcjonariusza i jego małżonka będący na jego wyłącznym utrzymaniu lub jeżeli ze względu na wiek albo całkowitą lub częściową niezdolność do pracy albo inne okoliczności są niezdolni do wykonywania zatrudnienia; za rodziców uważa się również ojczyma i macochę oraz osoby przysposabiające.",
         "source_name": "legal-questions piotr-rybak-legal-questions",
         "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
         "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
@@ -10,8 +10,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Czy zamknięcie składowiska odpadów lub jego wydzielonej części wymaga zgody właściwego organu?",
-        "output": "Art. 54. 1. Zamknięcie składowiska odpadów lub jego wydzielonej części wymaga zgody właściwego organu. 2. Zgodę na zamknięcie składowiska odpadów lub jego wydzielonej części wydaje, na wniosek zarządzającego składowiskiem odpadów, w drodze decyzji: 1) wojewoda - dla przedsięwzięć mogących znacząco oddziaływać na środowisko, dla których obowiązek sporządzania raportu o oddziaływaniu przedsięwzięcia na środowisko wynika z przepisów o ochronie środowiska oraz gdy dotyczy eksploatacji składowiska na terenach zakładów zaliczanych do tych przedsięwzięć, 2) starosta - dla pozostałych przedsięwzięć po przeprowadzeniu kontroli składowiska odpadów przez wojewódzkiego inspektora ochrony środowiska. 3. Wniosek, o którym mowa w ust. 2, powinien zawierać: 1) określenie technicznego sposobu zamknięcia składowiska odpadów lub jego wydzielonej części, 2) harmonogram działań związanych z rekultywacją składowiska odpadów. 4. Zgoda, o której mowa w ust. 1, na zamknięcie składowiska odpadów lub jego wydzielonej części określa: 1) techniczny sposób zamknięcia składowiska odpadów lub jego wydzielonej części, 2) harmonogram działań związanych z rekultywacją składowiska odpadów, 3) warunki sprawowania nadzoru nad zrekultywowanym składowiskiem odpadów. 5. Zarządzający składowiskiem, po wykonaniu obowiązków określonych w decyzji o zgodzie na zamknięcie składowiska, może złożyć wniosek o uchylenie ustanowionego zabezpieczenia roszczeń. Przepis art. 35 ust. 2 stosuje się odpowiednio.",
+        "input": "Jakiej karze podlega armator, który wykonuje rybołówstwo morskie w polskich obszarach morskich, z naruszeniem przepisów ustawy?",
+        "output": "Art. 74. 1. Armator, który wykonuje rybołówstwo morskie w polskich obszarach morskich, z naruszeniem przepisów ustawy, podlega karze pieniężnej do wysokości 1 000 000 złotych. 2. Karze, o której mowa w ust. 1, podlega również armator statku o polskiej przynależności, który wykonuje rybołówstwo morskie poza polskimi obszarami morskimi, z naruszeniem przepisów ustawy lub postanowień umów międzynarodowych, których Rzeczpospolita Polska jest stroną. 3. Minister właściwy do spraw rolnictwa określi, w drodze rozporządzenia, wysokość kar pieniężnych za naruszenia, o których mowa w ust. 1 i 2, zróżnicowane w zależności od ich rodzaju i społecznej szkodliwości.",
         "source_name": "legal-questions piotr-rybak-legal-questions",
         "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
         "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
@@ -19,8 +19,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Kto powołuje rachmistrzów spisowych?",
-        "output": "Art. 15. 1. Spis przeprowadzą rachmistrze spisowi, powołani przez dyrektora wojewódzkiego urzędu statystycznego na wniosek wójta, burmistrza lub prezydenta miasta. 2. Rachmistrzowi spisowemu przysługuje ochrona prawna przewidziana dla funkcjonariuszy publicznych.",
+        "input": "Czy na rozprawie mogą być obecne osoby w stanie nie licującym z powagą sądu?",
+        "output": "Art. 356. § 1. Na rozprawie oprócz osób biorących udział w postępowaniu mogą być obecne tylko osoby pełnoletnie, nie uzbrojone. § 2. Przewodniczący może zezwolić na obecność na rozprawie małoletnim oraz osobom obowiązanym do noszenia broni. § 3. Nie mogą być obecne na rozprawie osoby znajdujące się w stanie nie licującym z powagą sądu.",
         "source_name": "legal-questions piotr-rybak-legal-questions",
         "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
         "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",

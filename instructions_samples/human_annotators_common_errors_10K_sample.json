@@ -1,23 +1,23 @@
 [
     {
-        "instruct": "Usuń błędy składniowe z poniższego tekstu:\nTymczasem pani Agnieszka dokonuje cud.",
-        "output": "Naprawiono błędy szyku, oto poprawiony tekst:\nTymczasem pani Agnieszka dokonuje cudu.",
+        "instruct": "Skoryguj błędy w odmianie przez przypadki, liczby, rodzaje lub osoby:\nUSS „ Finland ” miał na pokładzie załogą statku „ Antilles ”, który został zatopiony przez niemiecki okręt podwodny SM U-105.",
+        "output": "Tekst po usunięciu błędnych końcówek prezentuje się następująco:\nUSS „ Finland ” miał na pokładzie załogę statku „ Antilles ”, który został zatopiony przez niemiecki okręt podwodny SM U-105.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_annotators_common_errors.py"
     },
     {
-        "instruct": "Popraw błędy syntaktyczne:\nPierwsze konstrukcje okrętów podwodnych było dziełem entuzjastów, innowatoruw, tworzących swoje projektory w oparciu o prywatne fundusze.",
-        "output": "Oto poprawiona forma tekstu, niezawierająca błędów składniowych:\nPierwsze konstrukcje okrętów podwodnych były dziełem entuzjastów, innowatorów, tworzących swoje projekty w oparciu o prywatne fundusze.",
+        "instruct": "Napraw błędy w użyciu znaków interpunkcyjnych:\nPo zbudowaniu U-1 austro-węgierska marynarka przeprowadziła próby kture trwały przez większość roku 1910.",
+        "output": "Tekst po korekcie interpunkcyjnej brzmi teraz poprawnie:\nPo zbudowaniu U-1 austro-węgierska marynarka przeprowadziła próby, które trwały przez większość roku 1910.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_annotators_common_errors.py"
     },
     {
-        "instruct": "Skoryguj błędy w pisowni słów:\nKarzdy ruch i dotyk jest namaszczeniem chwili, powolną kontemplacją.",
-        "output": "Tekst po korekcie ortograficznej brzmi teraz w taki sposób:\nKażdy ruch i dotyk jest namaszczeniem chwili, powolną kontemplacją.",
+        "instruct": "Ten tekst zawiera błędy w składni, popraw je:\nNiemieckie bombowiec zniszczyły wiele z ośrodków łączność, baz morskich, a w szczególności lotnisk",
+        "output": "Naprawiono błędy szyku, oto poprawiony tekst:\nNiemieckie bombowce zniszczyły wiele z ośrodków łączności, baz morskich, a w szczególności lotnisk.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",

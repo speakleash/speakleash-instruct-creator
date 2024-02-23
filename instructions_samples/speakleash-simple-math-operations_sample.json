@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Igor ma 31 gruszek. Obok stoi Maria i zabiera 10 gruszek. Oblicz ile teraz Igor ma gruszek.",
+        "instruct": "Przedwczoraj miałem 25 gruszek. Wczoraj straciłem 9. Ile mi zostało?",
         "input": "",
-        "output": "Odpowiedź: 21.",
+        "output": "Odpowiedź: 16.",
         "source_name": "simple_math_operations",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",
         "script_name": "speakleash-simple-math-operations.py"
     },
     {
-        "instruct": "Oblicz ile to będzie 16 dodać -1.",
+        "instruct": "Ile to będzie 9 * -7?",
         "input": "",
-        "output": "16 plus -1 to 15",
+        "output": "Wynikiem jest -63.",
         "source_name": "simple_math_operations",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",
         "script_name": "speakleash-simple-math-operations.py"
     },
     {
-        "instruct": "Gdy Szymek miał 36 banknotów, oddał koleżance 10 banknotów. Oblicz ile banknotów pozostało.",
+        "instruct": "Wykonaj operację dodawania liczb 4 oraz 17.",
         "input": "",
-        "output": "26 banknotów",
+        "output": "Odpowiedź to 21.",
         "source_name": "simple_math_operations",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",

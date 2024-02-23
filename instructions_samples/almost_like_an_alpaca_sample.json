@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Co napisać w uzasadnieniu pracy zdalnej?",
+        "instruct": "Jakie są gatunki żab w Polsce?",
         "input": "",
-        "output": "Wyłóż powody, dla których zdalny system pracy uczyni cię bardziej produktywnym i sprawi, że będziesz miał lepsze wyniki w pracy. Możesz też wskazać praktyczny przykład z pracy, gdy wykazałeś się samodzielnością i świetną organizacją swojego czasu, bez nadzoru.",
+        "output": "ŻABY W POLSCE\nŻaba wodna.\nŻaba jeziorkowa.\nŻaba moczarowa.\nŻaba zwinka.\nŻaba trawna.",
         "source_name": "almost_like_an_alpaca",
         "source_url": "http://instruct.speakleash.space/",
         "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
         "script_name": "almost_like_an_alpaca.py"
     },
     {
-        "instruct": "Na co pomaga joga?",
+        "instruct": "Co można zrobić szybko na przekąskę?",
         "input": "",
-        "output": "CO DAJĄ ĆWICZENIA JOGI?\nrozluźnia i wzmacnia mięśnie,\nwyrównuje gospodarkę hormonalną,\nuwalnia od bólu odcinek lędźwiowy,\nniweluje bóle stawów,\nzwalcza bezsenność,\nleczy depresję,\npoprawia odporność,\nwyrównuje wagę.",
+        "output": "PRZEKĄSKI NA SZYBKO\nTatar z pomidorów i grillowanego bekonu. ...\nPieczarki faszerowane z grilla. ...\nKasza kuskus z krewetkami i awokado. ...\nTosty z awokado, jajkiem i pomidorkami. ...\nSałatka z tuńczykiem na tortilli. ...\nTortille w czerwonej salsie (chilaquiles) ...\nChipsy z tortilli do zupy meksykańskiej. ...\nWarzywny placek z surówki i pieczarek.",
         "source_name": "almost_like_an_alpaca",
         "source_url": "http://instruct.speakleash.space/",
         "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
         "script_name": "almost_like_an_alpaca.py"
     },
     {
-        "instruct": "Jaki biznes jednoosobowy?",
+        "instruct": "Jakie są cechy poprawnej infografiki?",
         "input": "",
-        "output": "12 NAJLEPSZYCH POMYSŁÓW NA FIRMĘ JEDNOOSOBOWĄ, KTÓRE MOŻESZ ZACZĄĆ REALIZOWAĆ JUŻ DZIŚ\nBloger.\nTwórca treści – wideo i podcasty.\nProjektowanie graficzne i fotografia.\nCopywriting.\nPielęgnacja i wyprowadzanie psów.\nKonsulting.\nTrener personalny.\nProgramista stron internetowych, oprogramowania lub aplikacji mobilnych.",
+        "output": "Infografika powinna być skupiona, ale nie może być nieczytelna. Jeśli odbiorca będzie musiał wyławiać z obrazu liczne, gęsto upakowane elementy, zaprzepaszczona zostanie główna zaleta infografiki – możliwość ogarnięcia tematu w kilka chwil. Chodzi więc o wygląd, prostotę, bezpośredniość. To cechy dobrej infografiki.",
         "source_name": "almost_like_an_alpaca",
         "source_url": "http://instruct.speakleash.space/",
         "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",

@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Wymień 10 słów (formie podstawowej), które zaczynają się na literę \"l\".",
+        "instruct": "Czy możesz wymienić 6 słów, które zaczynają się na literę \"p\".",
         "input": "",
-        "output": "lista/linia/ludy/listopada/liczby/lutego/liter/litera/length/literami",
+        "output": "przewiózć/przyjmą/przyłączając/przywracając/przetaczać/postulować",
         "source_name": "plwiki_random_word_list",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
         "script_name": "plwiki_random_word_list.py"
     },
     {
-        "instruct": "Podaj 8 słów rozpoczynających się na literę \"a\".",
+        "instruct": "Wymień cztery słów (formie podstawowej), które zaczynają się na literę \"ż\".",
         "input": "",
-        "output": "alternatywny, algebraiczny, arabski, asocjacyjny, awk, alfabetyczny, absorpcyjny, alergiczny",
+        "output": "• żaliła\n• żywiły\n• żartują\n• żałowała",
         "source_name": "plwiki_random_word_list",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
         "script_name": "plwiki_random_word_list.py"
     },
     {
-        "instruct": "Wymień 7 słów rozpoczynających się na literę \"f\".",
+        "instruct": "Czy jesteś w stanie wymienić osiem słów.",
         "input": "",
-        "output": "• format\n• folia\n• formula_29\n• funkcja\n• funkcj\n• forma\n• fuzja",
+        "output": "patrzć, położyć, stykać, Rozpoczynając, pośrednicz, rywal, zrzekła, polać",
         "source_name": "plwiki_random_word_list",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",

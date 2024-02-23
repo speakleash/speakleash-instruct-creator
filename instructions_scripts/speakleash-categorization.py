@@ -62,7 +62,7 @@ for item in data:
         outputs.append("Kategoria tekstu: " + category)
 
         random.shuffle(outputs)
-        instructions.append({"instruct": prompts[0], "input" : txt, "output" : "Tekst należy do kategorii: " + outputs[0], "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
+        instructions.append({"instruct": prompts[0], "input" : txt, "output" : outputs[0], "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
 
 
 random.shuffle(instructions)

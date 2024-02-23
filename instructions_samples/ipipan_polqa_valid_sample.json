@@ -1,8 +1,8 @@
 [
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "W którym wieku żył Arystoteles?",
-        "output": "Lykeion, lykejon, likejon (gr. Λύκειον, Lýkeion) – szkoła filozoficzna (przy czym przez filozofię rozumiano wtedy ogół racjonalnej wiedzy) założona przez ucznia Platona – Arystotelesa w IV wieku p.n.e.",
+        "input": "Jak nazywa się silny wiatr syberyjski, a także pierwszy wahadłowiec kosmiczny ZSRR, który wystartował w 1988 roku?",
+        "output": "Nosiciel wahadłowców – określenie opisujące samoloty służące do przenoszenia promów kosmicznych. Były tylko dwa modele samolotów, które potrafiły wykonywać takie zadania: Boeing 747 Shuttle Carrier Aircraft: zmodyfikowane samoloty Boeing 747 wykorzystywane przez NASA do przewozu promów używanych w programie STS. Antonow An-225 Mrija: wykorzystywany w radzieckim programie Buran do przewozu zarówno orbiterów, jak i części rakiety Energia, największy i jedyny taki samolot na świecie.",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
@@ -10,8 +10,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Deuter jest izotopem którego pierwiastka?",
-        "output": "deuter – izotop wodoru „Deuter” – muzyk niemiecki Deuter – polski zespół punkrockowy \"Deuter\" – album zespołu Dezerter z 1995 roku",
+        "input": "W którym roku wybuchło powstanie w warszawskim getcie?",
+        "output": "Powstanie w getcie warszawskim (jid. ‏וואַרשעווער געטאָ־אויפֿשטאַנד‎ Warszewer geto-ojfsztand) – zbrojne wystąpienie żydowskich podziemnych formacji zbrojnych na terenie warszawskiego getta od 19 kwietnia do 16 maja 1943.",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
@@ -19,8 +19,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Która dyscyplina sportowa jest oznaczana skrótem MTB?",
-        "output": "1. Mistrzostwa Świata w Maratonie MTB – zawody sportowe, które odbyły się w ramach 14. mistrzostw świata w kolarstwie górskim, 31 sierpnia 2003 roku w szwajcarskim Lugano. Wyniki mężczyzn na stronie Sports123.com Wyniki kobiet na stronie Sports123.com",
+        "input": "W którym archipelagu leży atol Midway?",
+        "output": "Atol Midway jest najbardziej wysuniętą na zachód częścią Łańcucha Hawajskiego i z racji swego położenia geograficznego oraz licznych instalacji wojskowych jest ważnym punktem strategicznym, określonym przez Japończyków jako „strażnik Hawajów”.",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",

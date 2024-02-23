@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Czy podane słowo jest nieprzyzwoite?",
-        "input": "nauczycieli",
-        "output": "Słowo: nauczycieli nie jest wulgarnym wyrażeniem",
+        "instruct": "Czy podane słowo jest wulgarne?",
+        "input": "pochodzi",
+        "output": "nie",
         "source_name": "vulgar_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
         "script_name": "vulgar_words.py"
     },
     {
-        "instruct": "Czy podane słowo jest przekleństwem?",
-        "input": "różny",
-        "output": "Nie",
+        "instruct": "Czy podane słowo jest wulgarnym wyrażeniem?",
+        "input": "doszedł",
+        "output": "Słowo: doszedł nie jest obraźliwe",
         "source_name": "vulgar_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
         "script_name": "vulgar_words.py"
     },
     {
-        "instruct": "Czy podane słowo jest niecenzuralne?",
-        "input": "wypierdolicie",
-        "output": "Słowo: wypierdolicie jest wulgaryzmem",
+        "instruct": "Czy podane słowo jest obraźliwe?",
+        "input": "wymusza",
+        "output": "Słowo: wymusza nie jest wulgarne",
         "source_name": "vulgar_words",
         "source_url": "https://speakleash.org/",
         "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii przetworzenia ich za pomocą pakietu Spacy oraz listy słów wulgarnych.",
