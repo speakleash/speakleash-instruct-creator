@@ -12,8 +12,8 @@ except ImportError as e:
 
 source_name = os.path.basename(__file__).replace(".py", "") + " clarin-pl-poquad"
 source_url = "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad"
-source_description = "Instrukcje zawierające: tytuł artykułu z Wikipedii,\
-                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź."
+source_description = "Instrukcje zawierające: tytuł artykułu z Wikipedii, treść artykułu, oraz pytanie do artykułu i " \
+                     "wyodrębnioną odpowiedź."
 script_name = os.path.basename(__file__)
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
