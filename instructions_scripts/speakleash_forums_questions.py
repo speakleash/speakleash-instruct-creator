@@ -18,7 +18,7 @@ except ImportError as e:
         return None
 
 
-source_name = os.path.basename(__file__).replace(".py", "") + " speakleash_forums_questions"
+source_name = os.path.basename(__file__).replace(".py", "")
 script_name = os.path.basename(__file__)
 source_url = "skrypt długo się generuje, paczka przesłana ręcznie"
 source_description = "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatycznie" \
