@@ -1,8 +1,8 @@
 [
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Jak nazywa się silny wiatr syberyjski, a także pierwszy wahadłowiec kosmiczny ZSRR, który wystartował w 1988 roku?",
-        "output": "Nosiciel wahadłowców – określenie opisujące samoloty służące do przenoszenia promów kosmicznych. Były tylko dwa modele samolotów, które potrafiły wykonywać takie zadania: Boeing 747 Shuttle Carrier Aircraft: zmodyfikowane samoloty Boeing 747 wykorzystywane przez NASA do przewozu promów używanych w programie STS. Antonow An-225 Mrija: wykorzystywany w radzieckim programie Buran do przewozu zarówno orbiterów, jak i części rakiety Energia, największy i jedyny taki samolot na świecie.",
+        "input": "W którym wieku został odlany dzwon Zygmunta?",
+        "output": "Nie są znane powody, dla których król postanowił ufundować dzwon, być może było to wotum błagalne związane z narodzinami jego syna Zygmunta II Augusta (1 sierpnia 1520)[5].",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
@@ -10,8 +10,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "W którym roku wybuchło powstanie w warszawskim getcie?",
-        "output": "Powstanie w getcie warszawskim (jid. ‏וואַרשעווער געטאָ־אויפֿשטאַנד‎ Warszewer geto-ojfsztand) – zbrojne wystąpienie żydowskich podziemnych formacji zbrojnych na terenie warszawskiego getta od 19 kwietnia do 16 maja 1943.",
+        "input": "Kto był najlepszym przyjacielem Achillesa i uczestnikiem wojny trojańskiej; zginął z rąk Hektora?",
+        "output": "Następuje skrucha, wyznanie win i przebaczenie, które stanowią – jak twierdzi Stępniewska – wielką analogię do końcowej sytuacji w \"Iliadzie\", gdzie Achilles wydaje Priamowi ciało Hektora, zabójcy Patroklosa, najlepszego przyjaciela Achillesa. Na takiej samej zasadzie Gerwazy przebacza Jackowi Soplicy zabójstwo Stolnika. W ten sposób też poeta zużytkował w akcie konania księdza Robaka dwa rozwiązania strukturalne – jedno z \"Iliady\", drugie z \"Odysei\".",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
@@ -19,8 +19,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "W którym archipelagu leży atol Midway?",
-        "output": "Atol Midway jest najbardziej wysuniętą na zachód częścią Łańcucha Hawajskiego i z racji swego położenia geograficznego oraz licznych instalacji wojskowych jest ważnym punktem strategicznym, określonym przez Japończyków jako „strażnik Hawajów”.",
+        "input": "Czy Szwecja w czasie II WŚ była neutralna?",
+        "output": "Szwecja zachowała neutralność podczas I i II wojny światowej, co uchroniło ją od zniszczeń i kosztów wojennych oraz wzmocniło jej gospodarkę.",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",

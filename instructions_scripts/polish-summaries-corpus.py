@@ -4,9 +4,10 @@ import json
 import random
 from utils.functions import download_file, get_dir_path
 
-source_name = os.path.basename(__file__).replace(".py", "") + " TODO"
-source_url = "https:// - TODO"
-source_description = "TODO"
+source_name = os.path.basename(__file__).replace(".py", "")
+source_url = "https://huggingface.co/datasets/allegro/summarization-polish-summaries-corpus"
+source_description = "Instrukcje powstały na bazie datasetu The Polish Summaries Corpus zwierającego ręczne " \
+                     "streszczenia artykułów prasowych."
 script_name = os.path.basename(__file__)
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
