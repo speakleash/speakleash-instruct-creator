@@ -3,7 +3,7 @@
         "instruct": "Odpowiedz na pytanie.",
         "input": "Jakie sprzęty polecacie?",
         "output": "A i od nowego roku praktycznie wszystkie sprzęty mają już gwarancję na 5 lat.",
-        "source_name": "speakleash_forums_questions speakleash_forums_questions",
+        "source_name": "speakleash_forums_questions",
         "source_url": "skrypt długo się generuje, paczka przesłana ręcznie",
         "source_description": "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatyczniepary pytania - odpowiedź (forum_forum_wszystkodlawnetrza_pl_corpus,forum_ezoforum_pl_corpus).",
         "script_name": "speakleash_forums_questions.py"
@@ -12,7 +12,7 @@
         "instruct": "Odpowiedz na pytanie.",
         "input": "Jakie sprzęty polecacie?",
         "output": "A i od nowego roku praktycznie wszystkie sprzęty mają już gwarancję na 5 lat.",
-        "source_name": "speakleash_forums_questions speakleash_forums_questions",
+        "source_name": "speakleash_forums_questions",
         "source_url": "skrypt długo się generuje, paczka przesłana ręcznie",
         "source_description": "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatyczniepary pytania - odpowiedź (forum_forum_wszystkodlawnetrza_pl_corpus,forum_ezoforum_pl_corpus).",
         "script_name": "speakleash_forums_questions.py"
@@ -21,7 +21,7 @@
         "instruct": "Odpowiedz na pytanie.",
         "input": "Jakie sprzęty polecacie?",
         "output": "A i od nowego roku praktycznie wszystkie sprzęty mają już gwarancję na 5 lat.",
-        "source_name": "speakleash_forums_questions speakleash_forums_questions",
+        "source_name": "speakleash_forums_questions",
         "source_url": "skrypt długo się generuje, paczka przesłana ręcznie",
         "source_description": "Dokumenty z forów internetowych o jakości HIGH, wyodrębniono z nich automatyczniepary pytania - odpowiedź (forum_forum_wszystkodlawnetrza_pl_corpus,forum_ezoforum_pl_corpus).",
         "script_name": "speakleash_forums_questions.py"
