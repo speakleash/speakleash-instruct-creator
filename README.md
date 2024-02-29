@@ -13,6 +13,12 @@ Merged instruction JSON files into one final file:<br>
 http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merged_and_stats_2024_02_28_v0_0_10.zip
 </details>
 
+Or using terminal commands:
+For Linux:
+`wget --no-check-certificate` 
+
+For Windows:
+`curl` 
 ## Introduction:
 To contribute, clone this repository and add a new instructions script (e.g., ```allegro-summarization.py```) to the ```instructions_scripts``` directory.
 
