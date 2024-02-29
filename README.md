@@ -13,10 +13,10 @@ Merged instruction JSON files into one final file:<br>
 http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merged_and_stats_2024_02_28_v0_0_10.zip
 
 Or using terminal commands:<br>
-For Linux:<br>
+- For Linux:<br>
 `wget` 
 
-For Windows:<br>
+- For Windows:<br>
 `curl` 
 </details>
 
