@@ -2,6 +2,17 @@
 
 Generate instruction JSON files using implemented instruction scripts.
 
+#
+<details>
+<summary>Released instruction version: 2024_02_28_v0_0_10 (expandable list with download links):</summary><br>
+
+All generated instruction JSON files:<br>
+https://instruct.speakleash.space/instructions_not_merged/instructions_not_merged_2024_02_28_v0_0_10.zip
+
+Merged instruction JSON files into one final file:<br>
+https://instruct.speakleash.space/instructions_merged_and_stats/instructions_merged_and_stats_2024_02_28_v0_0_10.zip
+</details>
+
 ## Introduction:
 To contribute, clone this repository and add a new instructions script (e.g., ```allegro-summarization.py```) to the ```instructions_scripts``` directory.
 
