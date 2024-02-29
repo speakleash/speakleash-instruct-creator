@@ -14,10 +14,10 @@ http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merg
 </details>
 
 Or using terminal commands:
-For Linux:
+For Linux:<br>
 `wget --no-check-certificate` 
 
-For Windows:
+For Windows:<br>
 `curl` 
 ## Introduction:
 To contribute, clone this repository and add a new instructions script (e.g., ```allegro-summarization.py```) to the ```instructions_scripts``` directory.
