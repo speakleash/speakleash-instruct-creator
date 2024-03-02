@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Jakie są gatunki żab w Polsce?",
+        "instruct": "Który król najwcześniej władał Anglia?",
         "input": "",
-        "output": "ŻABY W POLSCE\nŻaba wodna.\nŻaba jeziorkowa.\nŻaba moczarowa.\nŻaba zwinka.\nŻaba trawna.",
+        "output": "Alfred Wielki – twórca idei zjednoczonej Anglii. Edward Starszy – następca Alfreda. Athelstan – uznawany za pierwszego króla Anglii.\n8 maj 2023",
         "source_name": "almost_like_an_alpaca",
         "source_url": "http://instruct.speakleash.space/",
         "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
         "script_name": "almost_like_an_alpaca.py"
     },
     {
-        "instruct": "Co można zrobić szybko na przekąskę?",
+        "instruct": "Co jest przedmiotem badań w naukach społecznych?",
         "input": "",
-        "output": "PRZEKĄSKI NA SZYBKO\nTatar z pomidorów i grillowanego bekonu. ...\nPieczarki faszerowane z grilla. ...\nKasza kuskus z krewetkami i awokado. ...\nTosty z awokado, jajkiem i pomidorkami. ...\nSałatka z tuńczykiem na tortilli. ...\nTortille w czerwonej salsie (chilaquiles) ...\nChipsy z tortilli do zupy meksykańskiej. ...\nWarzywny placek z surówki i pieczarek.",
+        "output": "Badania społeczne to naukowe badania mające na celu odkrywanie prawidłowości w życiu społecznym poprzez obserwację i wnioskowanie. Badania społeczne koncentrują się na procesach i zjawiskach w społeczeństwie, a nie na badaniu danych empirycznych.",
         "source_name": "almost_like_an_alpaca",
         "source_url": "http://instruct.speakleash.space/",
         "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
         "script_name": "almost_like_an_alpaca.py"
     },
     {
-        "instruct": "Jakie są cechy poprawnej infografiki?",
+        "instruct": "Co zrobić gdy laptop wolno chodzi?",
         "input": "",
-        "output": "Infografika powinna być skupiona, ale nie może być nieczytelna. Jeśli odbiorca będzie musiał wyławiać z obrazu liczne, gęsto upakowane elementy, zaprzepaszczona zostanie główna zaleta infografiki – możliwość ogarnięcia tematu w kilka chwil. Chodzi więc o wygląd, prostotę, bezpośredniość. To cechy dobrej infografiki.",
+        "output": "Jeśli komputer wykazuje się spowolnioną reakcją podczas używania programów i aplikacji, przyczyn należy upatrywać albo w pracy dysku, albo w zbyt dużej liczbie działających w tle aplikacji lub niezaktualizowanym systemie. Są to najczęstsze przyczyny à propos powolnego rozruchu samego systemu.",
         "source_name": "almost_like_an_alpaca",
         "source_url": "http://instruct.speakleash.space/",
         "source_description": "Instrukcje powstały na podstawie pytań/zadań z zestawu danych Alpaca i odpowiedzi z polskiego Internetu.",
