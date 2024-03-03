@@ -9,9 +9,10 @@ try:
     from utils.functions import get_dir_path
 except ImportError as e:
     print(f'Error: {e}')
+
+
     def get_dir_path(directory):
         return None
-
 
 SCRIPT_NAME = os.path.basename(__file__)
 SOURCE_NAME = SCRIPT_NAME.replace(".py", "")
@@ -33,9 +34,9 @@ def create_dirs() -> str:
     # Create directory (if it does not exist yet) for created instructions json files
     os.makedirs(output_dir, exist_ok=True)
     return output_dir
-    
 
-def download_dataset(dataset: str = "WiktorS/polish-news", split:str = "train") -> pd.DataFrame:
+
+def download_dataset(dataset: str = "WiktorS/polish-news", split: str = "train") -> pd.DataFrame:
     """
     Download and load a dataset to the frame.
 
@@ -45,11 +46,11 @@ def download_dataset(dataset: str = "WiktorS/polish-news", split:str = "train") 
     :return: A Pandas DataFrame containing the downloaded dataset.
     """
     dataset = load_dataset(dataset, split=split)
-    
+
     dataset.set_format('pandas')
     frame = dataset[:]
-    
-    return frame 
+
+    return frame
 
 
 def create_instruction(frame: pd.DataFrame, output_dir: str) -> None:
@@ -60,36 +61,37 @@ def create_instruction(frame: pd.DataFrame, output_dir: str) -> None:
     :param json_path: The path to the output JSON file.
     """
     INSTRUCT_LIST = [
-        "Napisz skróconą wersję podanego tekstu.",
-        "Przygotuj streszczenie dla tego tekstu.",
-        "Dokonaj streszczenia z podanego materiału.",
-        "Streść poniższy tekst.",
-        "Zrób streszczenie.",
-        "Przygotuj skrót informacji z podanego tekstu."
+            "Napisz skróconą wersję podanego tekstu.",
+            "Przygotuj streszczenie dla tego tekstu.",
+            "Dokonaj streszczenia z podanego materiału.",
+            "Streść poniższy tekst.",
+            "Zrób streszczenie.",
+            "Przygotuj skrót informacji z podanego tekstu."
     ]
-    
+
     instructions = []
 
     for index, row in frame.iterrows():
-
-        instructions.append(
-             {
-                "instruct": random.choice(INSTRUCT_LIST), 
-                 "input": row['content'], 
-                 "output": row['headline'], 
-                 "source_name": SOURCE_NAME, 
-                 "source_url": SOURCE_URL, 
-                 "source_description": SOURCE_DESCRIPTION, 
-                 "script_name": SCRIPT_NAME
-            } 
-
-        )
+        input = row['content']
+        output = row['headline']
+        if input and output:
+            instructions.append(
+                    {
+                            "instruct": random.choice(INSTRUCT_LIST),
+                            "input": input,
+                            "output": output,
+                            "source_name": SOURCE_NAME,
+                            "source_url": SOURCE_URL,
+                            "source_description": SOURCE_DESCRIPTION,
+                            "script_name": SCRIPT_NAME
+                    }
+            )
 
     # Randomly change the order of the elements
     random.shuffle(instructions)
 
-    output_path = os.path.join(output_dir, SCRIPT_NAME.replace(".py",".json"))
-    
+    output_path = os.path.join(output_dir, SCRIPT_NAME.replace(".py", ".json"))
+
     # Write prepared instructions to the output file
     with open(output_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
