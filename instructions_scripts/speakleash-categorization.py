@@ -54,15 +54,16 @@ for item in data:
     if quality.upper() == "HIGH" and category:
         counter += 1
         random.shuffle(prompts)
-        outputs = []
-        outputs.append("Tekst należy do kategorii: " + category)
-        outputs.append("Kategoria tekstu to: " + category)
-        outputs.append("Wykryta kategoria: " + category)
-        outputs.append("Kategoria: " + category)
-        outputs.append("Kategoria tekstu: " + category)
+        # outputs = []
+        # outputs.append("Tekst należy do kategorii: " + category)
+        # outputs.append("Kategoria tekstu to: " + category)
+        # outputs.append("Wykryta kategoria: " + category)
+        # outputs.append("Kategoria: " + category)
+        # outputs.append("Kategoria tekstu: " + category)
 
-        random.shuffle(outputs)
-        instructions.append({"instruct": prompts[0], "input" : txt, "output" : outputs[0], "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
+        # random.shuffle(outputs)
+        instructions.append({"instruct": prompts[0], "input" : txt, "output" : category, "source_name" :
+            source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
 
 
 random.shuffle(instructions)

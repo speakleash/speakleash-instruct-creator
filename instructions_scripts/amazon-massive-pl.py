@@ -194,7 +194,7 @@ main_dict = {
 		"instruction": [
 			"Przeanalizuj poniższy tekst i sklasyfikuj ilość błędów w tekście na podstawie podanych kategorii: ",
 			"Sprawdź podany tekst i oceń ilość błędów zgodnie z podanymi kategoriami: ",
-			"Oceń poprawność podanego teksu i sklasyfikuj go według następujących kategorii: ",
+			"Oceń poprawność podanego tekstu i sklasyfikuj go według następujących kategorii: ",
 			"Zweryfikuj jakość tekstu i przyporządkuj go do jednej z kategorii: ",
 			"Przypisz podany tekst do jednej z kategorii na podstawie znalezionych w nim błędów: "],
 		"output": spelling_score,
