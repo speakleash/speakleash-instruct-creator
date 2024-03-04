@@ -10,7 +10,7 @@ All generated instruction JSON zip files:<br>
 http://instruct.speakleash.space/instructions_not_merged/instructions_not_merged_2024_03_02_v0_0_11.zip
 
 Merged instruction JSON files into one final zipfile:<br>
-http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merged_and_stats_2024_03_02_v0_0_11.zip
+http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merged_and_stats_2024_03_04_v0_0_12.zip
 
 Merged instruction JSON file files:
 http://instruct.speakleash.space/speakleash_pl_instructions_2024_03_02_v0_0_11.jsonl
