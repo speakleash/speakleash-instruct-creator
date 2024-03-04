@@ -1,8 +1,8 @@
 [
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Których członków rodziny funkcjonariusza uwzględnia się przy przydziale lokalu?",
-        "output": "Art. 63. Członkami rodziny funkcjonariusza, których uwzględnia się przy przydziale lokalu mieszkalnego, są pozostający z funkcjonariuszem we wspólnym gospodarstwie domowym: 1) małżonek; 2) dzieci własne lub małżonka, przysposobione lub przyjęte na wychowanie w ramach rodziny zastępczej, pozostające na jego utrzymaniu do czasu ukończenia 18 roku życia, a w razie uczęszczania do szkoły lub odbywania studiów w szkole wyższej - do czasu ukończenia nauki, nie dłużej jednak niż do ukończenia przez nie 25 roku życia, chyba że przed osiągnięciem takiego wieku orzeczono o ich całkowitej niezdolności do pracy; 3) rodzice funkcjonariusza i jego małżonka będący na jego wyłącznym utrzymaniu lub jeżeli ze względu na wiek albo całkowitą lub częściową niezdolność do pracy albo inne okoliczności są niezdolni do wykonywania zatrudnienia; za rodziców uważa się również ojczyma i macochę oraz osoby przysposabiające.",
+        "input": "Jak brzmi treść przyrzeczenia, które musi złożyć biegły sądowy?",
+        "output": "Art. 197. § 1. Biegły składa przyrzeczenie następującej treści: \"Świadomy znaczenia moich słów i odpowiedzialności przed prawem, przyrzekam uroczyście, że powierzone mi obowiązki wykonam z całą sumiennością i bezstronnością\". § 2. Biegły sądowy powołuje się na przyrzeczenie złożone przy ustanowieniu go w tym charakterze. § 3. Do biegłego stosuje się odpowiednio przepisy art. 177, 179-181, 187, 188 § 2 i 4, art. 190 oraz art. 191 § 1 i 3.",
         "source_name": "legal-questions piotr-rybak-legal-questions",
         "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
         "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
@@ -10,8 +10,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Jakiej karze podlega armator, który wykonuje rybołówstwo morskie w polskich obszarach morskich, z naruszeniem przepisów ustawy?",
-        "output": "Art. 74. 1. Armator, który wykonuje rybołówstwo morskie w polskich obszarach morskich, z naruszeniem przepisów ustawy, podlega karze pieniężnej do wysokości 1 000 000 złotych. 2. Karze, o której mowa w ust. 1, podlega również armator statku o polskiej przynależności, który wykonuje rybołówstwo morskie poza polskimi obszarami morskimi, z naruszeniem przepisów ustawy lub postanowień umów międzynarodowych, których Rzeczpospolita Polska jest stroną. 3. Minister właściwy do spraw rolnictwa określi, w drodze rozporządzenia, wysokość kar pieniężnych za naruszenia, o których mowa w ust. 1 i 2, zróżnicowane w zależności od ich rodzaju i społecznej szkodliwości.",
+        "input": "Od jakiego dnia każdego roku nalicza się podwyższenie indywidualnych wynagrodzeń urzędników?",
+        "output": "Art. 13. 1. Środki na wynagrodzenia zasadnicze urzędników ustala się: 1) w pierwszym roku obowiązywania ustawy - przeciętnie w wysokości 35% wynagrodzenia zasadniczego sędziego sądu rejonowego, 2) w drugim roku obowiązywania ustawy - przeciętnie w wysokości 40% wynagrodzenia zasadniczego sędziego sądu rejonowego, 3) w trzecim roku obowiązywania ustawy - przeciętnie w wysokości 50% wynagrodzenia zasadniczego sędziego sądu rejonowego - z tym że w drugim i trzecim roku obowiązywania ustawy środki na wynagrodzenia zasadnicze urzędników podwyższa się o wartość składki na ubezpieczenia emerytalne i rentowe, o której mowa w art. 110 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (DZ. U. Nr 137, poz. 887). 2. Podwyższenie indywidualnych wynagrodzeń urzędników nalicza się od dnia 1 stycznia każdego roku.",
         "source_name": "legal-questions piotr-rybak-legal-questions",
         "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
         "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
@@ -19,8 +19,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Czy na rozprawie mogą być obecne osoby w stanie nie licującym z powagą sądu?",
-        "output": "Art. 356. § 1. Na rozprawie oprócz osób biorących udział w postępowaniu mogą być obecne tylko osoby pełnoletnie, nie uzbrojone. § 2. Przewodniczący może zezwolić na obecność na rozprawie małoletnim oraz osobom obowiązanym do noszenia broni. § 3. Nie mogą być obecne na rozprawie osoby znajdujące się w stanie nie licującym z powagą sądu.",
+        "input": "Czy skazany który nie ukończył 18 lat musi mieć obrońcę?",
+        "output": "Art. 8. § 1. W postępowaniu wykonawczym skazany może korzystać z pomocy obrońcy ustanowionego w tym postępowaniu lub pełnomocnika. § 2. W postępowaniu przed sądem skazany musi mieć obrońcę, jeżeli: 1) jest głuchy, niemy lub niewidomy, 2) zachodzi uzasadniona wątpliwość co do jego poczytalności, 3) nie ukończył 18 lat, 4) nie włada językiem polskim. § 3. Skazany pozbawiony wolności może porozumiewać się ze swoim obrońcą lub pełnomocnikiem będącym adwokatem podczas nieobecności innych osób oraz korespondencyjnie lub telefonicznie. Rozdział IV Postępowanie wykonawcze Oddział 1 Wykonywanie orzeczeń",
         "source_name": "legal-questions piotr-rybak-legal-questions",
         "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
         "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",

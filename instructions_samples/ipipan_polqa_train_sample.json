@@ -1,8 +1,8 @@
 [
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Jakiego koloru kwiaty ma konwalia majowa?",
-        "output": "Zastosowanie. Roślina ozdobna. Uprawiana na rabatach i na kwiat cięty. Stosowana razem z paprociami także do okrywania miejsc cienistych, zadrzewionych, przy fundamentach budynków. Popularny składnik wiązanek ślubnych. Kwiatostany stosowane do bukietów o niewielkich rozmiarach złożonych z samych konwalii (otulonych też zwykle liśćmi tego gatunku) lub z innymi białymi kwiatami. Utrzymują się długo w wodzie po skośnym ucięciu pędów i nacięciu ich na długości ok. 5 cm.",
+        "input": "Flop to technika skoku w dal czy wzwyż?",
+        "output": "Richard Douglas „Dick” Fosbury (ur. 6 marca 1947 w Portland w stanie Oregon) – amerykański skoczek wzwyż, który zapoczątkował styl skakania zwany flopem.",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
@@ -10,8 +10,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Jak nazywa się owalna płytka, na której malarz miesza farby podczas malowania?",
-        "output": "Paleta – prosty przyrząd malarski w postaci płytki lub bardzo płytkiej kuwety, służący do rozmieszczania farb potrzebnych w procesie malowania oraz ich swobodnego mieszania, rozcieńczania lub łączenia z mediami malarskimi. Paletą nazywany jest również dobór barw stosowany przez malarza lub szkołę.",
+        "input": "Jak miał na imię Sławek, marszałek Sejmu przed wojną?",
+        "output": "Były premier nie wszedł także w skład Obozu Zjednoczenia Narodowego, który uważał za twór dążący do totalitaryzmu. 22 czerwca 1938 r., tuż po śmierci Stanisława Cara, Sławek został marszałkiem Sejmu, głosowało na niego wielu sanacyjnych posłów, którzy chcieli w ten sposób wyrazić swój sprzeciw wobec sposobu traktowania go przez Rydza-Śmigłego i Mościckiego. Izba została jednak rozwiązana przez prezydenta 18 września.",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
@@ -19,8 +19,8 @@
     },
     {
         "instruct": "Odpowiedz na pytanie.",
-        "input": "Za co został skazany Al Capone?",
-        "output": "W tym celu rozpoczęto śledztwo urzędu skarbowego przeciw Capone, którego podejrzewano o niepłacenie podatków, oraz zawiązano specjalną grupę śledczą, która miała likwidować nielegalne destylarnie Capone.",
+        "input": "W którym roku USA wypowiedziało wojnę Niemcom podczas I wojny światowej?",
+        "output": "6 kwietnia – I wojna światowa: Stany Zjednoczone przystąpiły do I wojny światowej wypowiadając wojnę Niemcom.",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",

@@ -1,29 +1,29 @@
 [
     {
         "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
-        "input": "Kto jako jedyny interpretował apokalipsę inaczej niż papiestwo? Jednym z ostatnich przedstawicieli antypapieskiej interpretacji Apokalipsy w protestanckiej egzegezie był Bengel. „Głowy Bestii” identyfikuje z siedmioma papieżami, od Grzegorza VII do Innocentego III. Bengel głosił podwójny chiliazm, a jego interpretacja Apokalipsy przeplatana jest fantastyką. Twierdził, że w 1836 roku zakończy się rozpoczęty w 725 roku i trwający 1111 1/9 lat Chronus, a rozpocznie Nonchronus. Paruzja dokona się w roku 1836, po której rozpocznie się tysiącletnie królestwo i trwać będzie do roku 2836, po którym nastąpi związanie Szatana i kolejne tysiącletnie królestwo. W roku 3836 nastąpi koniec świata. W XIX wieku historiozoficzna interpretacja Apokalipsy została niemal całkowicie zarzucona, kontynuowana jest po dziś dzień przez adwentystów i Świadków Jehowy.",
-        "output": "Bengel",
+        "input": "Jaki tekst znajduje się na pomnikowej tablicy? Schrony odcinka \"Wizna\" zostały zniszczone przez wycofujące się w 1944 r. wojska niemieckie. W ruinach schronu dowodzenia na Górze Strękowej znajduje się pomnik – wiele lat po śmierci Raginisa umieszczono tu skromną tablicę: Przechodniu, powiedz Ojczyźnie, żeśmy walczyli do końca, spełniając swój obowiązek. W 2011 r. powstała tam także mogiła wojenna. Stan zachowania pozostałych schronów jest bardzo zły. Oprócz pomnika na Górze Strękowej w samej Wiźnie jest też pomnik poświęcony polskim obrońcom w 1939 oraz pomnik-armata poświęcony por. Stanisławowi Brykalskiemu.",
+        "output": "Przechodniu, powiedz Ojczyźnie, żeśmy walczyli do końca, spełniając swój obowiązek",
         "source_name": "poquad_text_extraction clarin-pl-poquad",
         "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
-        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii, treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
         "script_name": "poquad_text_extraction.py"
     },
     {
         "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
-        "input": "Na jakim serwisie społecznościowym swoją popularność zyskały hasztagi? Popularność hasztagów rosła wraz z rozwojem i popularnością Twittera. Christopher Reaves Messina zaproponował system do tagowania wybranych tematów w sieci mikroblogów na Twitterze. Wstawił pierwszy hasztag na Twitter, pisząc: how do you feel about using # (pound) for groups. As in #barcamp [msg]?. Według leksykografa Bena Zimmera, przewodniczącego Komisji do spraw nowych słów w dialektach amerykańskich społeczności, jako pierwszy określenia hasz tag użył na blogu Stowe Boyd, publikując wpis Hasz tagi = Grupowanie na Twitterze 26 sierpnia 2007 roku.",
-        "output": "na Twitterze",
+        "input": "Do jakiego wydarzenia odnosi się słowo haka? Jest to typowa haka peruperu. Słowa tej haki bez znajomości kontekstu historycznego i kulturowego są kompletnie niezrozumiałe, żeby nie powiedzieć infantylne. Nawiązuje ona do wydarzenia, jakie miało miejsce w czasie „wojen muszkietowych”: wódz jednego z klanów „Ngāti Toa”, nazywający się Te Rauparaha uciekał samotnie przez góry przed ścigającymi go wojownikami innego wodza („kudłaty człowiek” – w rozumieniu „przerażający człowiek” – Maorysi są z natury skąpo owłosieni i gęsto owłosieni ludzie wzbudzali u nich niepokój, może i obrzydzenie), który dysponował dużą przewagą militarną („może powodować wschód słońca”). Te Rauparaha doskonale wiedział, że w przypadku pojmania czeka go natychmiastowa śmierć („ka mate!” – ja umrę!), ale wierzył że zdoła ocaleć („ka ora!” – ja żyję! w znaczeniu „jednak jeszcze żyję!”). Po udanej ucieczce („słońce wzeszło”), która stała się głośna wśród Maorysów, haka ta była prawdopodobnie śpiewana przez społeczeństwo „Ngāti Toa” wobec wrogów, jako zapowiedź jego niezniszczalności.",
+        "output": "„wojen muszkietowych”:",
         "source_name": "poquad_text_extraction clarin-pl-poquad",
         "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
-        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii, treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
         "script_name": "poquad_text_extraction.py"
     },
     {
         "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
-        "input": "Kiedy doszukiwać się można źródła konfliktu Neville'a i Dallasa? Zalążków feudu między Adrianem Nevillem a Bo Dallasem można doszukiwać się już w maju 2013, kiedy to Neville – posiadacz NXT Tag Team Championship – wybrał Dallasa na zastępstwo za swojego kontuzjowanego partnera, Olivera Greya, tym samym czyniąc Dallasa mistrzem drużynowym. Neville i Dallas szybko utracili mistrzostwa; w późniejszych miesiącach Neville ponownie zdobył mistrzostwo tag teamów, natomiast Dallas stał się antagonistą i zdobył NXT Championship. 27 listopada 2013 Neville zdobył miano pretendenckie do głównego mistrzostwa NXT, a tydzień później zmierzył się z Dallasem. Walka zakończyła się wyliczeniem pozaringowym mistrza, przez co tytuł nie zmienił właściciela. 18 grudnia zawodnicy spotkali się w rewanżowym Lumberjack matchu. I tym razem pojedynek zakończył się nieczysto – walkę zakończyła interwencja jednego z „drwali” – Tylera Breeze’a. Neville ponownie stał się pretendentem po pokonaniu Dallasa w Beat the Clock Challenge’u w styczniu 2014. 5 lutego, podczas odcinka NXT, Triple H ogłosił, że zawodnicy zawalczą o NXT Championship w Ladder matchu na nadchodzącym NXT Arrival.",
-        "output": "w maju 2013",
+        "input": "W jakim filmie Bińczycki zagrał po raz pierwszy?  W filmie zadebiutował w 1962 epizodyczną rolą policjanta w Drugim brzegu. W kolejnych latach wcielał się w niewielkie role, głównie czarnych charakterów. W 1975 nastąpił przełom – Jerzy Antczak zaangażował go do roli Bogumiła w adaptacji Nocy i dni Marii Dąbrowskiej. Rola Bińczyckiego zachwyciła krytyków i publiczność, przeszła do historii polskiego kina. Aktor otrzymał za nią wiele nagród, a film został nawet nominowany do Oscara. Bińczycki ukazał tu siłę swojego aktorstwa, jak pisał Krzysztof Demidowicz – „Zbudował on fascynującą, ponadczasową sylwetkę zwyczajnego człowieka. Delikatnie odsłonił psychiczne rany bohatera, pokazując jednocześnie jego wewnętrzne bogactwo”.",
+        "output": "Drugi brzeg",
         "source_name": "poquad_text_extraction clarin-pl-poquad",
         "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
-        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii, treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
         "script_name": "poquad_text_extraction.py"
     }
 ]
