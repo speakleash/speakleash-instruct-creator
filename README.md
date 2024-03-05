@@ -15,6 +15,9 @@ http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merg
 Merged instruction JSON file files:<br>
 http://instruct.speakleash.space/speakleash_pl_instructions_2024_03_04_v0_0_12.jsonl
 
+Merged instruction JSON file files (Alpaca format):<br>
+http://instruct.speakleash.space/speakleash_pl_instructions_alpaca_2024_03_04_v0_0_12.jsonl
+
 Or using terminal commands:<br>
 - For Linux:<br>
 `wget` 
