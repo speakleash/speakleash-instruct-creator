@@ -13,7 +13,7 @@ Merged instruction JSON files into one final zipfile:<br>
 http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merged_and_stats_2024_03_04_v0_0_12.zip
 
 Merged instruction JSON file files:<br>
-http://instruct.speakleash.space/speakleash_pl_instructions_2024_03_04_v0_0_12.jsonl
+http://instruct.speakleash.space/speakleash_pl_instructions_2024_03_07_v0_0_13.jsonl
 
 Merged instruction JSON file files (Alpaca format):<br>
 http://instruct.speakleash.space/speakleash_pl_instructions_alpaca_2024_03_07_v0_0_13.jsonl
