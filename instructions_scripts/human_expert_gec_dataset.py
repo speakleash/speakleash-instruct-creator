@@ -19,7 +19,7 @@ SOURCE_DESCRIPTION = 'Zbiór danych zawierający zbiory testowe do korekcji bł�
                      'danych jest Ermlab'
 
 SOURCE_URL = 'https://github.com/Ermlab/polish-gec-datasets/tree/main/'
-FILE = 'human_annotators_common_errors_10K.jsonl'
+FILE = 'human_expert_gec_dataset.jsonl'
 DATA_DIR = 'data'
 OUTPUT_DIR = 'output'
 SCRIPT_NAME = os.path.basename(__file__)
@@ -34,7 +34,7 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
     :return: Generated instruction.
     """
     error_map = {
-            'lex': [
+            'leks': [
                     'Popraw błędy leksykalne w podanym tekście',
                     'Skoryguj wszelkie nieprawidłowości leksykalne w podanym fragmencie',
                     'Znajdź i popraw błędy leksykalne',
@@ -58,7 +58,7 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
                     'Popraw wszelkie nieprawidłowości w pisowni',
                     'Skoryguj błędy ortograficzne w poniższym fragmencie',
             ],
-            'synt': [
+            'skład': [
                     'Popraw błędy składniowe w podanym tekście:',
                     'Popraw błędy syntaktyczne',
                     'Skoryguj podany tekst, poprawiając błędy składniowe',
@@ -70,7 +70,7 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
                     'Składnia tego tekstu zawiera błędy, pozbądź się ich',
                     'Spraw, aby poniższy tekst nie zawierał błędów składniowych'
             ],
-            'flex': [
+            'fleks': [
                     'Popraw błędy związane z błędną odmianą słów',
                     'Dokonaj korekty błędnych form odmiany',
                     'Znajdź i popraw niepoprawne formy słów',
@@ -82,7 +82,7 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
                     'Usuń błędy związane z nieprawidłową odmianą',
                     'Skoryguj błędne formy słów w podanym tekście',
             ],
-            'punct': [
+            'int': [
                     'Popraw błędy interpunkcyjne',
                     'Napraw błędy w użyciu znaków interpunkcyjnych',
                     'Znajdź i usuń błędy w stosowaniu przecinków, kropek itd.',
@@ -93,6 +93,18 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
                     'Znajdź i napraw błędy w stosowaniu przecinków i kropek',
                     'Popraw wszelkie nieprawidłowości w użyciu znaków interpunkcyjnych',
                     'Skoryguj błędy w użyciu interpunkcji, takie jak przecinki czy kropki',
+            ],
+            'unspecified': [
+                    'Popraw zdanie',
+                    'Popraw błędy w poniższym zdaniu',
+                    'Dokonaj korekty tego tekstu',
+                    'Usuń wszystkie błędy, które znjadują się w tym tekście',
+                    'Znajdź i skoryguj wszystkie błędy w tekście',
+                    'Popraw ten tekst',
+                    'Spraw aby zdanie nie miało żadnych błędów',
+                    'Sprawdź tekst pod kątem błędów',
+                    'Spraw, by tekst nie miał żadnych błędów',
+                    'Skoryguj ten fragment, aby był gramatycznie poprawny',
             ]
     }
 
@@ -108,7 +120,7 @@ def get_answer(error_type: str, element_correct: str) -> str:
     :return: Generated answer.
     """
     answer_map = {
-            'lex': [
+            'leks': [
                     'Poprawna wersja tekstu, pozbawiona błędów leksykalnych',
                     'Poprawiona wersja',
                     'Tekst z poprawionymi błędami leksykalnymi prezentuje się następująco',
@@ -131,7 +143,7 @@ def get_answer(error_type: str, element_correct: str) -> str:
                     'Tekst po usunięciu literówek prezentuje się następująco',
                     'Oto tekst po korekcie ortograficznej'
             ],
-            'synt': [
+            'skład': [
                     'Oto poprawiona forma tekstu, niezawierająca błędów składniowych',
                     'Tekst poprawiono, eliminując błędy syntaktyczne',
                     'Naprawiono składnię tekstu, oto jego poprawiona forma',
@@ -143,7 +155,7 @@ def get_answer(error_type: str, element_correct: str) -> str:
                     'Tekst po usunięciu błędów w składni prezentuje się następująco',
                     'Oto tekst po korekcie składniowej'
             ],
-            'flex': [
+            'fleks': [
                     'Oto poprawiona forma tekstu, niezawierająca błędów fleksyjnych',
                     'Tekst poprawiono, eliminując błędy w odmianie słów',
                     'Naprawiono formy gramatyczne, oto poprawiony tekst',
@@ -155,7 +167,7 @@ def get_answer(error_type: str, element_correct: str) -> str:
                     'Tekst po usunięciu błędnych końcówek prezentuje się następująco',
                     'Oto tekst po korekcie fleksyjnej'
             ],
-            'punct': [
+            'int': [
                     'Oto poprawiona forma tekstu, niezawierająca błędów interpunkcyjnych',
                     'Tekst poprawiono, eliminując błędy w interpunkcji',
                     'Naprawiono interpunkcję, oto poprawiony tekst',
@@ -166,7 +178,20 @@ def get_answer(error_type: str, element_correct: str) -> str:
                     'Usunięto błędy w stosowaniu interpunkcji, oto poprawiony tekst',
                     'Tekst po usunięciu nieprawidłowej interpunkcji prezentuje się następująco',
                     'Oto tekst po korekcie interpunkcyjnej'
+            ],
+            'unspecified': [
+                    'Poprawione zdanie',
+                    'Tekst po korekcie wygląda następująco',
+                    'Wyeliminowano wszystkie błędy. Tekst prezetnuje się następująco',
+                    'Oto tekst po naniesionych zmianach i poprawkach',
+                    'Poprawiona wersja tekstu brzmi następująco',
+                    'Usunięto błędy w tekście, oto poprawiony tekst',
+                    'Po dokonaniu korekty, fragment tekstu brzmi',
+                    'Tak prezentuje się tekst po naniesionych zmianach',
+                    'Wprowadzone poprawki sprawiły, że tekst wygląda następująco',
+                    'Zredagowany tekst prezentuje się w takiej oto formie',
             ]
+
     }
 
     return f"{random.choice(answer_map.get(error_type))}:\n{element_correct}"
@@ -226,20 +251,27 @@ def create_instruction(file_path: str, json_path: str) -> None:
     :param json_path: The path to the output JSON file.
     """
 
+    errors_types = ['skład', 'int', 'leks', 'fleks', 'ort', 'unspecified']
+    blacklist = ['orrt', 'skłąd', 'inr']
     instructions = []
 
     try:
         with jsonlines.open(file_path, 'r') as reader_file:
             for element in reader_file:
-                error_type = element['errors'][0]['type']
-                instructions.append({
-                        "instruct": get_instruct(error_type, element['incorrect']),
-                        "output": get_answer(error_type, element['correct']),
-                        "source_name": SOURCE_NAME,
-                        "source_url": SOURCE_URL,
-                        "source_description": SOURCE_DESCRIPTION,
-                        "script_name": SCRIPT_NAME
-                })
+                try:
+                    error_type = element['errors'][0]['type']
+                except (KeyError, IndexError):
+                    error_type = 'unspecified'
+
+                if error_type in errors_types and error_type not in blacklist:
+                    instructions.append({
+                            "instruct": get_instruct(error_type, element['incorrect']),
+                            "output": get_answer(error_type, element['correct']),
+                            "source_name": SOURCE_NAME,
+                            "source_url": SOURCE_URL,
+                            "source_description": SOURCE_DESCRIPTION,
+                            "script_name": SCRIPT_NAME
+                    })
     except (FileNotFoundError, jsonlines.Error) as e:
         print(f"Error reading file {file_path}: {e}")
 
