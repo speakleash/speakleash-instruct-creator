@@ -4,7 +4,7 @@ Generate instruction JSON files using implemented instruction scripts.
 
 #
 <details>
-<summary>Released instruction version: 2024_03_04_v0_0_12 (expandable list with download links):</summary><br>
+<summary>Released instruction version: 2024_03_07_v0_0_13 (expandable list with download links):</summary><br>
 
 All generated instruction JSON zip files:<br>
 http://instruct.speakleash.space/instructions_not_merged/instructions_not_merged_2024_03_07_v0_0_13.zip
