@@ -45,7 +45,7 @@ def create_instruction(instruction, file_path, json_path):
     instructions = []
     data_temp = pd.read_json(file_path, orient="index", typ="series")
     data = pd.DataFrame(data_temp["data"])
-
+    instructions_sets = []
     for index, row in data.iterrows():
         if len(row["paragraphs"][0]["qas"]) != 0 and list(
             row["paragraphs"][0]["qas"][0].keys()
@@ -61,17 +61,20 @@ def create_instruction(instruction, file_path, json_path):
                 target = row["paragraphs"][0]["qas"][0]["answers"][0]["generative_answer"]
             else:
                 continue
-            instructions.append(
-                {
-                    "instruct": instruction,
-                    "input": source + ' ' + row["paragraphs"][0]["context"],
-                    "output": target,
-                    "source_name": source_name,
-                    "source_url": source_url,
-                    "source_description": source_description,
-                    "script_name": script_name,
-                 }
-            )
+            set = (instruction, source + ' ' + row["paragraphs"][0]["context"], target)
+            if set not in instructions_sets:
+                instructions_sets.append(set)
+                instructions.append(
+                    {
+                        "instruct": instruction,
+                        "input": source + ' ' + row["paragraphs"][0]["context"],
+                        "output": target,
+                        "source_name": source_name,
+                        "source_url": source_url,
+                        "source_description": source_description,
+                        "script_name": script_name,
+                     }
+                )
     random.shuffle(instructions)
 
     with open(json_path, "w", encoding='utf-8') as f:
