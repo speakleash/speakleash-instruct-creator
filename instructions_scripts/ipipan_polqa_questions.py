@@ -9,6 +9,7 @@ import os
 import random
 
 import pandas as pd
+import ast
 
 try:
     from utils.functions import download_file, get_dir_path
@@ -55,7 +56,17 @@ def downloader(file: str) -> tuple:
     return file_path, json_path
 
 
-def create_instruction(instruction: str, file_path: str, json_path: str) -> None:
+def parse_answers(answers: str) -> list:
+    """
+    Parse a string of answers into a list of answers.
+
+    :param answers: A string containing answers, possibly enclosed in square brackets and separated by commas.
+    :return: A list of answers extracted from the input string.
+    """
+    return ast.literal_eval(answers)
+
+
+def create_instruction(file_path: str, json_path: str) -> None:
     """
     Create instructions in JSON format from a CSV file and save them in a JSON file.
 
@@ -65,31 +76,37 @@ def create_instruction(instruction: str, file_path: str, json_path: str) -> None
     """
 
     instructions = []
+    added_pair = []
+    added_pairs_counter = 0
+    new_counter = 0
 
-    # Read data columnts from the csv file
-    data = pd.read_csv(file_path, usecols=['question', 'passage_text', 'relevant'])
+    data = pd.read_csv(file_path, usecols=['question', 'passage_text', 'relevant', 'answers'], converters={'answers': parse_answers})
+    data['first_answer'] = data['answers'].apply(lambda x: x[0] if x else None)
+    print(data.head())
 
     # Iterate through rows and pick defined ones
     for index, row in data.iterrows():
-        source = row['question']
-        target = row['passage_text']
+        question = row['question']
+        answer = row['first_answer']
         if row['relevant']:
+            new_counter += 1
+        pair = (question, answer)
+        if row['relevant'] and pair not in added_pair:
+            added_pair.append(pair)
+            added_pairs_counter += 1
             instructions.append({
-                    "instruct": instruction,
-                    "input": source,
-                    "output": target,
+                    'id': added_pairs_counter,
+                    "instruct": row['question'],
+                    "input": row['passage_text'],
+                    "output": row['first_answer'],
                     "source_name": source_name,
                     "source_url": source_url,
                     "source_description": source_description,
                     "script_name": script_name
             })
-        else:
-            continue
 
     # Randomly change the order of the elements
-    random.shuffle(instructions)
-
-    # Write prepared instructions to the output file
+    # random.shuffle(instructions)
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
@@ -98,4 +115,4 @@ if __name__ == '__main__':
     files = ['train', 'valid']
     for file in files:
         file_path, json_path = downloader(file)
-        create_instruction("Odpowiedz na pytanie.", file_path, json_path)
+        create_instruction(file_path, json_path)
