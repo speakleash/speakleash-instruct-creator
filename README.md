@@ -120,7 +120,7 @@ Q&A extraction from SpeakLeash datasets (selected forums)
 "forum_ezoforum_pl_corpus"
 
 ## 10
-IC - DONE
+IC - IN PROGRESS
 https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
 Polish Analogy Dataset
 
@@ -129,9 +129,6 @@ MF - DONE
 https://github.com/ZILiAT-NASK/BAN-PL/data/BAN-PL_1.zip
 BAN-PL.csv
 
-## 12
-IC - IN PROGRESS 
-https://github.com/Ermlab/polish-gec-datasets/tree/main
 
 ## POMYSŁY
 https://huggingface.co/datasets/WiktorS/polish-news
