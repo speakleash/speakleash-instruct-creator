@@ -78,18 +78,14 @@ def create_instruction(file_path: str, json_path: str) -> None:
     instructions = []
     added_pair = []
     added_pairs_counter = 0
-    new_counter = 0
 
     data = pd.read_csv(file_path, usecols=['question', 'passage_text', 'relevant', 'answers'], converters={'answers': parse_answers})
     data['first_answer'] = data['answers'].apply(lambda x: x[0] if x else None)
-    print(data.head())
 
     # Iterate through rows and pick defined ones
     for index, row in data.iterrows():
         question = row['question']
         answer = row['first_answer']
-        if row['relevant']:
-            new_counter += 1
         pair = (question, answer)
         if row['relevant'] and pair not in added_pair:
             added_pair.append(pair)
@@ -107,6 +103,9 @@ def create_instruction(file_path: str, json_path: str) -> None:
 
     # Randomly change the order of the elements
     # random.shuffle(instructions)
+
+    print(len(instructions))
+
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
