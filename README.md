@@ -93,7 +93,7 @@ https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
 ## 5
-IC - IN PROGRESS (2 datasets done)
+IC - IN PROGRESS (2 datasets done)<br>
 https://github.com/Ermlab/polish-gec-datasets
 human_annotators_common_errors_10K.jsonl
 
