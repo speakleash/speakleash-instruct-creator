@@ -272,18 +272,3 @@ if __name__ == '__main__':
     data_dir, output_dir = create_dirs()
     file_path, json_path = downloader(SOURCE_URL, FILE, data_dir, output_dir)
     create_instruction(file_path, json_path)
-
-
-
-"""
-"Biorąc pod uwagę, że Pesa 122N jest wąskotorową wersją Pesy 120N, to ten typ powinien być nazwany Pesa 820N <ref name=' ŚK 2008-02-01 00:00:00'> </ref>." - niejasne, prawdopodobnie niepoprawne odniesienie do odnośnika.
-"""
-
-
-"""
-WNIOSKI:
-Jeżeli zrobimy usunięcie potwórzonych linii w notepad++, to zostaje 9963 instrukcji
-
-1) Istnieją 3 duplikaty na 10000, które są parami correct-incorrect
-2) istnieje 29 duplikatów jednie po correct
-"""
