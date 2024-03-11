@@ -96,7 +96,9 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
             ]
     }
 
-    return f"{random.choice(error_map.get(error_type))}:\n{element_incorrect}"
+    instruct_pick = random.choice(error_map.get(error_type))
+    output_clean = text_cleaner(f"{instruct_pick}:\n{element_incorrect}")
+    return output_clean
 
 
 def get_answer(error_type: str, element_correct: str) -> str:
@@ -168,8 +170,19 @@ def get_answer(error_type: str, element_correct: str) -> str:
                     'Oto tekst po korekcie interpunkcyjnej'
             ]
     }
+    instruct_pick = random.choice(answer_map.get(error_type))
+    output_clean = text_cleaner(f"{instruct_pick}:\n{element_correct}")
+    return output_clean
 
-    return f"{random.choice(answer_map.get(error_type))}:\n{element_correct}"
+
+def text_cleaner(text: str) -> str:
+    """
+    Clean string with regex formula.
+
+    :param text: Provided text for cleaning.
+    :return: Cleaned text.
+    """
+    return text.replace('Ŝ', 'ż').replace('„', '"').replace('”', '"').replace(',,', '"').replace("''", '"').replace(' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
 
 
 def downloader(download_url: str, file: str, data_dir:str, output_dir: str) -> tuple:
@@ -227,26 +240,30 @@ def create_instruction(file_path: str, json_path: str) -> None:
     """
 
     instructions = []
+    duplicates_correct = []
 
     try:
         with jsonlines.open(file_path, 'r') as reader_file:
             for element in reader_file:
-                error_type = element['errors'][0]['type']
-                instructions.append({
-                        "instruct": get_instruct(error_type, element['incorrect']),
-                        "output": get_answer(error_type, element['correct']),
-                        "source_name": SOURCE_NAME,
-                        "source_url": SOURCE_URL,
-                        "source_description": SOURCE_DESCRIPTION,
-                        "script_name": SCRIPT_NAME
-                })
+                if element['correct'] not in duplicates_correct:
+                    duplicates_correct.append(element['correct'])
+                    error_type = element['errors'][0]['type']
+                    instructions.append({
+                            "instruct": get_instruct(error_type, element['incorrect']),
+                            "output": get_answer(error_type, element['correct']),
+                            "source_name": SOURCE_NAME,
+                            "source_url": SOURCE_URL,
+                            "source_description": SOURCE_DESCRIPTION,
+                            "script_name": SCRIPT_NAME
+                    })
+
+
     except (FileNotFoundError, jsonlines.Error) as e:
         print(f"Error reading file {file_path}: {e}")
 
     # Randomly change the order of the elements
-    random.shuffle(instructions)
+    # random.shuffle(instructions)
 
-    # Write prepared instructions to the output file
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
@@ -255,3 +272,18 @@ if __name__ == '__main__':
     data_dir, output_dir = create_dirs()
     file_path, json_path = downloader(SOURCE_URL, FILE, data_dir, output_dir)
     create_instruction(file_path, json_path)
+
+
+
+"""
+"Biorąc pod uwagę, że Pesa 122N jest wąskotorową wersją Pesy 120N, to ten typ powinien być nazwany Pesa 820N <ref name=' ŚK 2008-02-01 00:00:00'> </ref>." - niejasne, prawdopodobnie niepoprawne odniesienie do odnośnika.
+"""
+
+
+"""
+WNIOSKI:
+Jeżeli zrobimy usunięcie potwórzonych linii w notepad++, to zostaje 9963 instrukcji
+
+1) Istnieją 3 duplikaty na 10000, które są parami correct-incorrect
+2) istnieje 29 duplikatów jednie po correct
+"""
