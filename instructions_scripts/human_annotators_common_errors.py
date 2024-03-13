@@ -2,7 +2,7 @@
 import json
 import os
 import random
-
+import re
 import jsonlines
 
 try:
@@ -182,10 +182,11 @@ def text_cleaner(text: str) -> str:
     :param text: Provided text for cleaning.
     :return: Cleaned text.
     """
+    text = re.sub(r"\[\d+\]\.$", '', text)
     return text.replace('Ŝ', 'ż').replace('„', '"').replace('”', '"').replace(',,', '"').replace("''", '"').replace(' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
 
 
-def downloader(download_url: str, file: str, data_dir:str, output_dir: str) -> tuple:
+def downloader(download_url: str, file: str, data_dir: str, output_dir: str) -> tuple:
     """
     Download dataset file, return its file path and corresponding JSON file path.
 
@@ -239,6 +240,7 @@ def create_instruction(file_path: str, json_path: str) -> None:
     :param json_path: The path to the output JSON file.
     """
 
+    instructions_counter = 1
     instructions = []
     duplicates_correct = []
 
@@ -246,21 +248,37 @@ def create_instruction(file_path: str, json_path: str) -> None:
         with jsonlines.open(file_path, 'r') as reader_file:
             for element in reader_file:
                 if element['correct'] not in duplicates_correct:
+                    # add element list to duplicates checker list
                     duplicates_correct.append(element['correct'])
+
+                    # get error type
                     error_type = element['errors'][0]['type']
+                    print(error_type)
+
+                    # generate instruct and output
+                    instruct = get_instruct(error_type, element['incorrect'])
+                    output = get_answer(error_type, element['correct'])
+                    print(type(instruct), type(output))
+                    print(output)
+
+                    # add instruction to the dataset
                     instructions.append({
-                            "instruct": get_instruct(error_type, element['incorrect']),
-                            "output": get_answer(error_type, element['correct']),
+                            'id': instructions_counter,
+                            "instruct": instruct,
+                            "output": output,
+                            'output_len': len(output),
                             "source_name": SOURCE_NAME,
                             "source_url": SOURCE_URL,
                             "source_description": SOURCE_DESCRIPTION,
                             "script_name": SCRIPT_NAME
                     })
+                    # increase added instructions counter
+                    instructions_counter += 1
 
 
     except (FileNotFoundError, jsonlines.Error) as e:
         print(f"Error reading file {file_path}: {e}")
-
+    print(len(instructions))
     # Randomly change the order of the elements
     # random.shuffle(instructions)
 

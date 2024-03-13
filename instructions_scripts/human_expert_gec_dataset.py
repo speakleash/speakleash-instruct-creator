@@ -2,7 +2,7 @@
 import json
 import os
 import random
-
+import re
 import jsonlines
 
 try:
@@ -107,8 +107,9 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
                     'Skoryguj ten fragment, aby był gramatycznie poprawny',
             ]
     }
-
-    return f"{random.choice(error_map.get(error_type))}:\n{element_incorrect}"
+    instruct_pick = random.choice(error_map.get(error_type))
+    output_clean = text_cleaner(f"{instruct_pick}:\n{element_incorrect}")
+    return output_clean
 
 
 def get_answer(error_type: str, element_correct: str) -> str:
@@ -193,11 +194,23 @@ def get_answer(error_type: str, element_correct: str) -> str:
             ]
 
     }
+    instruct_pick = random.choice(answer_map.get(error_type))
+    output_clean = text_cleaner(f"{instruct_pick}:\n{element_correct}")
+    return output_clean
 
-    return f"{random.choice(answer_map.get(error_type))}:\n{element_correct}"
+
+def text_cleaner(text: str) -> str:
+    """
+    Clean string with regex formula.
+
+    :param text: Provided text for cleaning.
+    :return: Cleaned text.
+    """
+    text = re.sub(r"\[\d+\]\.$", '', text)
+    return text.replace('Ŝ', 'ż').replace('„', '"').replace('”', '"').replace(',,', '"').replace("''", '"').replace(' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
 
 
-def downloader(download_url: str, file: str, data_dir:str, output_dir: str) -> tuple:
+def downloader(download_url: str, file: str, data_dir: str, output_dir: str) -> tuple:
     """
     Download dataset file, return its file path and corresponding JSON file path.
 
@@ -250,33 +263,58 @@ def create_instruction(file_path: str, json_path: str) -> None:
     :param file_path: The path to the downloaded CSV file.
     :param json_path: The path to the output JSON file.
     """
-
+    # Listed types of searched errors being picked for processing
     errors_types = ['skład', 'int', 'leks', 'fleks', 'ort', 'unspecified']
+    # Blackisted types of errors, not picked for processing
     blacklist = ['orrt', 'skłąd', 'inr']
+
+    instructions_counter = 1
     instructions = []
+    duplicates_correct = []
+    errors_unspecified = 0
 
     try:
         with jsonlines.open(file_path, 'r') as reader_file:
             for element in reader_file:
+                # get error type
                 try:
                     error_type = element['errors'][0]['type']
                 except (KeyError, IndexError):
+                    errors_unspecified += 1
                     error_type = 'unspecified'
 
-                if error_type in errors_types and error_type not in blacklist:
+                # Conditions: error is in searched errors, not blacklisted, correct output is not duplicated and
+                # error is present in sentences
+                if error_type in errors_types and error_type not in blacklist and element['correct'] not in \
+                        duplicates_correct and element['correct'] != element['incorrect']:
+
+                    # add element list to duplicates checker list
+                    duplicates_correct.append(element['correct'])
+
+                    # generate instruct and output
+                    instruct = get_instruct(error_type, element['incorrect'])
+                    output = get_answer(error_type, element['correct'])
+                    print(type(element['incorrect']))
+
+                    # add instruction to the dataset
                     instructions.append({
-                            "instruct": get_instruct(error_type, element['incorrect']),
-                            "output": get_answer(error_type, element['correct']),
+                            'id': instructions_counter,
+                            "instruct": instruct,
+                            "output": output,
+                            'output_len': len(output),
                             "source_name": SOURCE_NAME,
                             "source_url": SOURCE_URL,
                             "source_description": SOURCE_DESCRIPTION,
                             "script_name": SCRIPT_NAME
                     })
+                    # increase added instructions counter
+                    instructions_counter += 1
+
     except (FileNotFoundError, jsonlines.Error) as e:
         print(f"Error reading file {file_path}: {e}")
 
     # Randomly change the order of the elements
-    random.shuffle(instructions)
+    # random.shuffle(instructions)
 
     # Write prepared instructions to the output file
     with open(json_path, "w", encoding='utf-8') as f:
