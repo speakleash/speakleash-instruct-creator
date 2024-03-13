@@ -256,12 +256,14 @@ def _convert_github_url(git_url: str) -> str:
     return git_url
 
 
-def create_instruction(file_path: str, json_path: str) -> None:
+def create_instruction(file_path: str, json_path: str, shuffle: bool = False, sort_instructions: bool = False) -> None:
     """
     Create instructions in JSON format from a JSON file and save them in a JSON file.
 
     :param file_path: The path to the downloaded CSV file.
     :param json_path: The path to the output JSON file.
+    :param json_path: Condition setting instructions randomised order.
+    :param json_path: Condition setting instructions sorting by output length.
     """
     # Listed types of searched errors being picked for processing
     errors_types = ['skład', 'int', 'leks', 'fleks', 'ort', 'unspecified']
@@ -294,7 +296,6 @@ def create_instruction(file_path: str, json_path: str) -> None:
                     # generate instruct and output
                     instruct = get_instruct(error_type, element['incorrect'])
                     output = get_answer(error_type, element['correct'])
-                    print(type(element['incorrect']))
 
                     # add instruction to the dataset
                     instructions.append({
@@ -313,8 +314,19 @@ def create_instruction(file_path: str, json_path: str) -> None:
     except (FileNotFoundError, jsonlines.Error) as e:
         print(f"Error reading file {file_path}: {e}")
 
+    if sort_instructions:
+        # sort instructions by output length
+        instructions_sorted = sorted(instructions, key=lambda x: x['output_len'])
+
+        # Give new ID's for sorted instructions
+        for index, instruction in enumerate(instructions_sorted, start=1):
+            instruction['id'] = index
+
+        instructions = instructions_sorted
+
     # Randomly change the order of the elements
-    # random.shuffle(instructions)
+    if shuffle:
+        random.shuffle(instructions)
 
     # Write prepared instructions to the output file
     with open(json_path, "w", encoding='utf-8') as f:
@@ -324,4 +336,4 @@ def create_instruction(file_path: str, json_path: str) -> None:
 if __name__ == '__main__':
     data_dir, output_dir = create_dirs()
     file_path, json_path = downloader(SOURCE_URL, FILE, data_dir, output_dir)
-    create_instruction(file_path, json_path)
+    create_instruction(file_path, json_path, shuffle=False, sort_instructions=True)
