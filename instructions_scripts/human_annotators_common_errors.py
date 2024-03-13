@@ -2,7 +2,7 @@
 import json
 import os
 import random
-
+import re
 import jsonlines
 
 try:
@@ -96,7 +96,9 @@ def get_instruct(error_type: str, element_incorrect: str) -> str:
             ]
     }
 
-    return f"{random.choice(error_map.get(error_type))}:\n{element_incorrect}"
+    instruct_pick = random.choice(error_map.get(error_type))
+    output_clean = text_cleaner(f"{instruct_pick}:\n{element_incorrect}")
+    return output_clean
 
 
 def get_answer(error_type: str, element_correct: str) -> str:
@@ -168,11 +170,23 @@ def get_answer(error_type: str, element_correct: str) -> str:
                     'Oto tekst po korekcie interpunkcyjnej'
             ]
     }
+    instruct_pick = random.choice(answer_map.get(error_type))
+    output_clean = text_cleaner(f"{instruct_pick}:\n{element_correct}")
+    return output_clean
 
-    return f"{random.choice(answer_map.get(error_type))}:\n{element_correct}"
+
+def text_cleaner(text: str) -> str:
+    """
+    Clean string with regex formula.
+
+    :param text: Provided text for cleaning.
+    :return: Cleaned text.
+    """
+    text = re.sub(r"\[\d+\]\.$", '', text)
+    return text.replace('Ŝ', 'ż').replace('„', '"').replace('”', '"').replace(',,', '"').replace("''", '"').replace(' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
 
 
-def downloader(download_url: str, file: str, data_dir:str, output_dir: str) -> tuple:
+def downloader(download_url: str, file: str, data_dir: str, output_dir: str) -> tuple:
     """
     Download dataset file, return its file path and corresponding JSON file path.
 
@@ -218,35 +232,65 @@ def _convert_github_url(git_url: str) -> str:
     return git_url
 
 
-def create_instruction(file_path: str, json_path: str) -> None:
+def create_instruction(file_path: str, json_path: str, shuffle: bool = False, sort_instructions: bool = False) -> None:
     """
     Create instructions in JSON format from a JSON file and save them in a JSON file.
 
     :param file_path: The path to the downloaded CSV file.
     :param json_path: The path to the output JSON file.
+    :param json_path: Condition setting instructions randomised order.
+    :param json_path: Condition setting instructions sorting by output length.
     """
-
+    instructions_counter = 1
     instructions = []
+    duplicates_correct = []
 
     try:
         with jsonlines.open(file_path, 'r') as reader_file:
             for element in reader_file:
-                error_type = element['errors'][0]['type']
-                instructions.append({
-                        "instruct": get_instruct(error_type, element['incorrect']),
-                        "output": get_answer(error_type, element['correct']),
-                        "source_name": SOURCE_NAME,
-                        "source_url": SOURCE_URL,
-                        "source_description": SOURCE_DESCRIPTION,
-                        "script_name": SCRIPT_NAME
-                })
+                if element['correct'] not in duplicates_correct:
+                    # add element list to duplicates checker list
+                    duplicates_correct.append(element['correct'])
+
+                    # get error type
+                    error_type = element['errors'][0]['type']
+
+                    # generate instruct and output
+                    instruct = get_instruct(error_type, element['incorrect'])
+                    output = get_answer(error_type, element['correct'])
+
+                    # add instruction to the dataset
+                    instructions.append({
+                            'id': instructions_counter,
+                            "instruct": instruct,
+                            "output": output,
+                            'output_len': len(output),
+                            "source_name": SOURCE_NAME,
+                            "source_url": SOURCE_URL,
+                            "source_description": SOURCE_DESCRIPTION,
+                            "script_name": SCRIPT_NAME
+                    })
+                    # increase added instructions counter
+                    instructions_counter += 1
+
+
     except (FileNotFoundError, jsonlines.Error) as e:
         print(f"Error reading file {file_path}: {e}")
 
-    # Randomly change the order of the elements
-    random.shuffle(instructions)
+    if sort_instructions:
+        # sort instructions by output length
+        instructions_sorted = sorted(instructions, key=lambda x: x['output_len'])
 
-    # Write prepared instructions to the output file
+        # Give new ID's for sorted instructions
+        for index, instruction in enumerate(instructions_sorted, start=1):
+            instruction['id'] = index
+
+        instructions = instructions_sorted
+
+    # Randomly change the order of the elements
+    if shuffle:
+        random.shuffle(instructions)
+
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
@@ -254,4 +298,4 @@ def create_instruction(file_path: str, json_path: str) -> None:
 if __name__ == '__main__':
     data_dir, output_dir = create_dirs()
     file_path, json_path = downloader(SOURCE_URL, FILE, data_dir, output_dir)
-    create_instruction(file_path, json_path)
+    create_instruction(file_path, json_path, shuffle=False, sort_instructions=True)
