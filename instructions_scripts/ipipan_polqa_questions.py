@@ -7,9 +7,11 @@ Removed test subset in Pull Request #15
 import json
 import os
 import random
+import re
 
 import pandas as pd
 import ast
+
 
 try:
     from utils.functions import download_file, get_dir_path
@@ -55,6 +57,17 @@ def downloader(file: str) -> tuple:
     json_path = os.path.join(output_dir, f"ipipan_polqa_{file}.json")
     return file_path, json_path
 
+def text_cleaner(text: str) -> str:
+    """
+    Clean string with regex formula.
+
+    :param text: Provided text for cleaning.
+    :return: Cleaned text.
+    """
+    text = re.sub(r"\[\d+\]\.$", '', text)
+    return text.replace('Ŝ', 'ż').replace('„', '"').replace('”', '"').replace(',,', '"').replace("''", '"').replace(' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
+
+
 
 def parse_answers(answers: str) -> list:
     """
@@ -84,17 +97,19 @@ def create_instruction(file_path: str, json_path: str) -> None:
 
     # Iterate through rows and pick defined ones
     for index, row in data.iterrows():
-        question = row['question']
-        answer = row['first_answer']
-        pair = (question, answer)
+        instruct = text_cleaner(row['question'])
+        input = text_cleaner(row['passage_text'])
+        output = text_cleaner(row['first_answer'])
+
+        pair = (instruct, output)
         if row['relevant'] and pair not in added_pair:
             added_pair.append(pair)
             added_pairs_counter += 1
             instructions.append({
                     'id': added_pairs_counter,
-                    "instruct": row['question'],
-                    "input": row['passage_text'],
-                    "output": row['first_answer'],
+                    "instruct": instruct,
+                    "input": input,
+                    "output": output,
                     "source_name": source_name,
                     "source_url": source_url,
                     "source_description": source_description,
@@ -103,8 +118,6 @@ def create_instruction(file_path: str, json_path: str) -> None:
 
     # Randomly change the order of the elements
     # random.shuffle(instructions)
-
-    print(len(instructions))
 
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
