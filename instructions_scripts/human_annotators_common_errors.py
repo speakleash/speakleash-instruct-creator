@@ -9,6 +9,8 @@ try:
     from utils.functions import download_file, get_dir_path
 except ImportError as e:
     print(f'Error: {e}')
+
+
     def get_dir_path(directory):
         return None
 
@@ -183,7 +185,8 @@ def text_cleaner(text: str) -> str:
     :return: Cleaned text.
     """
     text = re.sub(r"\[\d+\]\.$", '', text)
-    return text.replace('Ŝ', 'ż').replace('„', '"').replace('”', '"').replace(',,', '"').replace("''", '"').replace(' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
+    return text.replace('Ŝ', 'ż').replace('„', '"').replace('”', '"').replace(',,', '"').replace("''", '"').replace(
+        ' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
 
 
 def downloader(download_url: str, file: str, data_dir: str, output_dir: str) -> tuple:
@@ -241,7 +244,6 @@ def create_instruction(file_path: str, json_path: str, shuffle: bool = False, so
     :param json_path: Condition setting instructions randomised order.
     :param json_path: Condition setting instructions sorting by output length.
     """
-    instructions_counter = 1
     instructions = []
     duplicates_correct = []
 
@@ -261,18 +263,14 @@ def create_instruction(file_path: str, json_path: str, shuffle: bool = False, so
 
                     # add instruction to the dataset
                     instructions.append({
-                            'id': instructions_counter,
                             "instruct": instruct,
+                            "input": '',
                             "output": output,
-                            'output_len': len(output),
                             "source_name": SOURCE_NAME,
                             "source_url": SOURCE_URL,
                             "source_description": SOURCE_DESCRIPTION,
                             "script_name": SCRIPT_NAME
                     })
-                    # increase added instructions counter
-                    instructions_counter += 1
-
 
     except (FileNotFoundError, jsonlines.Error) as e:
         print(f"Error reading file {file_path}: {e}")
@@ -298,4 +296,4 @@ def create_instruction(file_path: str, json_path: str, shuffle: bool = False, so
 if __name__ == '__main__':
     data_dir, output_dir = create_dirs()
     file_path, json_path = downloader(SOURCE_URL, FILE, data_dir, output_dir)
-    create_instruction(file_path, json_path, shuffle=False, sort_instructions=True)
+    create_instruction(file_path, json_path, shuffle=False, sort_instructions=False)
