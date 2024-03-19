@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Odpowiedz na pytanie.",
-        "input": "W którym wieku został odlany dzwon Zygmunta?",
-        "output": "Nie są znane powody, dla których król postanowił ufundować dzwon, być może było to wotum błagalne związane z narodzinami jego syna Zygmunta II Augusta (1 sierpnia 1520)[5].",
+        "instruct": "Która organizacja powstała wcześniej: Europejska Wspólnota Węgla i Stali czy Europejska Wspólnota Energii Atomowej?",
+        "input": "1952    23 lipca    Na mocy traktatu paryskiego powołana została Europejska Wspólnota Węgla i Stali (EWWiS). Krajami założycielskimi były: Belgia, Francja, Holandia, Luksemburg, Republika Federalna Niemiec oraz Włochy.\n1958    1 stycznia    Na mocy traktatów rzymskich kraje EWWiS założyły Europejską Wspólnotę Gospodarczą (EWG), przekształconą później we Wspólnotę Europejską (WE), oraz Europejską Wspólnotę Energii Atomowej (Euratom).",
+        "output": "Europejska Wspólnota Węgla i Stali",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
         "script_name": "ipipan_polqa_questions.py"
     },
     {
-        "instruct": "Odpowiedz na pytanie.",
-        "input": "Kto był najlepszym przyjacielem Achillesa i uczestnikiem wojny trojańskiej; zginął z rąk Hektora?",
-        "output": "Następuje skrucha, wyznanie win i przebaczenie, które stanowią – jak twierdzi Stępniewska – wielką analogię do końcowej sytuacji w \"Iliadzie\", gdzie Achilles wydaje Priamowi ciało Hektora, zabójcy Patroklosa, najlepszego przyjaciela Achillesa. Na takiej samej zasadzie Gerwazy przebacza Jackowi Soplicy zabójstwo Stolnika. W ten sposób też poeta zużytkował w akcie konania księdza Robaka dwa rozwiązania strukturalne – jedno z \"Iliady\", drugie z \"Odysei\".",
+        "instruct": "W którym wieku został odlany dzwon Zygmunta?",
+        "input": "W Polsce nadawano imiona, tylko męskie, zwykle od ich fundatorów, jak np. wielki dzwon, odlany z woli króla Zygmunta I w 1520 roku w Krakowie, dla katedry na Wawelu przez Hansa Behama, ochrzczony został imieniem Zygmunt",
+        "output": "w XVI",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
         "script_name": "ipipan_polqa_questions.py"
     },
     {
-        "instruct": "Odpowiedz na pytanie.",
-        "input": "Czy Szwecja w czasie II WŚ była neutralna?",
-        "output": "Szwecja zachowała neutralność podczas I i II wojny światowej, co uchroniło ją od zniszczeń i kosztów wojennych oraz wzmocniło jej gospodarkę.",
+        "instruct": "Jak nazywają się boczne pasy na mundurowych spodniach?",
+        "input": "Lampasy - paski sukna lub jedwabiu kolorowego naszywane po bokach zewnętrznego szwu spodni (pantalonów), głównie mundurowych, rzadziej cywilnych (np. spodnie smokingu) zwykle podwójne lub pojedyncze.",
+        "output": "lampasy",
         "source_name": "ipipan-ipipan_polqa_questions",
         "source_url": "https://huggingface.co/datasets/ipipan/polqa",
         "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",

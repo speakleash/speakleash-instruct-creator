@@ -1,23 +1,26 @@
 [
     {
-        "instruct": "Usuń błędy składniowe z poniższego tekstu:\nPurpura oblewał korony drzew, spływała po ich pniach, ściekała na krzaki, paprocie i poszycie.",
-        "output": "Naprawiono składnię tekstu, oto jego poprawiona forma:\nPurpura oblewała korony drzew, spływała po ich pniach, ściekała na krzaki, paprocie i poszycie.",
+        "instruct": "Ten tekst zawiera błędy w składni, popraw je:\nNieopodal Zmorojewa rozpoczął się wojna.",
+        "input": "",
+        "output": "Usunięto błędny szyk elementów w zdaniu, oto poprawiony tekst:\nNieopodal Zmorojewa rozpoczęła się wojna.",
         "source_name": "human_expert_gec_dataset",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_expert_gec_dataset.py"
     },
     {
-        "instruct": "Spraw aby zdanie nie miało żadnych błędów:\nAndrzej Wajda usłyszał o niej od Tadeusza Janczara w 1957 roku podczas pobytu w szpitalu.",
-        "output": "Po dokonaniu korekty, fragment tekstu brzmi:\nAndrzej Wajda usłyszał o niej od Tadeusza Janczara w 1957 roku podczas pobytu w szpitalu.",
+        "instruct": "Składnia tego tekstu zawiera błędy, pozbądź się ich:\nNie była głośny; nie rozbrzmiewały wystrzały, krzyk żołnierzy, huk spadających bomb.",
+        "input": "",
+        "output": "Usunięto błędny szyk elementów w zdaniu, oto poprawiony tekst:\nNie była głośna; nie rozbrzmiewały wystrzały, krzyk żołnierzy, huk spadających bomb.",
         "source_name": "human_expert_gec_dataset",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_expert_gec_dataset.py"
     },
     {
-        "instruct": "Skoryguj błędy w pisowni słów:\nOdłożył słóchawkę i spojrzał na zegarkowi.",
-        "output": "Tekst poprawiono, eliminując błędy w pisowni:\nOdłożył słuchawkę i spojrzał na zegarek.",
+        "instruct": "Ten tekst zawiera błędy w składni, popraw je:\nNikt nie zakłócały spokoju lasu - gdzie ćwierkały ptaki, szumiały drzewa, słychać było przebiegające w oddali zwierzęta.",
+        "input": "",
+        "output": "Naprawiono składnię tekstu, oto jego poprawiona forma:\nNikt nie zakłócał spokoju lasu - gdzie ćwierkały ptaki, szumiały drzewa, słychać było przebiegające w oddali zwierzęta.",
         "source_name": "human_expert_gec_dataset",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",

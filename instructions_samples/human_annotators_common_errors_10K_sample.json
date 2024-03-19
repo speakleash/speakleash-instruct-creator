@@ -1,23 +1,26 @@
 [
     {
-        "instruct": "Skoryguj błędy w odmianie przez przypadki, liczby, rodzaje lub osoby:\nUSS „ Finland ” miał na pokładzie załogą statku „ Antilles ”, który został zatopiony przez niemiecki okręt podwodny SM U-105.",
-        "output": "Tekst po usunięciu błędnych końcówek prezentuje się następująco:\nUSS „ Finland ” miał na pokładzie załogę statku „ Antilles ”, który został zatopiony przez niemiecki okręt podwodny SM U-105.",
+        "instruct": "Spraw, aby poniższy tekst nie zawierał błędów składniowych:\nBoli mnie głowa, łzy płynie z oczu.",
+        "input": "",
+        "output": "Oto poprawiona forma tekstu, niezawierająca błędów składniowych:\nBoli mnie głowa, łzy płyną z oczu.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_annotators_common_errors.py"
     },
     {
-        "instruct": "Napraw błędy w użyciu znaków interpunkcyjnych:\nPo zbudowaniu U-1 austro-węgierska marynarka przeprowadziła próby kture trwały przez większość roku 1910.",
-        "output": "Tekst po korekcie interpunkcyjnej brzmi teraz poprawnie:\nPo zbudowaniu U-1 austro-węgierska marynarka przeprowadziła próby, które trwały przez większość roku 1910.",
+        "instruct": "Ten tekst zawiera błędy związane z błędną odmianą słów, popraw je:\nGdy Fitz po razu pierwszy poszedł do prostytutki, próbował ją pocałować - nie dlatego, że chciał, ale zakładał, że powinien to zrobić.",
+        "input": "",
+        "output": "Naprawiono formy gramatyczne, oto poprawiony tekst:\nGdy Fitz po raz pierwszy poszedł do prostytutki, próbował ją pocałować - nie dlatego, że chciał, ale zakładał, że powinien to zrobić.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",
         "script_name": "human_annotators_common_errors.py"
     },
     {
-        "instruct": "Ten tekst zawiera błędy w składni, popraw je:\nNiemieckie bombowiec zniszczyły wiele z ośrodków łączność, baz morskich, a w szczególności lotnisk",
-        "output": "Naprawiono błędy szyku, oto poprawiony tekst:\nNiemieckie bombowce zniszczyły wiele z ośrodków łączności, baz morskich, a w szczególności lotnisk.",
+        "instruct": "Wykryj i popraw wszelkie błędy pisowni w tekście:\nSystem zamknięty nie musi podkreślać cionżenia do centrum, gdyż ze swej natury jest koherentny.",
+        "input": "",
+        "output": "Tekst pozbawiono błędów ortograficznych, oto jego poprawiona forma:\nSystem zamknięty nie musi podkreślać ciążenia do centrum, gdyż ze swej natury jest koherentny.",
         "source_name": "human_annotators_common_errors",
         "source_url": "https://github.com/Ermlab/polish-gec-datasets/tree/main/",
         "source_description": "Zbiór danych zawierający zbiory testowe do korekcji błędów ortograficznych. Dataset składa się ze zdań prawidłowych, nieprawidłowych oraz wskazań błędów ortograficznych. Autorem zestawu danych jest Ermlab",

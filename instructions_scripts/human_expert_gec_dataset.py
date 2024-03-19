@@ -9,8 +9,6 @@ try:
     from utils.functions import download_file, get_dir_path
 except ImportError as e:
     print(f'Error: {e}')
-
-
     def get_dir_path(directory):
         return None
 
@@ -213,6 +211,14 @@ def text_cleaner(text: str) -> str:
         ' • ', ' * ').replace('×', '*').replace('·', '*').replace('–', '-').replace('\r', '')
 
 
+def convert_file_extension(file: str) -> str:
+    """
+    Change file extension from jsonl to json.
+    """
+    if '.jsonl' in file.lower():
+        return file.replace('.jsonl', '.json')
+
+
 def downloader(download_url: str, file: str, data_dir: str, output_dir: str) -> tuple:
     """
     Download dataset file, return its file path and corresponding JSON file path.
@@ -223,7 +229,7 @@ def downloader(download_url: str, file: str, data_dir: str, output_dir: str) -> 
     """
     download_url = _convert_github_url(download_url)
     file_path = download_file(f"{download_url}/{file}", data_dir, file)
-    json_path = os.path.join(output_dir, f"{file}")
+    json_path = os.path.join(output_dir, f"{convert_file_extension(file)}")
     return file_path, json_path
 
 
