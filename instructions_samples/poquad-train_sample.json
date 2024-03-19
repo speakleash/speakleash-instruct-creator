@@ -1,29 +1,29 @@
 [
     {
         "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
-        "input": "Kto jako jedyny interpretował apokalipsę inaczej niż papiestwo? Jednym z ostatnich przedstawicieli antypapieskiej interpretacji Apokalipsy w protestanckiej egzegezie był Bengel. „Głowy Bestii” identyfikuje z siedmioma papieżami, od Grzegorza VII do Innocentego III. Bengel głosił podwójny chiliazm, a jego interpretacja Apokalipsy przeplatana jest fantastyką. Twierdził, że w 1836 roku zakończy się rozpoczęty w 725 roku i trwający 1111 1/9 lat Chronus, a rozpocznie Nonchronus. Paruzja dokona się w roku 1836, po której rozpocznie się tysiącletnie królestwo i trwać będzie do roku 2836, po którym nastąpi związanie Szatana i kolejne tysiącletnie królestwo. W roku 3836 nastąpi koniec świata. W XIX wieku historiozoficzna interpretacja Apokalipsy została niemal całkowicie zarzucona, kontynuowana jest po dziś dzień przez adwentystów i Świadków Jehowy.",
-        "output": "Bengel",
+        "input": "Co było powodem powrócenia konceptu porozumieniu monachijskiego? Projekty konfederacji zaczęły się załamywać 5 sierpnia 1942. Ponownie wróciła kwestia monachijska, co uaktywniło się wymianą listów Ripka – Stroński. Natomiast 17 sierpnia 1942 doszło do spotkania E. Beneša i J. Masaryka z jednej a Wł. Sikorskiego i E. Raczyńskiego z drugiej strony. Polscy dyplomaci zaproponowali podpisanie układu konfederacyjnego. W następnym miesiącu, tj. 24 września, strona polska przesłała na ręce J. Masaryka projekt deklaracji o przyszłej konfederacji obu państw. Strona czechosłowacka projekt przyjęła, lecz już w listopadzie 1942 E. Beneš podważył ideę konfederacji. W zamian zaproponowano zawarcie układu sojuszniczego z Polską na 20 lat (formalnie nastąpiło to 20 listopada 1942).",
+        "output": "wymiana listów Ripka – Stroński",
         "source_name": "poquad_text_extraction clarin-pl-poquad",
         "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
-        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii, treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
         "script_name": "poquad_text_extraction.py"
     },
     {
         "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
-        "input": "Na jakim serwisie społecznościowym swoją popularność zyskały hasztagi? Popularność hasztagów rosła wraz z rozwojem i popularnością Twittera. Christopher Reaves Messina zaproponował system do tagowania wybranych tematów w sieci mikroblogów na Twitterze. Wstawił pierwszy hasztag na Twitter, pisząc: how do you feel about using # (pound) for groups. As in #barcamp [msg]?. Według leksykografa Bena Zimmera, przewodniczącego Komisji do spraw nowych słów w dialektach amerykańskich społeczności, jako pierwszy określenia hasz tag użył na blogu Stowe Boyd, publikując wpis Hasz tagi = Grupowanie na Twitterze 26 sierpnia 2007 roku.",
-        "output": "na Twitterze",
+        "input": "Jaki model zastąpił Pomilio PC? Samoloty Pomilio PD weszły na wyposażenie jednostek bojowych i zarazem do walki od lipca 1917 roku. Pierwsze otrzymały je w tym miesiącu eskadry (Squadriglia) nr 131 i 132, gdzie zastąpiły Pomilio PC. Do działań wchodziły następnie kolejne nowo formowane eskadry Pomilio: 133 (we wrześniu), 134 (w październiku), 135 (w styczniu 1918 roku), 136 (w maju 1918 roku). Eskadra 139, sformowana z dwóch sekcji początkowo przydzielonych do lotnictwa Marynarki (od sierpnia 1917 roku), weszła do działań w styczniu 1918 roku, a w czerwcu odznaczyła się w bitwie nad Piawą, zrzucając 175 bomb. W bitwie tej brały udział też inne eskadry. Model PD został szybko zastąpiony w jednostkach przez PE i skierowany głównie do szkolenia.",
+        "output": "Pomilio PD",
         "source_name": "poquad_text_extraction clarin-pl-poquad",
         "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
-        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii, treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
         "script_name": "poquad_text_extraction.py"
     },
     {
         "instruct": "Znajdź w podanym tekście odpowiedź na pytanie.",
-        "input": "Kiedy doszukiwać się można źródła konfliktu Neville'a i Dallasa? Zalążków feudu między Adrianem Nevillem a Bo Dallasem można doszukiwać się już w maju 2013, kiedy to Neville – posiadacz NXT Tag Team Championship – wybrał Dallasa na zastępstwo za swojego kontuzjowanego partnera, Olivera Greya, tym samym czyniąc Dallasa mistrzem drużynowym. Neville i Dallas szybko utracili mistrzostwa; w późniejszych miesiącach Neville ponownie zdobył mistrzostwo tag teamów, natomiast Dallas stał się antagonistą i zdobył NXT Championship. 27 listopada 2013 Neville zdobył miano pretendenckie do głównego mistrzostwa NXT, a tydzień później zmierzył się z Dallasem. Walka zakończyła się wyliczeniem pozaringowym mistrza, przez co tytuł nie zmienił właściciela. 18 grudnia zawodnicy spotkali się w rewanżowym Lumberjack matchu. I tym razem pojedynek zakończył się nieczysto – walkę zakończyła interwencja jednego z „drwali” – Tylera Breeze’a. Neville ponownie stał się pretendentem po pokonaniu Dallasa w Beat the Clock Challenge’u w styczniu 2014. 5 lutego, podczas odcinka NXT, Triple H ogłosił, że zawodnicy zawalczą o NXT Championship w Ladder matchu na nadchodzącym NXT Arrival.",
-        "output": "w maju 2013",
+        "input": "W którym roku zawodnik zdobył swojego pierwszego gola? Kowal trafił do wojska jesienią 1952 roku, natomiast grę dla Wawelu rozpoczął od sezonu 1953. Zadebiutował w wygranym spotkaniu ligowym przeciwko AKS-owi Chorzów (2:4, 15 marca 1953 roku), zaś pierwszą bramkę strzelił w tymże meczu. W pojedynku z Lechią Gdańsk (5:1, 26 lipca 1953 roku) zdobył hat tricka. Kowal wystąpił w dwudziestu jeden meczach ligowych i strzelił siedem bramek. Zespół prowadzony przez Artura Waltera zdobył wicemistrzostwo Polski, natomiast z rywalizacji o Puchar Polski został wycofany. W sierpniu 1953 roku Kowal jako czynny żołnierz i zawodnik Wawelu reprezentował Okręg Wojskowy Kraków na III Spartakiadzie Wojska Polskiego we Wrocławiu. Wawel zapewnił sobie zwycięstwo w turnieju po wygranych spotkaniach ze Śląskiem Wrocław, Flotą Gdynia, Lotnikiem Warszawa i Zawiszą Bydgoszcz oraz remisie z Lublinianką. Po zakończeniu sezonu decyzją Ministra Obrony Narodowej Wawel został odsunięty z rozgrywek I ligi. Uznano, że prawo do reprezentowania wojskowych klubów w lidze ma wyłącznie Legia Warszawa. W wyniku tychże działań najlepszych piłkarzy krakowskiego zespołu przeniesiono w ramach poborów do stolicy, wśród nich Kowala.",
+        "output": "w 1953",
         "source_name": "poquad_text_extraction clarin-pl-poquad",
         "source_url": "https://huggingface.co/datasets/clarin-pl/poquad/resolve/main/poquad",
-        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii,                    treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
+        "source_description": "Instrukcje zawierające: tytuł artykułu z Wikipedii, treść artykułu, oraz pytanie do artykułu i wyodrębnioną odpowiedź.",
         "script_name": "poquad_text_extraction.py"
     }
 ]

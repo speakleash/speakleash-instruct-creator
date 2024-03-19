@@ -6,7 +6,6 @@ Removed test subset in Pull Request #15
 
 import json
 import os
-import random
 import re
 
 import pandas as pd
@@ -106,7 +105,6 @@ def create_instruction(file_path: str, json_path: str) -> None:
             added_pair.append(pair)
             added_pairs_counter += 1
             instructions.append({
-                    'id': added_pairs_counter,
                     "instruct": instruct,
                     "input": input,
                     "output": output,
