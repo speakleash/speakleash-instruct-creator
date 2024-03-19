@@ -191,7 +191,6 @@ def convert_file_extension(file: str) -> str:
     """
     Change file extension from jsonl to json.
     """
-    print(f'---- type(file) = {type(file)}')
     if '.jsonl' in file.lower():
         return file.replace('.jsonl', '.json')
 
@@ -204,15 +203,9 @@ def downloader(download_url: str, file: str, data_dir: str, output_dir: str) -> 
     :param file: The name of the dataset file to be downloaded.
     :return: A tuple containing path to downloaded file and output JSON file.
     """
-    print(f'---- download_url = {download_url}')
     download_url = _convert_github_url(download_url)
-    print(f'---- download_url changed = {download_url}')
-    print(f'---- data_dir changed = {data_dir}')
-    print(f'---- file changed = {file}')
     file_path = download_file(f"{download_url}/{file}", data_dir, file)
-    print(f'---- file file_path = {file_path}')
     json_path = os.path.join(output_dir, f"{convert_file_extension(file)}")
-    print(f'---- file json_path = {json_path}')
     return file_path, json_path
 
 

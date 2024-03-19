@@ -215,7 +215,6 @@ def convert_file_extension(file: str) -> str:
     """
     Change file extension from jsonl to json.
     """
-    print(f'---- type(file) = {type(file)}')
     if '.jsonl' in file.lower():
         return file.replace('.jsonl', '.json')
 
