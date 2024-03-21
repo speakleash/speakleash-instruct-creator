@@ -2,6 +2,7 @@
 import os
 import json
 import random
+import config
 
 try:
     from utils.functions import download_file, get_dir_path

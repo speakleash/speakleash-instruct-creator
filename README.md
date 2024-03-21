@@ -2,6 +2,30 @@
 
 Generate instruction JSON files using implemented instruction scripts.
 
+#
+<details>
+<summary>Released instruction version: 2024_03_07_v0_0_13 (expandable list with download links):</summary><br>
+
+All generated instruction JSON zip files:<br>
+http://instruct.speakleash.space/instructions_not_merged/instructions_not_merged_2024_03_07_v0_0_13.zip
+
+Merged instruction JSON files into one final zipfile:<br>
+http://instruct.speakleash.space/instructions_merged_and_stats/instructions_merged_and_stats_2024_03_07_v0_0_13.zip
+
+Merged instruction JSON file files:<br>
+http://instruct.speakleash.space/speakleash_pl_instructions_2024_03_07_v0_0_13.jsonl
+
+Merged instruction JSON file files (Alpaca format):<br>
+http://instruct.speakleash.space/speakleash_pl_instructions_alpaca_2024_03_07_v0_0_13.jsonl
+
+Or using terminal commands:<br>
+- For Linux:<br>
+`wget` 
+
+- For Windows:<br>
+`curl` 
+</details>
+
 ## Introduction:
 To contribute, clone this repository and add a new instructions script (e.g., ```allegro-summarization.py```) to the ```instructions_scripts``` directory.
 
@@ -69,7 +93,7 @@ https://huggingface.co/datasets/ipipan/polqa
 ipipan_polqa.csv
 
 ## 5
-IC - IN PROGRESS
+IC - IN PROGRESS (2 datasets done)<br>
 https://github.com/Ermlab/polish-gec-datasets
 human_annotators_common_errors_10K.jsonl
 
@@ -96,7 +120,7 @@ Q&A extraction from SpeakLeash datasets (selected forums)
 "forum_ezoforum_pl_corpus"
 
 ## 10
-IC - DONE
+IC - IN PROGRESS
 https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
 Polish Analogy Dataset
 
@@ -105,9 +129,6 @@ MF - DONE
 https://github.com/ZILiAT-NASK/BAN-PL/data/BAN-PL_1.zip
 BAN-PL.csv
 
-## 12
-IC - IN PROGRESS 
-https://github.com/Ermlab/polish-gec-datasets/tree/main
 
 ## POMYSŁY
 https://huggingface.co/datasets/WiktorS/polish-news
