@@ -1,4 +1,4 @@
-"""Instructions creator based on human_annotators_common_errors"""
+"""Instructions generator scripts for web FAQ based on the dataset faq_merged.xlsx"""
 import json
 import os
 import re
@@ -95,7 +95,6 @@ def create_instruction(file_path: str, json_path: str) -> None:
                     "script_name": SCRIPT_NAME
             })
 
-    print(f'---- Instructions num = {len(instructions)}')
     with open(json_path, "w", encoding='utf-8') as save_file:
         json.dump(instructions, save_file, indent=4, ensure_ascii=False)
 
