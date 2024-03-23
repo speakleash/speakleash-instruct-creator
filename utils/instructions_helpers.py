@@ -1,20 +1,20 @@
 from elasticsearch import Elasticsearch
 
-def get_instructions(es_hosts, api_key):
+def get_instructions(es_host, api_key):
 
     """
     Fetches documents from an Elasticsearch index where the status field is not 'not ok',
     returning only the 'instruction' part of each document.
     
     Parameters:
-    - es_hosts (list): A list of host URLs for the Elasticsearch cluster.
+    - es_hosts (str): URL for the Elasticsearch cluster.
     - api_key (str): The API key used for authenticating with the Elasticsearch cluster.
     
     Returns:
     - list: A list of 'instruction' fields from the fetched documents.
     """
 
-    es = Elasticsearch(es_hosts, api_key=api_key)
+    es = Elasticsearch(es_host, api_key=api_key)
 
     page = es.search(
         index='instructions',
