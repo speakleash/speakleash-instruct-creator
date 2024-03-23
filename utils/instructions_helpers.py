@@ -7,7 +7,7 @@ def get_instructions(es_host, api_key):
     returning only the 'instruction' part of each document.
     
     Parameters:
-    - es_hosts (str): URL for the Elasticsearch cluster.
+    - es_host (str): URL for the Elasticsearch cluster.
     - api_key (str): The API key used for authenticating with the Elasticsearch cluster.
     
     Returns:
