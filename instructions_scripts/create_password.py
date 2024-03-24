@@ -51,18 +51,18 @@ def random_instruct(mode):
 
     if mode == "sylabic":
         instruct = [
-            "Stwórz hasło łatwe do zapamiętania składające się ",
-            "Wygeneruj hasło łatwe do wymówienia składające się ",
-            "Stwórz hasło proste do zapamiętania składające się ",
-            "Stwórz hasło (łatwe do zapamiętania) składające się z",
+            "Stwórz hasło łatwe do zapamiętania składające się z ",
+            "Wygeneruj hasło łatwe do wymówienia składające się z ",
+            "Stwórz hasło proste do zapamiętania składające się z ",
+            "Stwórz hasło (łatwe do zapamiętania) składające się z ",
             "Stwórz hasło, które jest łatwe do zapamiętania, wygenerowane z "
         ]
         return random.choice(instruct)
     else:
         instruct = [
-            "Stwórz hasło składające się ",
-            "Wygeneruj hasło składające się ",
-            "Twórz hasło składające się ",
+            "Stwórz hasło składające się z ",
+            "Wygeneruj hasło składające się z ",
+            "Twórz hasło składające się z ",
             "Wygeneruj losowe hasło składające się z ",
             "Stwórz losowe hasło, które jest wygenerowane z "
         ]
@@ -84,7 +84,7 @@ for i in range(10000):
     random.shuffle(mode)
 
     output = ""
-    instruct = random_instruct(mode[0]) + str(chars[0]) + " znaków, " + str(digits[0]) + " cyfr i " + str(special_chars[0]) + " znaków specjalnych."
+    instruct = random_instruct(mode[0]) + str(chars[0]) + " liter, " + str(digits[0]) + " cyfr i " + str(special_chars[0]) + " znaków specjalnych."
     
 
     if mode[0] == "sylabic":
