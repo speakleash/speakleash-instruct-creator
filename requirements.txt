@@ -12,5 +12,6 @@ conllu==4.5.2
 huggingface-hub
 stylo_metrix
 langdetect
+docx
 https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl
 http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz
