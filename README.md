@@ -46,6 +46,8 @@ directory called ```instructions_merged_and_stats``` along with statistical file
 To update instruction samples, run the ```generate_samples.py``` script. It will generate JSON files with three records each.
 ### Important information:
 ```sentiment_detection.py``` -> requires HuggingFace token.<br>
+```orca_math_create_english_docx.py``` with ```orca_math_create_json_from_docx.py``` -> the scripts need to be self-translated in an external service,
+so they are not included in merge_files.py. More information inside these scripts.
 ```speakleash_forums_questions.py``` -> if installed requirements won't work, follow the steps included in this documentation: https://github.com/ZILiAT-NASK/StyloMetrix
 If you are facing problems with dependencies, execute manual installation of the following libraries:
 ```pip install http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz```<br>

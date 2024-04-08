@@ -7,7 +7,10 @@ from docx import Document
 
 from utils.functions import get_dir_path
 
-# TODO: add info how to use this script
+# This is not a complete script to translate and generate instructions.
+# You need to generate .docx documents using orca_math_create_english_docx.py,
+# translate them in an external service, place them in /data/translated
+# and finally use this script to create a dataset from them.
 
 dataset = load_dataset("microsoft/orca-math-word-problems-200k")
 questions, answers = dataset['train']['question'], dataset['train']['answer']
@@ -30,6 +33,7 @@ def remove_trailing_newline(text):
 
 
 indexes = load_indexes(indexes_path)
+print("Indexes are loaded.")
 
 paths = os.listdir(translated_folder)
 paths = [path for path in paths if path.endswith(".docx")]
@@ -39,7 +43,7 @@ paths = sorted(paths, key=lambda x: int(re.search(r'\d+', x).group()))
 os.makedirs(translated_json_path, exist_ok=True)
 
 for doc_idx in range(0, len(indexes)):
-    print("Document number: " + str(doc_idx))
+    print("Create .json file from document number: " + str(doc_idx))
     # Load the DOCX document
     doc_path = os.path.join(translated_folder, paths[doc_idx])
     doc = Document(doc_path)
@@ -81,13 +85,15 @@ for doc_idx in range(0, len(indexes)):
             json.dump(entry, outfile, ensure_ascii=False)
             outfile.write('\n')
 
+print("All .docx documents have been converted to .json")
 
 paths = os.listdir(translated_json_path)
 paths = sorted(paths, key=lambda x: int(re.search(r'\d+', x).group()))
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 output_path = get_dir_path("output") or os.path.join(base_dir, "output")
-with open(os.path.join(output_path, 'polish_orca_math.json'), 'w') as output_file:
+combined_file_path = os.path.join(output_path, 'polish_orca_math.json')
+with open(combined_file_path, 'w') as output_file:
     output_file.write("[\n")
 
     first_object = True
@@ -107,4 +113,5 @@ with open(os.path.join(output_path, 'polish_orca_math.json'), 'w') as output_fil
 
     output_file.write('\n]')
 
-print("Combined file saved.")
+print("Combined file saved into " + combined_file_path)
+print("You can now delete all other files created during translation.")
