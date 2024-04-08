@@ -15,6 +15,7 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 data_folder = get_dir_path("data") or os.path.join(base_dir, "data")
 translated_folder = os.path.join(data_folder, "translated")
 indexes_path = os.path.join(data_folder, 'docx_indexes.json')
+translated_json_path = os.path.join(translated_folder, 'json')
 
 
 def load_indexes(file_path):
@@ -29,18 +30,15 @@ def remove_trailing_newline(text):
 
 
 indexes = load_indexes(indexes_path)
-translated_json_path = os.path.join(translated_folder, 'json')
-
 
 paths = os.listdir(translated_folder)
 paths = [path for path in paths if path.endswith(".docx")]
-sorted_paths = sorted(paths, key=lambda x: int(re.search(r'\d+', x).group()))
+paths = sorted(paths, key=lambda x: int(re.search(r'\d+', x).group()))
 
 
 os.makedirs(translated_json_path, exist_ok=True)
 
-# for doc_idx in range(0, len(indexes)):
-for doc_idx in range(0, 1):
+for doc_idx in range(0, len(indexes)):
     print("Document number: " + str(doc_idx))
     # Load the DOCX document
     doc_path = os.path.join(translated_folder, paths[doc_idx])
@@ -85,7 +83,7 @@ for doc_idx in range(0, 1):
 
 
 paths = os.listdir(translated_json_path)
-pahts = sorted(paths, key=lambda x: int(re.search(r'\d+', x).group()))
+paths = sorted(paths, key=lambda x: int(re.search(r'\d+', x).group()))
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 output_path = get_dir_path("output") or os.path.join(base_dir, "output")
@@ -104,9 +102,9 @@ with open(os.path.join(output_path, 'polish_orca_math.json'), 'w') as output_fil
                         output_file.write(',')
                         output_file.write("\n")
 
-                    json_object = json.loads(line)  # Parsowanie linii do obiektu JSON
-                    json.dump(json_object, output_file, ensure_ascii=False, indent=4)  # Zapis obiektu JSON do pliku docelowego
+                    json_object = json.loads(line)
+                    json.dump(json_object, output_file, ensure_ascii=False, indent=4)
 
-    output_file.write('\n]')  # Koniec tablicy JSON
+    output_file.write('\n]')
 
 print("Combined file saved.")
