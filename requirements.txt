@@ -1,5 +1,4 @@
 requests>=2.31.0
-pandas
 spacy==3.7.0
 speakleash
 datasets>=2.11.0
@@ -14,3 +13,4 @@ stylo_metrix
 langdetect
 https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl
 http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz
+tqdm
