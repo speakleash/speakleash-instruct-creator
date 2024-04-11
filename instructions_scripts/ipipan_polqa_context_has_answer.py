@@ -167,7 +167,7 @@ def create_instruction(
         output = (
             POSITIVE_ANSWERS[i % len(POSITIVE_ANSWERS)]
             if relevant
-            else NEGATIVE_ANSWERS[i % len(POSITIVE_ANSWERS)]
+            else NEGATIVE_ANSWERS[i % len(NEGATIVE_ANSWERS)]
         ) + random.choice(
             ["", "."]
         )  # sometimes add dot at the end
