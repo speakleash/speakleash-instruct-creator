@@ -1,12 +1,17 @@
+"""
+Main task of the script: split the dataset into small .docx files prepared for translation by an external service.
+
+Additional information:
+This is not a complete script to translate and generate instructions.
+This part only creates small .docx files from the dataset, which can then be conveniently translated using external service.
+Later create a dataset from the translated documents using orca_math_create_json_from_docx.py
+"""
+
 from datasets import load_dataset
 import docx
 import json
 import os
 from utils.functions import get_dir_path
-
-# This is not a complete script to translate and generate instructions.
-# This part only creates small .docx files from the dataset, which can then be conveniently translated using external services.
-# Later create a dataset from the translated documents using orca_math_create_json_from_docx.py
 
 dataset = load_dataset("microsoft/orca-math-word-problems-200k")
 questions, answers = dataset['train']['question'], dataset['train']['answer']
@@ -60,6 +65,7 @@ os.makedirs(translated_folder, exist_ok=True)
 save_indexes(indexes_path)
 
 print("Indexes are generated and stored in the folder " + indexes_path)
+
 
 def generate_docx(questions, answers):
     doc = docx.Document()

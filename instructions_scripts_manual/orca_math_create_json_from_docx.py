@@ -1,3 +1,17 @@
+"""
+Main task of the script: to merge multiple translated documents and combine them into a single .json file.
+
+Additional information:
+This script is not designed to handle the complete translation and instruction generation process.
+Instead, it serves a specific function in a broader workflow:
+1. Initially, generate .docx documents using orca_math_create_english_docx.py.
+2. Translate these documents through an external service.
+3. After translation, place the documents into the /data/translated directory within your project structure.
+4. Employ this script to compile the translated documents into a comprehensive dataset represented as a .json file.
+5. Once the .json file is successfully created, you can delete all the .docx files to clean up your workspace,
+as they are no longer needed for further processing.
+"""
+
 import re
 import json
 import os
@@ -6,11 +20,6 @@ from datasets import load_dataset
 from docx import Document
 
 from utils.functions import get_dir_path
-
-# This is not a complete script to translate and generate instructions.
-# You need to generate .docx documents using orca_math_create_english_docx.py,
-# translate them in an external service, place them in /data/translated
-# and finally use this script to create a dataset from them.
 
 dataset = load_dataset("microsoft/orca-math-word-problems-200k")
 questions, answers = dataset['train']['question'], dataset['train']['answer']
