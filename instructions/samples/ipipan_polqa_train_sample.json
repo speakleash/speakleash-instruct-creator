@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Jak nazywa się pierwsza litera alfabetu greckiego?",
+        "input": "Alfa (ἄλφα, pisana Αα) − pierwsza litera alfabetu greckiego. W greckim systemie liczbowym oznacza liczbę 1. Alfa pochodzi od litery alfabetu fenickiego alef . Od alfy pochodzą łacińskie A i cyrylickie А. W języku starogreckim i grece współczesnej alfa reprezentuje samogłoskę otwartą przednią niezaokrągloną /a/.",
+        "output": "alfa",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    },
+    {
+        "instruct": "Jak nazywa się dowolny odcinek łączący dwa punkty okręgu?",
+        "input": "Cięciwa - odcinek łączący dwa dowolne punkty na okręgu, krzywej, bądź powierzchni",
+        "output": "cięciwa",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    },
+    {
+        "instruct": "W którym państwie rozpoczyna się akcja powieści \"W pustyni i w puszczy\"?",
+        "input": "W Port Saidzie rozpoczyna się akcja powieści Henryka Sienkiewicza \"W pustyni i w puszczy\", mieszkali tam jej główni bohaterowie Staś i Nel. Ich ojcowie, inżynierowie, doglądali robót przy wale i przy pogłębianiu łożyska Kanału Sueskiego. 1 lutego 2012 r. po piłkarskim meczu El-Masry i Al-Ahly Kair, doszło do zamieszek, w których zginęło 79 osób. Obecnie znajduje się tam polski konsulat honorowy. Wołgograd",
+        "output": "w Egipcie",
+        "source_name": "ipipan-ipipan_polqa_questions",
+        "source_url": "https://huggingface.co/datasets/ipipan/polqa",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych PolQA. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z odpowiedziami. Autor zestawu danych to Instytu Podstaw Informatyki Polskiej Akademii Nauk.",
+        "script_name": "ipipan_polqa_questions.py"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Wygeneruj harmonogram treningowy.",
+        "input": "",
+        "output": "1. Pajace: Zaczynamy z nogami razem, ramiona wzdłuż ciała. Skaczemy stopami na boki, unosząc ręce do góry. Skaczemy stopami z powrotem do pozycji wyjściowej, opuszczając ręce wzdłuż ciała. Powtarzamy przez 30 sekund.\n2. Pompki: Zaczynamy w pozycji deski, z rękami nieco szerzej niż na szerokość ramion i równoważąc na palcach stóp. Zginamy łokcie, opuszczając klatkę piersiową prawie do ziemi, a następnie wypychamy się do góry. Kontynuujemy przez 1 minutę.\n3. Przemiennie wychodzenie w przód jedną nogą: Stajemy z nogami szerokości bioder; wychodzimy w przód prawą nogą, trzymając kolano nad kostką. Wróć do pozycji wyjściowej i powtórz na drugiej stronie. Kontynuuj przemienianie przez 1 minutę.\n4. Podnoszenie kolan do klatki piersiowej: Zaczynamy stojąc z nogami razem. Podnosimy prawe kolano do klatki piersiowej, a następnie opuszczamy je z powrotem do pozycji wyjściowej i powtarzamy na drugiej stronie. Kontynuujemy przemienianie przez 30 sekund.\n5. Mostki biodrowe: Leżymy na plecach z płaskimi stopami i zgiętymi kolanami. Napinamy mięśnie brzucha i unosimy biodra do góry. Trzymamy przez dwie sekundy, a następnie opuszczamy do pozycji wyjściowej. Powtarzamy przez 1 minutę.\n6. Przysiady: Zaczynamy stojąc z nogami szerokości bioder. Schodzimy w dół w przysiad, trzymając kolana nad palcami i klatkę piersiową prosto. Dociskamy się do pięt, aby wrócić do pozycji wyjściowej. Powtarzamy przez 1 minutę.",
+        "source_name": "emplocity_owca_questions",
+        "source_url": "https://huggingface.co/datasets/emplocity/owca",
+        "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
+        "script_name": "emplocity_owca_questions.py"
+    },
+    {
+        "instruct": "Przedstawiam 6 wskazówek dotyczących nauki do testu:\n\n1. Planuj swoją naukę z wyprzedzeniem: Zanim rozpoczniesz naukę, upewnij się, że masz wystarczająco dużo czasu na przyswojenie materiału. Zaprojektuj plan nauki, który uwzględnia czas na powtórki i przerwy.\n\n2. Skup się na zrozumieniu materiału: Ważne jest, aby nie tylko zapamiętywać informacje, ale także zrozumieć je. Spróbuj wyjaśnić temat innym osobom, aby upewnić się, że naprawdę go rozumiesz.\n\n3. Korzystaj z różnych źródeł: Nie polegaj tylko na jednym źródle informacji. Korzystaj z różnych źródeł, takich jak książki, artykuły, filmy, aby uzyskać pełniejszy obraz tematu.\n\n4. Ćwicz aktywnie: Aktywna nauka, takie jak notowanie, rozwiązywanie zadań i testów praktycznych, pomaga w zapamiętywaniu materiału i utrwalaniu go w",
+        "input": "",
+        "output": "1. Rozpocznij naukę z odpowiednim wyprzedzeniem, aby móc skutecznie przyswoić i zapamiętać materiał.\n2. Stwórz plan nauki, określając, jakie tematy należy omówić i kiedy.\n3. Wykorzystaj różnorodne źródła i skuteczne techniki nauki, takie jak powtarzanie materiału w odstępach czasowych, testy praktyczne i grupy naukowe.\n4. Pamiętaj o regularnych przerwach i zdrowych przekąskach, aby utrzymać poziom energii i skupienia.\n5. Unikaj odkładania nauki na później oraz niezdrowych nawyków, takich jak nadmierna przeglądanie internetu czy granie w gry komputerowe.\n6. Zadawaj pytania nauczycielowi lub profesorowi, jeśli nie jesteś pewien jakiegoś pojęcia lub masz trudności z zrozumieniem pewnych tematów.",
+        "source_name": "emplocity_owca_questions",
+        "source_url": "https://huggingface.co/datasets/emplocity/owca",
+        "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
+        "script_name": "emplocity_owca_questions.py"
+    },
+    {
+        "instruct": "Przewidzieć miesięczny rachunek za prąd dla mieszkania o powierzchni 1000 stóp kwadratowych w Kalifornii.",
+        "input": "",
+        "output": "Miesięczny rachunek za prąd dla mieszkania o powierzchni 1000 stóp kwadratowych w Kalifornii szacowany jest na około 105-200 dolarów, w zależności od zużycia oraz innych czynników, takich jak izolacja i urządzenia energooszczędne.",
+        "source_name": "emplocity_owca_questions",
+        "source_url": "https://huggingface.co/datasets/emplocity/owca",
+        "source_description": "The OWCA dataset is a Polish-translated dataset of instructions for fine-tuning the Alpaca model made by Stanford.",
+        "script_name": "emplocity_owca_questions.py"
+    }
+]

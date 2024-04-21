@@ -1,0 +1,44 @@
+[
+    {
+        "instruct": "Jungkook jest na piątym miejscu. Znajdź liczbę osób, które przekroczyły linię mety szybciej niż Jungkook.",
+        "input": "",
+        "output": "Jeśli Jungkook będzie na 5 miejscu, to 4 osoby dobiegną do mety szybciej od niego.",
+        "instruct_eng": "Jungkook is the 5th place. Find the number of people who crossed the finish line faster than Jungkook.",
+        "output_eng": "If Jungkook is in 5th place, then 4 people crossed the finish line faster than him.",
+        "source_name": "microsoft-orca_math_problems",
+        "source_url": "https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych orca math word problems, a następnie przetłumaczone maszynowo.",
+        "script_name": "translate_orca_math_problems.py",
+        "id": 0,
+        "status": "",
+        "updated_by": ""
+    },
+    {
+        "instruct": "Liczba podzielona przez 10 to 6. Yoongi uzyskał wynik, odejmując 15 od pewnej liczby. Jaki uzyskał wynik?",
+        "input": "",
+        "output": "Nazwijmy pewną liczbę „x”. Zgodnie z podanymi informacjami: \n\nLiczba podzielona przez 10 to 6: \nx / 10 = 6 \n\nYoongi uzyskał wynik odejmując 15 od x: \nWynik = x - 15 \n\nNajpierw musimy znaleźć wartość x. Możemy to zrobić rozwiązując pierwsze równanie: \n\nx / 10 = 6 \nx = 6 * 10 \nx = 60 \n\nTeraz, gdy wiemy, że x wynosi 60, możemy znaleźć wynik, który Yoongi uzyskał, odejmując 15 od x: \n\nWynik = x - 15 \nWynik = 60 - 15 \nWynik = 45 \n\nZatem wynik uzyskany przez Yoongiego to 45.",
+        "instruct_eng": "A number divided by 10 is 6. Yoongi got the result by subtracting 15 from a certain number. What is the result he got?",
+        "output_eng": "Let's call the certain number \"x\". According to the information given:\n\nA number divided by 10 is 6:\nx / 10 = 6\n\nYoongi got the result by subtracting 15 from x:\nResult = x - 15\n\nFirst, we need to find the value of x. We can do this by solving the first equation:\n\nx / 10 = 6\nx = 6 * 10\nx = 60\n\nNow that we know x is 60, we can find the result Yoongi got by subtracting 15 from x:\n\nResult = x - 15\nResult = 60 - 15\nResult = 45\n\nSo, the result Yoongi got is 45.",
+        "source_name": "microsoft-orca_math_problems",
+        "source_url": "https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych orca math word problems, a następnie przetłumaczone maszynowo.",
+        "script_name": "translate_orca_math_problems.py",
+        "id": 1,
+        "status": "",
+        "updated_by": ""
+    },
+    {
+        "instruct": "Dongju wybiera kartkę papieru z zapisaną liczbą i chce utworzyć trzycyfrową liczbę, umieszczając pierwszą wybraną liczbę na miejscu setek, drugą na miejscu dziesiątek, a trzecią na miejscu jednostek. Jeśli liczby zapisane na każdym papierze wynosiły odpowiednio 1, 6 i 8, znajdź sumę drugiej najmniejszej i trzeciej najmniejszej liczby trzycyfrowej, którą Dongju może ułożyć. Nie można jednak wybrać tego samego numerowanego papieru wielokrotnie.",
+        "input": "",
+        "output": "Aby znaleźć drugą najmniejszą i trzecią najmniejszą liczbę trzycyfrową, którą Dongju może utworzyć za pomocą cyfr 1, 6 i 8, musimy rozważyć wszystkie możliwe kombinacje tych trzech cyfr bez powtórzeń. \n\nMożliwe liczby trzycyfrowe to: \n- 168 \n- 186 \n- 618 \n- 681 \n- 816 \n- 861 \n\nTeraz uporządkujmy te liczby w kolejności rosnącej, aby znaleźć drugą najmniejszą i trzecią najmniejszą liczbę: \n- 168 (najmniejsza) \n- 186 (druga najmniejsza) \n- 618 (trzecia najmniejsza) \n- 681 \n- 816 \n- 861 (największa) \n\nDruga najmniejsza liczba to 186, a trzecia najmniejsza liczba to 618. \n\nTeraz znajdujemy sumę drugiej najmniejszej i trzeciej najmniejszej liczby: \n186 + 618 = 804 \n\nDlatego suma drugiej najmniejszej i trzeciej najmniejszej liczby trzycyfrowej, którą Dongju może utworzyć za pomocą cyfr 1, 6 i 8, wynosi 804.",
+        "instruct_eng": "Dongju selects a piece of paper with a number written on it, and wants to make a three-digit number by placing the first selected number in the hundreds place, the second selected in the tens place, and the third selected in the units place. If the numbers written on each paper was 1, 6, and 8, respectively, find the sum of the second smallest and third smallest three-digit numbers that Dongju can make. However, you cannot select the same numbered paper multiple times.",
+        "output_eng": "To find the second smallest and third smallest three-digit numbers that Dongju can make with the digits 1, 6, and 8, we need to consider all the possible combinations of these three digits without repetition.\n\nThe possible three-digit numbers are:\n- 168\n- 186\n- 618\n- 681\n- 816\n- 861\n\nNow, let's arrange these numbers in ascending order to find the second smallest and third smallest numbers:\n- 168 (smallest)\n- 186 (second smallest)\n- 618 (third smallest)\n- 681\n- 816\n- 861 (largest)\n\nThe second smallest number is 186, and the third smallest number is 618.\n\nNow, we find the sum of the second smallest and third smallest numbers:\n186 + 618 = 804\n\nTherefore, the sum of the second smallest and third smallest three-digit numbers that Dongju can make with the digits 1, 6, and 8 is 804.",
+        "source_name": "microsoft-orca_math_problems",
+        "source_url": "https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k",
+        "source_description": "Pary pytanie-odpowiedź powstały na bazie zestawu danych orca math word problems, a następnie przetłumaczone maszynowo.",
+        "script_name": "translate_orca_math_problems.py",
+        "id": 2,
+        "status": "",
+        "updated_by": ""
+    }
+]

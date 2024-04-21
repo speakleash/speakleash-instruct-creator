@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "dlaczego Heidi Krieger – mistrzyni Europy w pchnięciu kulą z 1986 – 11 lat po tym sukcesie zmieniła imię?",
+        "output": " W 1997 Heidi Krieger zdecydowała się na operację zmiany płci i przyjęła imię Andreas.",
+        "source_name": "allegro_klej_dyk_questions allegro/klej-dyk",
+        "source_url": "https://huggingface.co/datasets/allegro/klej-dyk",
+        "source_description": "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. odpowiedzi są anotowane jako trafne (1) albo nietrafne (0).",
+        "script_name": "allegro_klej_dyk_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "ile lat miała lady Clementina Hawarden, gdy zaczęła fotografować?",
+        "output": "Hawarden zaczęła fotografować mając niecałe czterdzieści lat, Cameron – pięćdziesiąt. ",
+        "source_name": "allegro_klej_dyk_questions allegro/klej-dyk",
+        "source_url": "https://huggingface.co/datasets/allegro/klej-dyk",
+        "source_description": "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. odpowiedzi są anotowane jako trafne (1) albo nietrafne (0).",
+        "script_name": "allegro_klej_dyk_questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "gdzie znajduje się Dupa Słonia?",
+        "output": "Terminem takim określano też skały przypominające wyglądem ruiny, jak np. skałę Zamczysko w Dolinie Będkowskiej, przez taterników nazwaną Dupą Słonia.",
+        "source_name": "allegro_klej_dyk_questions allegro/klej-dyk",
+        "source_url": "https://huggingface.co/datasets/allegro/klej-dyk",
+        "source_description": "Pary pytanie - odpowiedź pochodzące z sekcji Czy wiesz... z polskiej Wikipedii. odpowiedzi są anotowane jako trafne (1) albo nietrafne (0).",
+        "script_name": "allegro_klej_dyk_questions.py"
+    }
+]
