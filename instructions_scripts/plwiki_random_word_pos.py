@@ -5,11 +5,16 @@ import random
 import spacy
 from speakleash import Speakleash
 
+
 try:
     from utils.functions import get_dir_path, create_directory
 except ImportError as e:
     print(f'Error: {e}')
+
     def get_dir_path(directory):
+        return None
+
+    def create_directory(directory):
         return None
 
 nlp = spacy.load("pl_core_news_md")
@@ -17,9 +22,11 @@ nlp = spacy.load("pl_core_news_md")
 script_name = os.path.basename(__file__)
 source_name = script_name.replace(".py", "")
 source_url = "https://speakleash.org/"
-source_description = "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy."
+source_description = \
+    "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii " \
+    "i przetworzenia ich za pomocą pakietu Spacy."
 
-limit = 120000
+limit = 12000
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 # data_dir = get_dir_path("data") or os.path.join(base_dir, "data") #  commented out until Speakleash package update
@@ -67,7 +74,8 @@ for txt in wiki:
     doc = nlp(txt)
     print("Instructions: " + str(len(instructions)))
     for token in doc:
-        if not token.is_stop and not token.is_punct and not token.is_digit and token.is_oov == False:
+        if not token.is_stop and not token.is_punct and not token.is_digit and not token.is_oov \
+                and nlp.vocab.__contains__(token.lemma_) and token.text.islower() and len(token.text) > 4:
             word = token.text.strip()
             lemma = token.lemma_.strip()
 
