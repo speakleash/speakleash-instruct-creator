@@ -5,7 +5,7 @@ import json
 from utils.functions import create_directory
 
 # Output directory for the samples of the instructions
-SAMPLES_DIR = 'instructions_samples'
+SAMPLES_DIR = 'samples'
 TYPE = 'instructions'
 
 # Directory containing created instructions files in json format

@@ -8,8 +8,8 @@ from datetime import datetime
 
 from utils.functions import create_directory
 
-SCRIPTS_DIR = 'instructions_automated'
-SAMPLES_DIR = 'instructions_samples'
+SCRIPTS_DIR = 'automated'
+SAMPLES_DIR = 'samples'
 TYPE = 'instructions'
 INSTR_AND_STATS_DIR = 'instructions_merged_and_stats'
 base_dir = os.path.dirname(os.path.abspath(__file__))
