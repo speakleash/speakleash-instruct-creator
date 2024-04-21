@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Jak brzmi treść przyrzeczenia, które musi złożyć biegły sądowy?",
+        "output": "Art. 197. § 1. Biegły składa przyrzeczenie następującej treści: \"Świadomy znaczenia moich słów i odpowiedzialności przed prawem, przyrzekam uroczyście, że powierzone mi obowiązki wykonam z całą sumiennością i bezstronnością\". § 2. Biegły sądowy powołuje się na przyrzeczenie złożone przy ustanowieniu go w tym charakterze. § 3. Do biegłego stosuje się odpowiednio przepisy art. 177, 179-181, 187, 188 § 2 i 4, art. 190 oraz art. 191 § 1 i 3.",
+        "source_name": "legal-questions piotr-rybak-legal-questions",
+        "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
+        "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
+        "script_name": "legal-questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Od jakiego dnia każdego roku nalicza się podwyższenie indywidualnych wynagrodzeń urzędników?",
+        "output": "Art. 13. 1. Środki na wynagrodzenia zasadnicze urzędników ustala się: 1) w pierwszym roku obowiązywania ustawy - przeciętnie w wysokości 35% wynagrodzenia zasadniczego sędziego sądu rejonowego, 2) w drugim roku obowiązywania ustawy - przeciętnie w wysokości 40% wynagrodzenia zasadniczego sędziego sądu rejonowego, 3) w trzecim roku obowiązywania ustawy - przeciętnie w wysokości 50% wynagrodzenia zasadniczego sędziego sądu rejonowego - z tym że w drugim i trzecim roku obowiązywania ustawy środki na wynagrodzenia zasadnicze urzędników podwyższa się o wartość składki na ubezpieczenia emerytalne i rentowe, o której mowa w art. 110 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (DZ. U. Nr 137, poz. 887). 2. Podwyższenie indywidualnych wynagrodzeń urzędników nalicza się od dnia 1 stycznia każdego roku.",
+        "source_name": "legal-questions piotr-rybak-legal-questions",
+        "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
+        "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
+        "script_name": "legal-questions.py"
+    },
+    {
+        "instruct": "Odpowiedz na pytanie.",
+        "input": "Czy skazany który nie ukończył 18 lat musi mieć obrońcę?",
+        "output": "Art. 8. § 1. W postępowaniu wykonawczym skazany może korzystać z pomocy obrońcy ustanowionego w tym postępowaniu lub pełnomocnika. § 2. W postępowaniu przed sądem skazany musi mieć obrońcę, jeżeli: 1) jest głuchy, niemy lub niewidomy, 2) zachodzi uzasadniona wątpliwość co do jego poczytalności, 3) nie ukończył 18 lat, 4) nie włada językiem polskim. § 3. Skazany pozbawiony wolności może porozumiewać się ze swoim obrońcą lub pełnomocnikiem będącym adwokatem podczas nieobecności innych osób oraz korespondencyjnie lub telefonicznie. Rozdział IV Postępowanie wykonawcze Oddział 1 Wykonywanie orzeczeń",
+        "source_name": "legal-questions piotr-rybak-legal-questions",
+        "source_url": "https://huggingface.co/datasets/piotr-rybak/legal-questions/",
+        "source_description": "Pary pytanie-odpowiedź z zakresu prawa. Dataset składa się z pytań oraz ręcznie anotowanych fragmentów z artykułów prawnych zawierających potencjalne odpowiedzi (oznaczone True/False). ",
+        "script_name": "legal-questions.py"
+    }
+]

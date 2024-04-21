@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: ceremonię",
+        "input": "",
+        "output": "Forma podstawowa dla słowa ceremonię to: ceremonia",
+        "source_name": "speakleash_plwiki_lemmat_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "wiki-lemmat-words.py"
+    },
+    {
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: przeciwbiegunkowe",
+        "input": "",
+        "output": "Forma podstawowa dla słowa przeciwbiegunkowe to: przeciwbiegunkowy",
+        "source_name": "speakleash_plwiki_lemmat_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "wiki-lemmat-words.py"
+    },
+    {
+        "instruct": "Podaj formę podstawową (lemat) dla słowa: wybudowano",
+        "input": "",
+        "output": "Forma podstawowa dla słowa wybudowano to: wybudować",
+        "source_name": "speakleash_plwiki_lemmat_words",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały dzięki ekstrakcji słów z polskiej wersji Wikipedii i przetworzenia ich za pomocą pakietu Spacy.",
+        "script_name": "wiki-lemmat-words.py"
+    }
+]

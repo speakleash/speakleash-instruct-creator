@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Przedwczoraj miałem 25 gruszek. Wczoraj straciłem 9. Ile mi zostało?",
+        "input": "",
+        "output": "Odpowiedź: 16.",
+        "source_name": "simple_math_operations",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",
+        "script_name": "speakleash-simple-math-operations.py"
+    },
+    {
+        "instruct": "Ile to będzie 9 * -7?",
+        "input": "",
+        "output": "Wynikiem jest -63.",
+        "source_name": "simple_math_operations",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",
+        "script_name": "speakleash-simple-math-operations.py"
+    },
+    {
+        "instruct": "Wykonaj operację dodawania liczb 4 oraz 17.",
+        "input": "",
+        "output": "Odpowiedź to 21.",
+        "source_name": "simple_math_operations",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje dla prostych operacji matematycznych wygenerowane automatycznie",
+        "script_name": "speakleash-simple-math-operations.py"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: oto, informacja, ważny.",
+        "input": "",
+        "output": "Przykładowe pytania: Oto najważniejsze informacje z tym związane, czyli jak zarejestrować się w serwisie, jaka jest cena usługi, jakie produkcje i marki są dostępne w tym serwisie?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    },
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: chcieć by, ulubiony, chwila.",
+        "input": "",
+        "output": "Przykładowe pytania: Kto nie chciałby choć na chwilę przeobrazić się w ulubionego bohatera?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    },
+    {
+        "instruct": "Stwórz przykładowe pytania składające się ze słów: móc, polski, armia.",
+        "input": "",
+        "output": "Przykładowe pytania: Co możesz kupić od polskiej armii?",
+        "source_name": "news_8_general_corpus",
+        "source_url": "https://speakleash.org/",
+        "source_description": "Instrukcje powstały na podstawie zestawu danych news_8_general_corpus. Dataset zawiera artykuły z polskiego Internetu.",
+        "script_name": "speakleash-create-sentence.py"
+    }
+]
