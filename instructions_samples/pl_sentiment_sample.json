@@ -1,0 +1,30 @@
+[
+    {
+        "instruct": "Jakie są konotacje podanego tekstu - pozytywne czy negatywne?",
+        "input": "Był em u tej Pani dermatolog , ponieważ miałem problem z wysypką na tułowiu . Pani Bocianowska przy zgaszonym świetle , zza biurka spojrzała na mnie i oznajmiła , że to na sto procent łuszczyca , że jest to choroba nieuleczalna itp . Przepisała maść i wysłała do domu , zasięgnął em opinii innego dermatologa , który podejrzewał łupież różowy Gilberta , który trwa ok 4 - 6tyg , przechodzi sam i nabywa się na tego wirusa odporność . Tak też było , po 4 tygodniach wysypka zaczęła ustępować i nie ma już prawie po niej śladu . Pani doktor napędziła mi niezłego stracha swoją niekompetencją , nawet mnie nie obejrzała dokładnie ani nie wysłuchała odnośnie objawów itp . Nie polecam",
+        "output": "negatywne",
+        "source_name": "pl_opinion_sentiment",
+        "source_url": "https://huggingface.co/datasets/psc",
+        "source_description": "Instrukcje powstały dzięki zestawowi danych: The Polish Summaries Corpus",
+        "script_name": "pl_opinion_sentiment.py"
+    },
+    {
+        "instruct": "Jak oceniasz ton podanego tekstu - czy jest pozytywny czy negatywny?",
+        "input": "Zdecydowanie NIE polecam . Przez okres 2 miesiecy zostawilismy ponad 3 tys zlotych na szereg zupelnie niepotrzebnych badan , caly czas slyszalam , ze moja ciaza jest zagrozona i ze on ratuje moje dziecko - tu cytat : przed selekcja naturalna . Jak mi powiedzial , ze bakteria , ktora mam jest smiertelna , cos mi zaswitalo w glowie i dzieki pomocy zyczliwej osoby znalezlismy innego lekarza - Tomasza Lipinskiego , ktorego bardzo polecam . Generalnie nie chodzi o pieniadze , ale o ten caly strach i lek , ktory przezylismy , nie wiedzac co sie tak naprawde dzieje z malym . Szkoda , bo mysle , ze wiedze fachowa P . Lewandowski ma , tylko zdecydowanie jej naduzywa , nie troszczac sie o swoje pacjentki , a jedynie o zasobnosc wlasnego portfela . ODRADZAM",
+        "output": "negatywny",
+        "source_name": "pl_opinion_sentiment",
+        "source_url": "https://huggingface.co/datasets/psc",
+        "source_description": "Instrukcje powstały dzięki zestawowi danych: The Polish Summaries Corpus",
+        "script_name": "pl_opinion_sentiment.py"
+    },
+    {
+        "instruct": "Czy podany tekst jest pozytywny czy negatywny?",
+        "input": "Osoba niekompetentna do takiego stanowiska . Dzięki niej miałem powtórne złamanie , ponad pół roku leczenia poszło na marne , przez błędne ekspertyzy i zalecenia lekarza . Totalnie nie obchodziło jej , że jestem bez pracy , nie mam za co żyć i zależało mi na wygojeniu złamania jak najszybciej . Podczas wizyt nie dowiadywał em się CZEGOKOLWIEK , więcej podczas leczenia pomogli mi rehabilitanci , którzy sugerowali różne możliwości . Z niekompletnym zrostem lekarka stwierdziła iż jestem zdrowy i nie widzi przeciwwskazań do wykonywania nawet ciężkich prac fizycznych . Obecnie jestem osobą , m która nie potrafi przykręcić śrubki czy utrzymać w pionie kubka z piciem - lekarka u siebie nie dostrzega żadnych błędów - wszystko wina pacjenta który \" jest nachalny \" . Skutkowało to 4 operacjami i niepełnosprawnością do końca życia . Odradzam .",
+        "output": "Podany tekst jest negatywny.",
+        "source_name": "pl_opinion_sentiment",
+        "source_url": "https://huggingface.co/datasets/psc",
+        "source_description": "Instrukcje powstały dzięki zestawowi danych: The Polish Summaries Corpus",
+        "script_name": "pl_opinion_sentiment.py"
+    }
+	
+]
