@@ -1,5 +1,6 @@
 """Instructions creator based on WiktorS/polish-news dataset."""
 from datasets import load_dataset
+from utils.transform_text import reduce_whitespace
 import os
 import random
 import json
@@ -72,8 +73,8 @@ def create_instruction(frame: pd.DataFrame, output_dir: str) -> None:
     instructions = []
 
     for index, row in frame.iterrows():
-        input = row['content']
-        output = row['headline']
+        input = reduce_whitespace(row['content'])
+        output = reduce_whitespace(row['headline'])
         if input and output:
             instructions.append(
                     {
