@@ -24,10 +24,13 @@ file_path = download_file("https://huggingface.co/datasets/allegro/summarization
 json_path = os.path.join(output_dir, "summarization-polish-summaries-corpus.json")
 
 
-def create_instruction(instruct_list: list, file_path: str, json_path: str) -> None:
+def create_instruction(instruct_list: list, file_path: str, json_path: str, remove_duplicates_arg: bool = True) -> None:
 
     instructions = []
     data = pd.read_csv(file_path, usecols=['source', 'target'])
+
+    if remove_duplicates_arg:
+        data = remove_duplicates(data)
 
     for index, row in data.iterrows():
         source = row['source']
@@ -38,6 +41,12 @@ def create_instruction(instruct_list: list, file_path: str, json_path: str) -> N
 
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
+
+
+def remove_duplicates(data):
+    data = data.sample(frac=1).reset_index(drop=True)
+    data = data.drop_duplicates(subset='source', keep='first')
+    return data
 
 
 INSTRUCT_LIST = [
