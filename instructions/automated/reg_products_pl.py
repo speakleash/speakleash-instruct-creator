@@ -1,7 +1,6 @@
 import datetime
 import os
 import sys
-from bs4 import BeautifulSoup
 import requests
 import json, shutil
 import pandas as pd
@@ -136,18 +135,17 @@ def extract_content(source, data, WEB_NO: int, MIN_CHAR: int ):
                     try:
                         response = requests.get(page['link'])
                         if response.status_code == 200:
-                            # Parse the HTML content of the webpage
-                            soup = BeautifulSoup(response.text, 'html.parser')
+                            content = g.extract(url=page['link'])
+                            # Extract metadata
+                            meta_description = content.meta_description
+                            title = content.title
+                            page_text = content.cleaned_text
 
-                            # Extract all text content from the webpage
-                            page_text = soup.get_text()
-
-                            # Replace newline and tab characters with spaces
-                            page_text = re.sub(r'[\n\t]+', ' ', page_text)
                     except Exception as e:
                         error_links.append(page['link'])
                         print(page['link'], e)
-                        continue   
+                        continue
+                    page_text = re.sub(r'[\n\t]+', ' ', content.cleaned_text)    
                     if len(page_text) < MIN_CHAR:
                         continue
 
@@ -159,6 +157,64 @@ def extract_content(source, data, WEB_NO: int, MIN_CHAR: int ):
                         break
             save_jsons(name, json_files)
             pages_extract[name] = json_files
+
+    return pages_extract, error_links
+
+def extract_content(source, data, WEB_NO: int, MIN_CHAR: int):
+    """
+    Extracts the content from the given list of web pages.
+
+    Args:
+        source (dict): A dictionary containing the search results for each query.
+        data (pandas.DataFrame): The data containing the search queries.
+        WEB_NO (int): The number of search results to extract.
+        MIN_CHAR (int): The minimum number of characters for extracted content.
+
+    Returns:
+        dict: A dictionary containing the extracted content for each page.
+        list: A list of invalid links that could not be extracted.
+    """
+    pages_extract = {}
+    error_links = []
+
+    for name, dt in source.items():
+        json_files = []
+        for page in dt:
+            try:
+                response = requests.get(page['link'])
+                if response.status_code == 200:
+                    soup = BeautifulSoup(response.content, 'html.parser')
+                    # Extract metadata
+                    meta_description = soup.find('meta', attrs={'name': 'description'})
+                    title = soup.title.text if soup.title else None
+                    page_text = soup.get_text()
+
+            except Exception as e:
+                error_links.append(page['link'])
+                print(page['link'], e)
+                continue
+            
+            # Clean up the text
+            page_text = re.sub(r'[\n\t]+', ' ', page_text)
+            if len(page_text) < MIN_CHAR:
+                continue
+
+            json_files.append({
+                "meta_description": meta_description['content'] if meta_description else None,
+                "title": title,
+                "content": page_text,
+                "url": page['link'],
+                "category": data.loc[data.iloc[:, -1] == name, data.columns[0]].values[0],
+                "sub_category": data.loc[data.iloc[:, -1] == name, data.columns[1]].values[0],
+                "phrase": data.loc[data.iloc[:, -1] == name, data.columns[2]].values[0]
+            })
+
+            if len(json_files) >= WEB_NO:
+                print(len(json_files), WEB_NO)
+                break
+
+        save_jsons(name, json_files)
+        pages_extract[name] = json_files
 
     return pages_extract, error_links
 
