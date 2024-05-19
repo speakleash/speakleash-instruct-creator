@@ -164,3 +164,8 @@ output/
 *.jsonl
 datasets/
 local/
+test.csv
+.vscode/launch.json
+.vscode/settings.json
+thrash/
+files_with_cookies.txt
