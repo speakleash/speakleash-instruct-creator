@@ -1,4 +1,15 @@
-# speakleash-instruct-creator
+# Speakleash training and tuning datasets
+----------------------
+
+The repository consists of three sections of specific datasets::
+- conversations
+- functions
+- instructions
+Each section will include datasets created:
+- fully automated by scripts
+- manually, scripts with the help of a human
+- samples which will show 3 records of what was created
+
 
 Generate instruction JSON files using implemented instruction scripts.
 
