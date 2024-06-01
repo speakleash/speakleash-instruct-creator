@@ -1,26 +1,26 @@
 [
     {
-        "instruct": "Stwórz tytuł dla podanego wstępu.",
-        "input": "Wybierając piłkę do koszykówki, musisz zastanowić się nad jedną ważną kwestią: gdzie będziesz grać? Jest to istotne, ponieważ inne piłki przeznaczone są do rozgrywek na hali, a inne do gry na twardych powierzchniach, takich jak beton czy asfalt. Pomyśl też, ile pieniędzy chciałbyś na to przeznaczyć.",
-        "output": "Piłka do koszykówki – jaką wybrać?",
+        "instruct": "Napisz tytuł dla poniższego wstępu.",
+        "input": "Studniówka jest bez wątpienia najważniejszą do tej pory imprezą w życiu nastolatka. Pierwszy bal to też doskonały pretekst do zakupu garnituru z prawdziwego zdarzenia. Jak wybrać garnitur na studniówkę?",
+        "output": "Strój na studniówkę dla chłopaka do 900 zł",
         "source_name": "allegro-summarization-allegro-articles",
         "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
         "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",
         "script_name": "allegro-summarization.py"
     },
     {
-        "instruct": "Stwórz tytuł dla podanego wstępu.",
-        "input": "Kuchnia to najlepsze miejsce na spożywanie śniadań. Wszystko mamy w zasięgu ręki, co jest ważne, gdy śpieszymy się np. do pracy. Niezależnie od wielkości pomieszczenia warto więc wygospodarować taki kącik.",
-        "output": "Jak urządzić przytulny kącik śniadaniowy?",
+        "instruct": "Zrób tytuł dla załączonego wstępu.",
+        "input": "7 marca zaktualizujemy Załącznik nr 2 do Regulaminu Allegro.",
+        "output": "7 marca: aktualizacja Regulaminu Allegro",
         "source_name": "allegro-summarization-allegro-articles",
         "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
         "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",
         "script_name": "allegro-summarization.py"
     },
     {
-        "instruct": "Stwórz tytuł dla podanego wstępu.",
-        "input": "Wyraźne odgłosy dochodzące z okolic zawieszenia nie zawsze muszą oznaczać jego uszkodzenie. W większości przypadków są to po prostu naturalne dźwięki powstające np. podczas wpadnięcia koła w dziurę. Chcąc zwiększyć komfort jazdy, można zdecydować się na wyciszenie pracy zawieszenia.",
-        "output": "Jak wyciszyć pracę zawieszenia? Jakich użyć materiałów?",
+        "instruct": "Przygotuj tytuł dla załączonego wstępu.",
+        "input": "Święty Mikołaj przychodzi z prezentami 6 grudnia, Gwiazdor – w Wigilię. Dla dzieci są to dwa dni, kiedy są obsypywane podarunkami i często głównie to się liczy. Wiele szkrabów jednak dopytuje, kim są obdarowujący, w jaki sposób weszli do domu i czy w ogóle istnieją. Odpowiedzi warto poświęcić trochę czasu.",
+        "output": "Przybliżamy dzieciom postać Gwiazdora",
         "source_name": "allegro-summarization-allegro-articles",
         "source_url": "https://huggingface.co/datasets/allegro/summarization-allegro-articles/",
         "source_description": "Instrukcje powstały na podstawie zestawu danych allegro-summarization-allegro-articles. Dataset zawiera artykuły z serwisu Allegro wraz z ich podsumowaniami. Autor zestawu danych to Allegro ML Research",

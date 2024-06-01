@@ -36,13 +36,24 @@ file_path_3 = download_file("https://huggingface.co/datasets/allegro/summarizati
 json_path_3 = os.path.join(output_dir, "allegro-summarization-allegro-articles-lead-to-title.json")
 
 
-
-def create_instruction(instruction, file_path, json_path):
+def create_instruction(instruct_from: str, instruct_to: str, file_path: str, json_path: str) -> None:
 
     instructions = []
     data = pd.read_csv(file_path, usecols=['source', 'target'])
+    prepare_word_list = [
+        "Przygotuj",
+        "Napisz",
+        "Zrób"
+    ]
+    this_word_list = [
+        "podanego",
+        "załączonego",
+        "tego",
+        "poniższego"
+    ]
 
     for index, row in data.iterrows():
+        instruction = f"{random.choice(prepare_word_list)} {instruct_from} dla {random.choice(this_word_list)} {instruct_to}."
         source = row['source']
         target = row['target']
         instructions.append({"instruct": instruction, "input" : source, "output" : target, "source_name" : source_name, "source_url" : source_url, "source_description" : source_description, "script_name" : script_name})
@@ -52,6 +63,7 @@ def create_instruction(instruction, file_path, json_path):
     with open(json_path, "w", encoding='utf-8') as f:
         json.dump(instructions, f, indent=4, ensure_ascii=False)
 
-create_instruction("Stwórz tytuł dla podanego artykułu.",file_path_1, json_path_1)
-create_instruction("Stwórz wstęp dla podanego artykułu.", file_path_2, json_path_2)
-create_instruction("Stwórz tytuł dla podanego wstępu.", file_path_3, json_path_3)
+
+create_instruction("tytuł", "artykułu", file_path_1, json_path_1)
+create_instruction("wstęp", "artykułu", file_path_2, json_path_2)
+create_instruction("tytuł", "wstępu", file_path_3, json_path_3)
