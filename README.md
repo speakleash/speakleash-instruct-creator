@@ -1,10 +1,11 @@
-# Speakleash training and tuning datasets
+Speakleash training and tuning datasets
 ----------------------
 
 The repository consists of three sections of specific datasets::
 - conversations
 - functions
 - instructions
+
 Each section will include datasets created:
 - fully automated by scripts
 - manually, scripts with the help of a human
