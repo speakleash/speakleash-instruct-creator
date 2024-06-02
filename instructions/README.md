@@ -15,7 +15,7 @@ It would be beneficial to include any fields with metadata, such as:
 "source_url": "The URL of the used source datasets, if any were used."
 "source_description": "A short description of the used dataset: what it is about, the purpose of creation, authors."
 "script_name": "If the script generating the dataset is reusable and you want to share it with us by committing to our repository."
-"status": "If the instruction has been already manually verified, you can set the status as "ok". If not, leave the field as an empty string or None."
+"status": "If the instruction has been already manually verified, you can set the status as word `ok`. If not, leave the field as an empty string or None."
 "updated_by": "If the instruction has already been manually verified, leave your name/nickname in this field. It will help us to give thanks :)"
 "id": "numeric identifier for the dataset entry"
 ```
