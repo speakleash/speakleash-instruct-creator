@@ -5,9 +5,9 @@ This repository provides tools for generating datasets for training and tuning L
 ## Overview
 
 Datasets are divided into three main categories:
-- **instructions**
-- **conversations**
-- **[functions]**(https://github.com/speakleash/speakleash-instruct-creator/tree/main/functions)
+- **[instructions](https://github.com/speakleash/speakleash-instruct-creator/tree/main/instructions)**
+- **[conversations](https://github.com/speakleash/speakleash-instruct-creator/tree/main/conversations)**
+- **[functions](https://github.com/speakleash/speakleash-instruct-creator/tree/main/functions)**
 
 Each category consists of the following types of content:
 - **automated**
@@ -30,7 +30,7 @@ Each category consists of the following types of content:
 
 ## Usage
 
-Each category (Instructions, Conversations, Functions) has its own directory, containing subdirectories for automated, manual, and sample datasets. Inside each subdirectory, you will find examples and explanations of how each type of dataset should be structured.
+Each category (instructions, conversations, functions) has its own directory, containing subdirectories for generating datasets using automated or manual (and partailly manual) methods, as well as sample of these datasets. Inside each subdirectory, you will find examples and explanations of how each type of dataset should be structured.
 
 ## Generated datasets files:
 
