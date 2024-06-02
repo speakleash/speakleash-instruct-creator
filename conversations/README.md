@@ -1,4 +1,6 @@
-# conversations directory
+# Conversations
+
+Example of the conversation record and it's fields.
 
 {
   "messages": [
