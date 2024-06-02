@@ -1,6 +1,6 @@
 # Instructions
 
-Example of main fields (depends on the type of the implemented set: instructions, functions, conversations, etc.) for the instructions type:
+Example of the instruction record and it's fields.
 ```json
 {
   "instruction": "Why is the EU putting in place a Carbon Border Adjustment Mechanism?",
