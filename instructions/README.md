@@ -1,6 +1,6 @@
 # Instructions
 
-Example of the instruction record and it's fields.
+Example of the instruction record and it's fields:
 ```json
 {
   "instruction": "Why is the EU putting in place a Carbon Border Adjustment Mechanism?",
