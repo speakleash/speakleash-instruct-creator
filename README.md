@@ -60,7 +60,7 @@ Or using terminal commands:<br>
 
 ## Contribution
 
-To contribute, clone this repository and add a new scripts (e.g., `allegro-summarization.py`) to the choosen directroy (instrctuons, conversations, function).
+To contribute, clone this repository and add a new scripts (e.g., `allegro-summarization.py`) to the choosen directory (instrctuons, conversations, function) and JSON sample file with 3 records from generated dataset. If the records are large, they can be limited to less than 3.
 If you identify additional types of training datasets that should be included, please contribute by creating an issue in the repository. New sections containing the proposed types will be added based on feedback and discussion.
 
 ## Working with code:
