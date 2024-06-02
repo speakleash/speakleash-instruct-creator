@@ -10,6 +10,7 @@ Example of the function record and it's fields:
     "input": {
       "prompt": "Translate the following English text to French: 'Hello, how are you?'"
     },
+    "output": "Bonjour, comment ça va?",
     "source_name": "Translation Guide",
     "source_description": "A guide on how to translate text using various methods and tools."
   },
@@ -19,10 +20,9 @@ Example of the function record and it's fields:
     "input": {
       "audio_file_path": "/path/to/audio/file.wav"
     },
-    "output": "This is the transcription of the audio file."
+    "output": "This is the transcription of the audio file.",
     "source_name": "Audio Processing Handbook",
     "source_description": "A comprehensive handbook on audio processing techniques, including transcription."
-  }
   }
 ]
 ```
