@@ -7,7 +7,7 @@ This repository provides tools for generating datasets for training and tuning L
 Datasets are divided into three main categories:
 - **instructions**
 - **conversations**
-- **functions**
+- **[functions]**(https://github.com/speakleash/speakleash-instruct-creator/tree/main/functions)
 
 Each category consists of the following types of content:
 - **automated**
