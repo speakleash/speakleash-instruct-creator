@@ -81,7 +81,7 @@ To update instruction samples, run the `generate_samples.py` script. It will gen
 - `sentiment_detection.py` -> requires HuggingFace token.
 - `orca_math_create_english_docx.py` with `orca_math_create_json_from_docx.py` -> the scripts need to be self-translated in an external service, so they are not included in `merge_files.py`. More information inside these scripts.
 - `speakleash_forums_questions.py` -> if installed requirements won't work, follow the steps included in this documentation: [StyloMetrix](https://github.com/ZILiAT-NASK/StyloMetrix)
-  - If you are facing problems with dependencies, execute manual installation of the following libraries:
-    - `pip install http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz`
-    - `pip install https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl`
-  - It is a temporary solution but will work.
+- If you are facing problems with dependencies, execute manual installation of the following libraries:
+  - `pip install http://mozart.ipipan.waw.pl/~rtuora/spacy/pl_nask-0.0.7.tar.gz`
+  - `pip install https://github.com/explosion/spacy-models/releases/download/pl_core_news_md-3.7.0/pl_core_news_md-3.7.0-py3-none-any.whl`
+- It is a temporary solution but will work.
