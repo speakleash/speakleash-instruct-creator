@@ -2,6 +2,7 @@
 
 Example of the conversation record and it's fields.
 
+```json
 {
   "messages": [
     {
@@ -28,6 +29,7 @@ Example of the conversation record and it's fields.
   "source_name": "Digital Marketing Guide"
   "source_description": "An article about using Google Tools to boost your image."
 }
+```
 
 It would be beneficial to include any fields with metadata, such as:
 
