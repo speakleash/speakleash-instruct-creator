@@ -1,6 +1,6 @@
 # Conversations
 
-Example of the conversation record and it's fields.
+Example of the conversation record and it's fields:
 
 ```json
 {
@@ -23,7 +23,7 @@ Example of the conversation record and it's fields.
     },
     {
       "role": "assistant",
-      "content": "Choosing the right keywords is crucial for the success of the campaign. You should start with...
+      "content": "Choosing the right keywords is crucial for the success of the campaign. You should start with..."
     }
   ],
   "source_name": "Digital Marketing Guide"
