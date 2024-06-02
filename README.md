@@ -34,7 +34,7 @@ Each category (Instructions, Conversations, Functions) has its own directory, co
 
 ## Generated datasets files:
 
-Instructions:
+Instructions (links are currently out of date)
 
 <details>
 <summary>Released instruction version: 2024_03_07_v0_0_13 (expandable list with download links):</summary><br>
