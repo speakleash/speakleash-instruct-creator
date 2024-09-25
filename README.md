@@ -68,7 +68,7 @@ Or using terminal commands:<br>
 To contribute, clone this repository and add a new scripts (e.g., `allegro-summarization.py`) to the chosen directory (instructions, conversations, functions). If you identify additional types of training datasets that should be included, please contribute by creating an issue in the repository. New sections containing the proposed types will be added based on feedback and discussion.
 
 #### Further details how to create instructions:
-https://docs.google.com/document/d/1GZXCLx_Wb2QnAaqPPp0USHhmtBcrNSWCYwHU6r9RSLM/edit
+[A simple instructions manual (in Polish)](https://docs.google.com/document/d/1GZXCLx_Wb2QnAaqPPp0USHhmtBcrNSWCYwHU6r9RSLM)
 
 ## Working with code:
 
